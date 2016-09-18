@@ -184,6 +184,7 @@ function tz_enqueue_scripts() {
 	wp_register_script('tz_shortcodes', get_template_directory_uri() . '/js/jquery.shortcodes.js', 'jquery');
 	wp_register_style( 'tz_shortcodes', get_template_directory_uri() . '/css/shortcodes.css' );
 	wp_register_style('prettyPhotoCSS', get_template_directory_uri() . '/css/prettyPhoto.css');
+	wp_register_style('bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css');
 
 	// Enqueue our scripts
 	wp_enqueue_script('jquery');
@@ -195,6 +196,7 @@ function tz_enqueue_scripts() {
 	wp_enqueue_script('tz_custom');
 	wp_enqueue_script('tz_shortcodes'); 
 	wp_enqueue_style( 'tz_shortcodes' );
+	wp_enqueue_style( 'bxslider' );
 	if ( is_page_template('template-portfolio.php') ) {
 	    wp_enqueue_script('quicksand'); 
 	    wp_enqueue_script('prettyPhoto');
