@@ -308,7 +308,7 @@ add_filter('login_headertitle', 'tz_wp_login_title');
 /*-----------------------------------------------------------------------------------*/
 
 class Portfolio_Walker extends Walker_Category {
-   function start_el(&$output, $category, $depth, $args) {
+   function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
       extract($args);
       $cat_name = esc_attr( $category->name);
       $cat_name = apply_filters( 'list_cats', $cat_name, $category );
