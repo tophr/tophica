@@ -93,6 +93,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_image_size( 'thumbnail-portfolio', 700, '', true ); // Portfolio thumbnails
 }
 
+add_theme_support( 'custom-header' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );
 
