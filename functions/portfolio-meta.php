@@ -196,28 +196,28 @@ $meta_box_video = array(
 	'fields' => array(
 	array(
 			'name' => 'Youtube or Vimeo URL',
-			'desc' => __('If you are using YouTube or Vimeo, please enter in the page URL here.', 'framework'),
+			'desc' => __('If you are using YouTube or Vimeo, please enter in the page URL here.', 'tophica'),
 			'id' => 'tz_video_url',
 			'type' => 'text',
 			'std' => ''
 		),
 	array(
 			'name' => 'Embedded Code',
-			'desc' => __('If you are using something other than YouTube or Vimeo, paste the embed code here. Width is best at 700px with any height.<br><br> This field will override the above.', 'framework'),
+			'desc' => __('If you are using something other than YouTube or Vimeo, paste the embed code here. Width is best at 700px with any height.<br><br> This field will override the above.', 'tophica'),
 			'id' => 'tz_embed_code',
 			'type' => 'textarea',
 			'std' => ''
 		),
 	array(
 			'name' => 'Video Height',
-			'desc' => __('Please enter the video height. 500 = (500px).', 'framework'),
+			'desc' => __('Please enter the video height. 500 = (500px).', 'tophica'),
 			'id' => 'tz_video_height',
 			'type' => 'text',
 			'std' => ''
 		),
 	array(
 			'name' => 'Additional Info',
-			'desc' => __('Any content added here will display above the video. Feel free to use any HTML.', 'framework'),
+			'desc' => __('Any content added here will display above the video. Feel free to use any HTML.', 'tophica'),
 			'id' => 'tz_additional_info',
 			'type' => 'textarea',
 			'std' => ''
@@ -254,7 +254,7 @@ function tz_show_box() {
 
 	$wp_version = get_bloginfo('version');
  	
-	echo '<p style="padding:10px 0 0 0;">'.__('Upload an image and then click "insert into post". To delete an image, simply clear the field.', 'framework').'</p>';
+	echo '<p style="padding:10px 0 0 0;">'.__('Upload an image and then click "insert into post". To delete an image, simply clear the field.', 'tophica').'</p>';
 	// Use nonce for verification
 	echo '<input type="hidden" name="tz_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
  
@@ -303,7 +303,7 @@ function tz_show_box() {
 						frame.toolbar.get('view').set({
 							insert: {
 								style: 'primary',
-								text: '<?php _e("Insert", "zilla"); ?>',
+								text: '<?php _e("Insert", "tophica"); ?>',
 
 								click: function() {
 									var models = frame.state().get('selection'),
@@ -341,7 +341,7 @@ function tz_show_box() {
 function tz_show_box_video() {
 	global $meta_box_video, $post;
  	
-	echo '<p style="padding:10px 0 0 0;">'.__('These settings enable you to embed videos into your portfolio pages.', 'framework').'</p>';
+	echo '<p style="padding:10px 0 0 0;">'.__('These settings enable you to embed videos into your portfolio pages.', 'tophica').'</p>';
 	// Use nonce for verification
 	echo '<input type="hidden" name="tz_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
  

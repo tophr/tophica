@@ -84,7 +84,7 @@ if(isset($_POST['submitted'])) {
 					<?php if(isset($emailSent) && $emailSent == true) { ?>
     
                         <div class="thanks">
-                            <p><?php _e('Thanks, your email was sent successfully.', 'framework') ?></p>
+                            <p><?php _e('Thanks, your email was sent successfully.', 'tophica') ?></p>
                         </div>
     
                     <?php } else { ?>
@@ -92,13 +92,13 @@ if(isset($_POST['submitted'])) {
                         <?php the_content(); ?>
             
                         <?php if(isset($hasError) || isset($captchaError)) { ?>
-                            <p class="error"><?php _e('Sorry, an error occurred.', 'framework') ?><p>
+                            <p class="error"><?php _e('Sorry, an error occurred.', 'tophica') ?><p>
                         <?php } ?>
         
                         <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
                             <ul class="contactform">
                                 <li><p>
-                                <label for="contactName"><small><?php _e('Name', 'framework') ?> <span>*</span></small></label>
+                                <label for="contactName"><small><?php _e('Name', 'tophica') ?> <span>*</span></small></label>
                                     <input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="required requiredField" />
                                     <?php if($nameError != '') { ?>
                                         <span class="error"><?php echo $nameError; ?></span> 
@@ -106,7 +106,7 @@ if(isset($_POST['submitted'])) {
                                     </p>
                                 </li>
                     
-                                <li><p><label for="email"><small><?php _e('Email:', 'framework') ?><span>*</span></small></label>
+                                <li><p><label for="email"><small><?php _e('Email:', 'tophica') ?><span>*</span></small></label>
                                     <input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="required requiredField email" />
                                     <?php if($emailError != '') { ?>
                                         <span class="error"><?php echo $emailError; ?></span>
@@ -114,7 +114,7 @@ if(isset($_POST['submitted'])) {
                                     </p>
                                 </li>
                     
-                                <li class="textarea"><p><label for="commentsText"><small><?php _e('Message:', 'framework') ?><span>*</span></small></label>
+                                <li class="textarea"><p><label for="commentsText"><small><?php _e('Message:', 'tophica') ?><span>*</span></small></label>
                                     <textarea name="comments" id="commentsText" rows="20" cols="30" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
                                     <?php if($commentError != '') { ?>
                                         <span class="error"><?php echo $commentError; ?></span> 
@@ -124,7 +124,7 @@ if(isset($_POST['submitted'])) {
                     
                                 <li class="buttons">
                                     <input type="hidden" name="submitted" id="submitted" value="true" />
-                                    <button id="submit" type="submit"><?php _e('Send Email', 'framework') ?></button>
+                                    <button id="submit" type="submit"><?php _e('Send Email', 'tophica') ?></button>
                                 </li>
                             </ul>
                         </form>
@@ -144,11 +144,11 @@ if(isset($_POST['submitted'])) {
 				<!--BEGIN #post-0-->
 				<div id="post-0" <?php post_class(); ?>>
 				
-					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h2>
+					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'tophica') ?></h2>
 				
 					<!--BEGIN .entry-content-->
 					<div class="entry-content">
-						<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+						<p><?php _e("Sorry, but you are looking for something that isn't here.", "tophica") ?></p>
 					<!--END .entry-content-->
 					</div>
 				

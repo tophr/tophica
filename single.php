@@ -37,12 +37,12 @@
                     
                         <!--BEGIN .entry-meta .entry-header-->
                         <div class="entry-meta entry-header">
-                            <span class="author"><?php _e('By', 'framework') ?> <?php the_author_posts_link(); ?></span>
-                            <span class="published"><?php _e('On', 'framework') ?> <strong><?php the_time( get_option('date_format') ); ?></strong></span>
-                            <span class="entry-categories"><?php _e('In', 'framework') ?> <?php the_category(', ') ?></span>
-                            <span class="comment-count"><?php _e('With', 'framework') ?> <?php comments_popup_link(__('No Comments', 'framework'), __('1 Comment', 'framework'), __('% Comments', 'framework')); ?></span>
-                            <span class="permalink"><img src="<?php echo get_template_directory_uri(); ?>/images/permalink_icon.png" alt="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>" /><a title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Permalink', 'framework') ?></a></span>
-                            <?php edit_post_link( __('edit', 'framework'), '<span class="edit-post">[', ']</span>' ); ?>
+                            <span class="author"><?php _e('By', 'tophica') ?> <?php the_author_posts_link(); ?></span>
+                            <span class="published"><?php _e('On', 'tophica') ?> <strong><?php the_time( get_option('date_format') ); ?></strong></span>
+                            <span class="entry-categories"><?php _e('In', 'tophica') ?> <?php the_category(', ') ?></span>
+                            <span class="comment-count"><?php _e('With', 'tophica') ?> <?php comments_popup_link(__('No Comments', 'tophica'), __('1 Comment', 'tophica'), __('% Comments', 'tophica')); ?></span>
+                            <span class="permalink"><img src="<?php echo get_template_directory_uri(); ?>/images/permalink_icon.png" alt="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" /><a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Permalink', 'tophica') ?></a></span>
+                            <?php edit_post_link( __('edit', 'tophica'), '<span class="edit-post">[', ']</span>' ); ?>
                         <!--END .entry-meta entry-header -->
                         </div>
     
@@ -50,7 +50,7 @@
                         <div class="entry-content">
                         
                             <?php the_content(); ?>
-                            <?php wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'framework').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+                            <?php wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'tophica').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                             
                         <!--END .entry-content -->
                         </div>
@@ -77,11 +77,11 @@
 				<!--BEGIN #post-0-->
 				<div id="post-0" <?php post_class(); ?>>
 				
-					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h2>
+					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'tophica') ?></h2>
 				
 					<!--BEGIN .entry-content-->
 					<div class="entry-content">
-						<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+						<p><?php _e("Sorry, but you are looking for something that isn't here.", "tophica") ?></p>
 					<!--END .entry-content-->
 					</div>
 				

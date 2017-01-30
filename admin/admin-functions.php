@@ -75,13 +75,13 @@ function tz_option_setup(){
 /* Admin Backend */
 /*-----------------------------------------------------------------------------------*/
 
-function zillaframework_admin_head() { 
+function tophica_admin_head() { 
 	
 	//Tweaked the message on theme activate
 	?>
     <script type="text/javascript">
     jQuery(function(){
-	var message = '<p>This theme comes with an <a href="<?php echo admin_url('admin.php?page=zillaframework'); ?>">options panel</a> to configure settings. This theme also supports widgets, please visit the <a href="<?php echo admin_url('widgets.php'); ?>">widgets settings page</a> to configure them.</p>';
+	var message = '<p>This theme comes with an <a href="<?php echo admin_url('admin.php?page=tophica'); ?>">options panel</a> to configure settings. This theme also supports widgets, please visit the <a href="<?php echo admin_url('widgets.php'); ?>">widgets settings page</a> to configure them.</p>';
     	jQuery('.themes-php #message2').html(message);
     
     });
@@ -89,6 +89,6 @@ function zillaframework_admin_head() {
     <?php
 }
 
-add_action('admin_head', 'zillaframework_admin_head'); 
+add_action('admin_head', 'tophica_admin_head'); 
 
 ?>

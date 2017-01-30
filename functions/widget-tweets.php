@@ -19,10 +19,10 @@ class Zilla_Twitter_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'zilla-twitter-widget',
-			__('Custom Latest Tweets', 'zilla'),
+			__('Custom Latest Tweets', 'tophica'),
 			array(
 				'classname' => 'zilla-tweet-widget',
-				'description' => __('A new widget that displays your latest tweets', 'zilla')
+				'description' => __('A new widget that displays your latest tweets', 'tophica')
 			)
 		);
 	} // end constructor
@@ -55,7 +55,7 @@ class Zilla_Twitter_Widget extends WP_Widget {
 				echo '</li>';
 			}
 		} else {
-			echo '<li>' . __('There was an error grabbing the Twitter feed', 'zilla') . '</li>';
+			echo '<li>' . __('There was an error grabbing the Twitter feed', 'tophica') . '</li>';
 		}
 
 		echo '</ul>';
@@ -118,27 +118,27 @@ class Zilla_Twitter_Widget extends WP_Widget {
 			?>
 
 			<p>
-				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'zilla') ?></label>
+				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'tophica') ?></label>
 				<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
 			</p>
 
 			<p>
-				<label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e('Twitter Username e.g. themezilla', 'zilla') ?></label>
+				<label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e('Twitter Username e.g. themezilla', 'tophica') ?></label>
 				<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'username' ); ?>" name="<?php echo $this->get_field_name( 'username' ); ?>" value="<?php echo $instance['username']; ?>" />
 			</p>
 			
 			<p>
-				<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e('Number of tweets', 'zilla') ?></label>
+				<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e('Number of tweets', 'tophica') ?></label>
 				<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" value="<?php echo $instance['count']; ?>" />
-				<small><?php _e('Feeds include replies and retweets', 'zilla'); ?></small>
+				<small><?php _e('Feeds include replies and retweets', 'tophica'); ?></small>
 			</p>
 			
 			<p>
-				<label for="<?php echo $this->get_field_id( 'tweettext' ); ?>"><?php _e('Follow Text e.g. Follow me on Twitter', 'zilla') ?></label>
+				<label for="<?php echo $this->get_field_id( 'tweettext' ); ?>"><?php _e('Follow Text e.g. Follow me on Twitter', 'tophica') ?></label>
 				<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'tweettext' ); ?>" name="<?php echo $this->get_field_name( 'tweettext' ); ?>" value="<?php echo $instance['tweettext']; ?>" />
 			</p>
 			
-			<p><em><?php _e('Tweets are cached for 5 minutes to improve performance', 'zilla'); ?></em></p>
+			<p><em><?php _e('Tweets are cached for 5 minutes to improve performance', 'tophica'); ?></em></p>
 <?php
 		} // end if
 
@@ -189,13 +189,13 @@ class Zilla_Twitter_Widget extends WP_Widget {
 	 */
 	private function oauthGetTweets($config) {
 		if( empty($config['access_token']) ) 
-			return array('error' => __('Not properly configured, check settings', 'zilla'));		
+			return array('error' => __('Not properly configured, check settings', 'tophica'));		
 		if( empty($config['access_token_secret']) ) 
-			return array('error' => __('Not properly configured, check settings', 'zilla'));
+			return array('error' => __('Not properly configured, check settings', 'tophica'));
 		if( empty($config['consumer_key']) ) 
-			return array('error' => __('Not properly configured, check settings', 'zilla'));		
+			return array('error' => __('Not properly configured, check settings', 'tophica'));		
 		if( empty($config['consumer_key_secret']) ) 
-			return array('error' => __('Not properly configured, check settings', 'zilla'));		
+			return array('error' => __('Not properly configured, check settings', 'tophica'));		
 
 		$options = array(
 			'trim_user' => true,
@@ -286,8 +286,8 @@ add_action( 'widgets_init', create_function( '', 'register_widget("Zilla_Twitter
  */
 function zilla_twitter_widget_settings() {
 	add_options_page(
-		__('Twitter Widget Settings', 'zilla'),
-		__('Twitter Widget Settings', 'zilla'),
+		__('Twitter Widget Settings', 'tophica'),
+		__('Twitter Widget Settings', 'tophica'),
 		'manage_options',
 		'zilla-twitter-widget-settings',
 		'zilla_twitter_widget_render_admin_page'
@@ -323,7 +323,7 @@ function zilla_tw_register_settings() {
  */
 function zilla_twitter_widget_render_admin_page() {
 	if( ! current_user_can('manage_options') ) {
-		wp_die( __('Insufficient permissions', 'zilla') );
+		wp_die( __('Insufficient permissions', 'tophica') );
 	}
 
 	$settings = zilla_tw_settings();
@@ -332,13 +332,13 @@ function zilla_twitter_widget_render_admin_page() {
 	 	screen_icon();
 		echo '<h2>Twitter Widget Settings</h2>';
 		echo '<form method="post" action="options.php">';
-			echo '<p><strong>' . __('Twitter requires that you register an application in order to utilize their API. Directions to get the Consumer Key, Consumer Secret, Access Token, and Access Token Secret.', 'zilla' ) . '</strong></p>';
+			echo '<p><strong>' . __('Twitter requires that you register an application in order to utilize their API. Directions to get the Consumer Key, Consumer Secret, Access Token, and Access Token Secret.', 'tophica' ) . '</strong></p>';
 			echo '<ol>';
-				echo '<li><a href="https://dev.twitter.com/apps/new" target="_blank">' . __( 'Create a new Twitter application', 'zilla' ) . '</a></li>';
-				echo '<li>' . __( 'Fill in all fields on the create application page.', 'zilla' ) . '</li>';
-				echo '<li>' . __( 'Agree to rules, fill out captcha, and submit your application', 'zilla' ) . '</li>';
-				echo '<li>' . __( 'Copy the Consumer Key, Consumer Secret, Access Token, and Access Token Secret into the fields below', 'zilla' ) . '</li>';
-				echo '<li>' . __( "Click the Save Changes button at the bottom of this page" ) . '</li>';
+				echo '<li><a href="https://dev.twitter.com/apps/new" target="_blank">' . __( 'Create a new Twitter application', 'tophica' ) . '</a></li>';
+				echo '<li>' . __( 'Fill in all fields on the create application page.', 'tophica' ) . '</li>';
+				echo '<li>' . __( 'Agree to rules, fill out captcha, and submit your application', 'tophica' ) . '</li>';
+				echo '<li>' . __( 'Copy the Consumer Key, Consumer Secret, Access Token, and Access Token Secret into the fields below', 'tophica' ) . '</li>';
+				echo '<li>' . __( "Click the Save Changes button at the bottom of this page", 'tophica' ) . '</li>';
 			echo '</ol>';
 
 			settings_fields('zilla_tw_settings');

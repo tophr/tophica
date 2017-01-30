@@ -26,7 +26,7 @@
                         <div class="entry-content">
                         
                             <?php the_content(); ?>
-                            <?php wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'framework').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+                            <?php wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'tophica').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                             
                         <!--END .entry-content -->
                         </div>
@@ -46,11 +46,11 @@
 				<!--BEGIN #post-0-->
 				<div id="post-0" <?php post_class(); ?>>
 				
-					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h2>
+					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'tophica') ?></h2>
 				
 					<!--BEGIN .entry-content-->
 					<div class="entry-content">
-						<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+						<p><?php _e("Sorry, but you are looking for something that isn't here.", "tophica") ?></p>
 					<!--END .entry-content-->
 					</div>
 				

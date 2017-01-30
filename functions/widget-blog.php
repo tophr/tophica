@@ -28,12 +28,13 @@ class tz_blog_widget extends WP_Widget {
 /*	Widget Setup
 /*-----------------------------------------------------------------------------------*/
 	
-function tz_Blog_Widget() {
-
+//function tz_Blog_Widget() {
+function __construct(){
+	
 	// Widget settings
 	$widget_ops = array(
 		'classname' => 'tz_blog_widget',
-		'description' => __('A widget that displays your latest blog posts.', 'framework')
+		'description' => __('A widget that displays your latest blog posts.', 'tophica')
 	);
 
 	// Widget control settings
@@ -44,8 +45,19 @@ function tz_Blog_Widget() {
 	);
 
 	/* Create the widget. */
-	$this->WP_Widget( 'tz_blog_widget', __('Custom Blog Widget', 'framework'), $widget_ops, $control_ops );
+	/*$this->WP_Widget( 
+		'tz_blog_widget', 
+		__('Custom Blog Widget', 'tophica'), 
+		$widget_ops, 
+		$control_ops ); deprecated*/
 	
+	parent::__construct( 
+		'tz_blog_widget', 
+		__('Custom Blog Widget', 'tophica'), 
+		$widget_ops, 
+		$control_ops 
+	);
+
 }
 
 
@@ -82,14 +94,14 @@ function widget( $args, $instance ) {
             <!--BEGIN .hentry -->
             <div <?php post_class(); ?> id="post-widget-<?php the_ID(); ?>">
                                 
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
                 
                 <!--BEGIN .entry-meta .entry-header-->
                 <div class="entry-meta entry-header">
                     <span class="published"><?php the_time( get_option('date_format') ); ?></span>
                     <span class="meta-sep">&middot;</span>
-                    <span class="comment-count"><?php comments_popup_link(__('No Comments', 'framework'), __('1 Comment', 'framework'), __('% Comments', 'framework')); ?></span>
-                    <?php edit_post_link( __('edit', 'framework'), '<span class="edit-post">[', ']</span>' ); ?>
+                    <span class="comment-count"><?php comments_popup_link(__('No Comments', 'tophica'), __('1 Comment', 'tophica'), __('% Comments', 'tophica')); ?></span>
+                    <?php edit_post_link( __('edit', 'tophica'), '<span class="edit-post">[', ']</span>' ); ?>
                 <!--END .entry-meta entry-header -->
                 </div>
         
@@ -149,13 +161,13 @@ function form( $instance ) {
 
 	<!-- Widget Title: Text Input -->
 	<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'framework') ?></label>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'tophica') ?></label>
 		<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
 	</p>
 
 	<!-- Embed Code: Text Input -->
 	<p>
-		<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Posts Number:', 'framework') ?></label>
+		<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Posts Number:', 'tophica') ?></label>
 		<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" value="<?php echo $instance['number']; ?>" />
 	</p>
 

@@ -28,12 +28,13 @@ class tz_video_widget extends WP_Widget {
 /*	Widget Setup
 /*-----------------------------------------------------------------------------------*/
 	
-function tz_Video_Widget() {
-
+//function tz_Video_Widget() {
+function __construct(){
+	
 	// Widget settings
 	$widget_ops = array(
 		'classname' => 'tz_video_widget',
-		'description' => __('A widget that displays your YouTube or Vimeo Video.', 'framework')
+		'description' => __('A widget that displays your YouTube or Vimeo Video.', 'tophica')
 	);
 
 	// Widget control settings
@@ -44,7 +45,13 @@ function tz_Video_Widget() {
 	);
 
 	/* Create the widget. */
-	$this->WP_Widget( 'tz_video_widget', __('Custom Video Widget', 'framework'), $widget_ops, $control_ops );
+	//$this->WP_Widget( 'tz_video_widget', __('Custom Video Widget', 'tophica'), $widget_ops, $control_ops );
+	parent::__construct( 
+		'tz_video_widget', 
+		__('Custom Video Widget', 'tophica'), 
+		$widget_ops, 
+		$control_ops 
+	);
 	
 }
 
@@ -124,19 +131,19 @@ function form( $instance ) {
 
 	<!-- Widget Title: Text Input -->
 	<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'framework') ?></label>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'tophica') ?></label>
 		<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
 	</p>
 
 	<!-- Embed Code: Text Input -->
 	<p>
-		<label for="<?php echo $this->get_field_id( 'embed' ); ?>"><?php _e('Embed Code:', 'framework') ?></label>
+		<label for="<?php echo $this->get_field_id( 'embed' ); ?>"><?php _e('Embed Code:', 'tophica') ?></label>
 		<textarea style="height:200px;" class="widefat" id="<?php echo $this->get_field_id( 'embed' ); ?>" name="<?php echo $this->get_field_name( 'embed' ); ?>"><?php echo stripslashes(htmlspecialchars(( $instance['embed'] ), ENT_QUOTES)); ?></textarea>
 	</p>
 	
 	<!-- Description: Text Input -->
 	<p>
-		<label for="<?php echo $this->get_field_id( 'desc' ); ?>"><?php _e('Short Description:', 'framework') ?></label>
+		<label for="<?php echo $this->get_field_id( 'desc' ); ?>"><?php _e('Short Description:', 'tophica') ?></label>
 		<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'desc' ); ?>" name="<?php echo $this->get_field_name( 'desc' ); ?>" value="<?php echo stripslashes(htmlspecialchars(( $instance['desc'] ), ENT_QUOTES)); ?>" />
 	</p>
 		

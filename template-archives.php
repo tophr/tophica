@@ -37,7 +37,7 @@ Template Name: Archives
                             <!--BEGIN .archive-lists -->
                             <div class="archive-lists">
                                 
-                                <h4><?php _e('Last 30 Posts', 'framework') ?></h4>
+                                <h4><?php _e('Last 30 Posts', 'tophica') ?></h4>
                                 
                                 <ul>
                                 <?php $archive_30 = get_posts('numberposts=30');
@@ -46,13 +46,13 @@ Template Name: Archives
                                 <?php endforeach; ?>
                                 </ul>
                                 
-                                <h4><?php _e('Archives by Month:', 'framework') ?></h4>
+                                <h4><?php _e('Archives by Month:', 'tophica') ?></h4>
                                 
                                 <ul>
                                     <?php wp_get_archives('type=monthly'); ?>
                                 </ul>
                     
-                                <h4><?php _e('Archives by Subject:', 'framework') ?></h4>
+                                <h4><?php _e('Archives by Subject:', 'tophica') ?></h4>
                                 
                                 <ul>
                                     <?php wp_list_categories( 'title_li=' ); ?>
@@ -77,11 +77,11 @@ Template Name: Archives
 				<!--BEGIN #post-0-->
 				<div id="post-0" <?php post_class(); ?>>
 				
-					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h2>
+					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'tophica') ?></h2>
 				
 					<!--BEGIN .entry-content-->
 					<div class="entry-content">
-						<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+						<p><?php _e("Sorry, but you are looking for something that isn't here.", "tophica") ?></p>
 					<!--END .entry-content-->
 					</div>
 				

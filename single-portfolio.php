@@ -13,7 +13,7 @@
             
             <!--BEGIN .page-back -->
             <div class="page-back">
-            	<span class="back"><a href="<?php echo get_permalink(get_option('tz_portfolio_page')); ?>"><?php _e('&larr; Back to the Portfolio', 'framework'); ?></a></span>
+            	<span class="back"><a href="<?php echo get_permalink(get_option('tz_portfolio_page')); ?>"><?php _e('&larr; Back to the Portfolio', 'tophica'); ?></a></span>
             <!--END .page-back -->
             </div>
             
@@ -232,7 +232,7 @@
                                         
                                     <?php endif; ?>
                                                     
-                                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
+                                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
                 
                                     <!--BEGIN .entry-content -->
                                     <div class="entry-content">

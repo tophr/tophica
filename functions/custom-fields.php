@@ -89,9 +89,9 @@ global $post, $tz_heading_meta_boxes;
 function create_meta_box() {
 global $theme_name, $tz_heading_meta_boxes, $port_meta_boxes;
 	if (function_exists('add_meta_box') ) {
-	add_meta_box( 'new-meta-boxes', __('Heading', 'framework'), 'tz_heading_meta_boxes', 'post', 'normal', 'high' );
-	add_meta_box( 'new-meta-boxes', __('Heading', 'framework'), 'tz_heading_meta_boxes', 'page', 'normal', 'high' );
-	add_meta_box( 'new-meta-boxes', __('Heading', 'framework'), 'tz_heading_meta_boxes', 'portfolio', 'normal', 'high' );
+	add_meta_box( 'new-meta-boxes', __('Heading', 'tophica'), 'tz_heading_meta_boxes', 'post', 'normal', 'high' );
+	add_meta_box( 'new-meta-boxes', __('Heading', 'tophica'), 'tz_heading_meta_boxes', 'page', 'normal', 'high' );
+	add_meta_box( 'new-meta-boxes', __('Heading', 'tophica'), 'tz_heading_meta_boxes', 'portfolio', 'normal', 'high' );
 	}
 }
 

@@ -12,7 +12,7 @@ Template Name: Portfolio
 				if(get_post_meta($post->ID, 'heading_value', true) != ''): 
 					echo get_post_meta($post->ID, 'heading_value', true); 
 				else: 
-					_e('Some of my recent work.', 'framework'); 
+					_e('Some of my recent work.', 'tophica'); 
 				endif; 
 				?>
             </h1>
@@ -26,7 +26,7 @@ Template Name: Portfolio
                     
                     <?php the_content(); ?>
                     
-                    <h3><?php _e('Filter by Client:', 'framework'); ?></h3>
+                    <h3><?php _e('Filter by Client:', 'tophica'); ?></h3>
                     
                     <ul id="filter">
                       <li class="segment-1"><a data-value="all" href="#">All</a></li>
@@ -62,7 +62,7 @@ Template Name: Portfolio
                                 
                                 <div class="count hidden"><?php echo $count; ?></div>
                                  
-                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
+                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
             
                                 <!--BEGIN .entry-content -->
                                 <div class="entry-content">

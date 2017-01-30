@@ -5,7 +5,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 function register_menu() {
-	register_nav_menu('primary-menu', __('Primary Menu', 'framework'));
+	register_nav_menu('primary-menu', __('Primary Menu', 'tophica'));
 }
 add_action('init', 'register_menu');
 
@@ -14,7 +14,7 @@ add_action('init', 'register_menu');
 /*	Load Translation Text Domain
 /*-----------------------------------------------------------------------------------*/
 
-load_theme_textdomain('framework');
+load_theme_textdomain('tophica');
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -93,6 +93,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_image_size( 'thumbnail-portfolio', 700, '', true ); // Portfolio thumbnails
 }
 
+add_theme_support( 'title-tag' );
+add_theme_support( 'automatic-feed-links' );
 
 /*-----------------------------------------------------------------------------------*/
 /*	Get related posts by taxonomy
@@ -245,13 +247,13 @@ function tz_comment($comment, $args, $depth) {
       <div class="line"></div>
       <?php echo get_avatar($comment,$size='35'); ?>
       <div class="comment-author vcard">
-         <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?> <?php if($isByAuthor) { ?><span class="author-tag"><?php _e('(Author)','framework') ?></span><?php } ?>
+         <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?> <?php if($isByAuthor) { ?><span class="author-tag"><?php _e('(Author)','tophica') ?></span><?php } ?>
       </div>
 
-      <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s', 'framework'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)', 'framework'),'  ','') ?> &middot; <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></div>
+      <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s', 'tophica'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)', 'tophica'),'  ','') ?> &middot; <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></div>
       
       <?php if ($comment->comment_approved == '0') : ?>
-         <em class="moderation"><?php _e('Your comment is awaiting moderation.', 'framework') ?></em>
+         <em class="moderation"><?php _e('Your comment is awaiting moderation.', 'tophica') ?></em>
          <br />
       <?php endif; ?>
 	  
@@ -307,7 +309,7 @@ class Portfolio_Walker extends Walker_Category {
       $cat_name = apply_filters( 'list_cats', $cat_name, $category );
 	  $link = '<a href="#" data-value="term-'.$category->term_id.'" ';
       if ( $use_desc_for_title == 0 || empty($category->description) )
-         $link .= 'title="' . sprintf(__( 'View all items filed under %s', 'framework' ), $cat_name) . '"';
+         $link .= 'title="' . sprintf(__( 'View all items filed under %s', 'tophica' ), $cat_name) . '"';
       else
          $link .= 'title="' . esc_attr( strip_tags( apply_filters( 'category_description', $category->description, $category ) ) ) . '"';
       $link .= '>';
@@ -323,7 +325,7 @@ class Portfolio_Walker extends Walker_Category {
             $link .= '(';
          $link .= '<a href="' . get_category_feed_link($category->term_id, $feed_type) . '"';
          if ( empty($feed) )
-            $alt = ' alt="' . sprintf(__( 'Feed for all posts filed under %s', 'framework' ), $cat_name ) . '"';
+            $alt = ' alt="' . sprintf(__( 'Feed for all posts filed under %s', 'tophica' ), $cat_name ) . '"';
          else {
             $title = ' title="' . $feed . '"';
             $alt = ' alt="' . $feed . '"';
@@ -482,7 +484,7 @@ add_filter('widget_text', 'do_shortcode');
 /*	Load Theme Options
 /*-----------------------------------------------------------------------------------*/
 
-define('TZ_FILEPATH', TEMPLATEPATH);
+define('TZ_FILEPATH', get_template_directory());
 define('TZ_DIRECTORY', get_template_directory_uri());
 
 require_once (TZ_FILEPATH . '/admin/admin-functions.php');

@@ -179,7 +179,7 @@ function tz_video($postid) {
 			}
 			else 
 			{
-				$output = __('Sorry that seems to be an invalid <strong>YouTube</strong> URL. Please check it again.', 'framework');
+				$output = __('Sorry that seems to be an invalid <strong>YouTube</strong> URL. Please check it again.', 'tophica');
 			}
 			
 		}
@@ -192,13 +192,13 @@ function tz_video($postid) {
 			}
 			else 
 			{
-				$output = __('Sorry that seems to be an invalid <strong>Vimeo</strong> URL. Please check it again. Make sure there is a string of numbers at the end.', 'framework');
+				$output = __('Sorry that seems to be an invalid <strong>Vimeo</strong> URL. Please check it again. Make sure there is a string of numbers at the end.', 'tophica');
 			}
 			
 		}
 		else 
 		{
-			$output = __('Sorry that is an invalid YouTube or Vimeo URL.', 'framework');
+			$output = __('Sorry that is an invalid YouTube or Vimeo URL.', 'tophica');
 		}
 		
 		echo $output;

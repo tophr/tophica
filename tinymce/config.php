@@ -6,13 +6,13 @@ $tz_shortcodes['button'] = array(
 		'url' => array(
 			'std' => '',
 			'type' => 'text',
-			'label' => __('Button URL', 'textdomain'),
-			'desc' => __('Add the button\'s url eg http://example.com', 'textdomain')
+			'label' => __('Button URL', 'tophica'),
+			'desc' => __('Add the button\'s url eg http://example.com', 'tophica')
 		),
 		'style' => array(
 			'type' => 'select',
-			'label' => __('Button\'s Style', 'textdomain'),
-			'desc' => __('Select the button\'s style, ie the buttons colour', 'textdomain'),
+			'label' => __('Button\'s Style', 'tophica'),
+			'desc' => __('Select the button\'s style, ie the buttons colour', 'tophica'),
 			'options' => array(
 				'white' => 'White',
 				'black' => 'Black',
@@ -26,8 +26,8 @@ $tz_shortcodes['button'] = array(
 		),
 		'size' => array(
 			'type' => 'select',
-			'label' => __('Button\'s Size', 'textdomain'),
-			'desc' => __('Select the button\'s size', 'textdomain'),
+			'label' => __('Button\'s Size', 'tophica'),
+			'desc' => __('Select the button\'s size', 'tophica'),
 			'options' => array(
 				'small' => 'Small',
 				'large' => 'Large'
@@ -36,12 +36,12 @@ $tz_shortcodes['button'] = array(
 		'content' => array(
 			'std' => 'Button Text',
 			'type' => 'text',
-			'label' => __('Button\'s Text', 'textdomain'),
-			'desc' => __('Add the button\'s text', 'textdomain'),
+			'label' => __('Button\'s Text', 'tophica'),
+			'desc' => __('Add the button\'s text', 'tophica'),
 		)
 	),
 	'shortcode' => '[button url="{{url}}" style="{{style}}" size="{{size}}"] {{content}} [/button]',
-	'popup_title' => __('Insert Button Shortcode', 'textdomain')
+	'popup_title' => __('Insert Button Shortcode', 'tophica')
 );
 
 // Alerts shortcode config
@@ -49,8 +49,8 @@ $tz_shortcodes['alert'] = array(
 	'params' => array(
 		'style' => array(
 			'type' => 'select',
-			'label' => __('Alert\'s Style', 'textdomain'),
-			'desc' => __('Select the slter\'s style, ie the alert colour', 'textdomain'),
+			'label' => __('Alert\'s Style', 'tophica'),
+			'desc' => __('Select the slter\'s style, ie the alert colour', 'tophica'),
 			'options' => array(
 				'white' => 'White',
 				'red' => 'Red',
@@ -61,13 +61,13 @@ $tz_shortcodes['alert'] = array(
 		'content' => array(
 			'std' => 'Your Alert!',
 			'type' => 'textarea',
-			'label' => __('Alert\'s Text', 'textdomain'),
-			'desc' => __('Add the alert\'s text', 'textdomain'),
+			'label' => __('Alert\'s Text', 'tophica'),
+			'desc' => __('Add the alert\'s text', 'tophica'),
 		)
 		
 	),
 	'shortcode' => '[alert style="{{style}}"] {{content}} [/alert]',
-	'popup_title' => __('Insert Alert Shortcode', 'textdomain')
+	'popup_title' => __('Insert Alert Shortcode', 'tophica')
 );
 
 // Toggle content shortcode config
@@ -75,20 +75,20 @@ $tz_shortcodes['toggle'] = array(
 	'params' => array(
 		'title' => array(
 			'type' => 'text',
-			'label' => __('Toggle Content Title', 'textdomain'),
-			'desc' => __('Add the title that will go above the toggle content', 'textdomain'),
+			'label' => __('Toggle Content Title', 'tophica'),
+			'desc' => __('Add the title that will go above the toggle content', 'tophica'),
 			'std' => 'Title'
 		),
 		'content' => array(
 			'std' => 'Content',
 			'type' => 'textarea',
-			'label' => __('Toggle Content', 'textdomain'),
-			'desc' => __('Add the toggle content.', 'textdomain'),
+			'label' => __('Toggle Content', 'tophica'),
+			'desc' => __('Add the toggle content.', 'tophica'),
 		)
 		
 	),
 	'shortcode' => '[toggle title="{{title}}"] {{content}} [/toggle]',
-	'popup_title' => __('Insert Toggle Content Shortcode', 'textdomain')
+	'popup_title' => __('Insert Toggle Content Shortcode', 'tophica')
 );
 
 // Tabs
@@ -97,31 +97,31 @@ $tz_shortcodes['tabs'] = array(
         'tabs' => array(
         	'std' => 'Title',
             'type' => 'text',
-            'label' => __('Tab Titles', 'textdomain'),
-            'desc' => __('Please enter the tab titles here, seperating each by a comma. They must match the tabs that are created below.', 'textdomain')
+            'label' => __('Tab Titles', 'tophica'),
+            'desc' => __('Please enter the tab titles here, seperating each by a comma. They must match the tabs that are created below.', 'tophica')
         )
     ),
     'no_preview' => true,
     'shortcode' => '[tabs tabs="{{tabs}}"] {{child_shortcode}}  [/tabs]',
-    'popup_title' => __('Insert Tab Shortcode', 'textdomain'),
+    'popup_title' => __('Insert Tab Shortcode', 'tophica'),
     
     'child_shortcode' => array(
         'params' => array(
             'title' => array(
                 'std' => 'Title',
                 'type' => 'text',
-                'label' => __('Tab Title', 'textdomain'),
-                'desc' => __('Title of the tab', 'textdomain'),
+                'label' => __('Tab Title', 'tophica'),
+                'desc' => __('Title of the tab', 'tophica'),
             ),
             'content' => array(
                 'std' => 'Tab Content',
                 'type' => 'textarea',
-                'label' => __('Tab Content', 'textdomain'),
-                'desc' => __('Add the tabs content', 'textdomain')
+                'label' => __('Tab Content', 'tophica'),
+                'desc' => __('Add the tabs content', 'tophica')
             )
         ),
         'shortcode' => '[tab title="{{title}}"] {{content}} [/tab]',
-        'clone_button' => __('Add Tab', 'textdomain')
+        'clone_button' => __('Add Tab', 'tophica')
     )
 );
 
@@ -129,7 +129,7 @@ $tz_shortcodes['tabs'] = array(
 $tz_shortcodes['columns'] = array(
 	'params' => array(),
 	'shortcode' => ' {{child_shortcode}} ', // as there is no wrapper shortcode
-	'popup_title' => __('Insert Columns Shortcode', 'textdomain'),
+	'popup_title' => __('Insert Columns Shortcode', 'tophica'),
 	'no_preview' => true,
 	
 	// child shortcode is clonable & sortable
@@ -137,8 +137,8 @@ $tz_shortcodes['columns'] = array(
 		'params' => array(
 			'column' => array(
 				'type' => 'select',
-				'label' => __('Column Type', 'textdomain'),
-				'desc' => __('Select the type, ie width of the column.', 'textdomain'),
+				'label' => __('Column Type', 'tophica'),
+				'desc' => __('Select the type, ie width of the column.', 'tophica'),
 				'options' => array(
 					'one_third' => 'One Third',
 					'one_third_last' => 'One Third Last',
@@ -167,12 +167,12 @@ $tz_shortcodes['columns'] = array(
 			'content' => array(
 				'std' => '',
 				'type' => 'textarea',
-				'label' => __('Column Content', 'textdomain'),
-				'desc' => __('Add the column content.', 'textdomain'),
+				'label' => __('Column Content', 'tophica'),
+				'desc' => __('Add the column content.', 'tophica'),
 			)
 		),
 		'shortcode' => '[{{column}}] {{content}} [/{{column}}] ',
-		'clone_button' => __('Add Column', 'textdomain')
+		'clone_button' => __('Add Column', 'tophica')
 	)
 );
 

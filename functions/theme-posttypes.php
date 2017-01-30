@@ -10,16 +10,16 @@
 function tz_create_post_type_portfolios() 
 {
 	$labels = array(
-		'name' => __( 'Portfolio', 'framework'),
-		'singular_name' => __( 'Portfolio' , 'framework'),
-		'add_new' => _x('Add New', 'slide', 'framework'),
-		'add_new_item' => __('Add New Portfolio', 'framework'),
-		'edit_item' => __('Edit Portfolio', 'framework'),
-		'new_item' => __('New Portfolio', 'framework'),
-		'view_item' => __('View Portfolio', 'framework'),
-		'search_items' => __('Search Portfolio', 'framework'),
-		'not_found' =>  __('No portfolios found', 'framework'),
-		'not_found_in_trash' => __('No portfolios found in Trash', 'framework'), 
+		'name' => __( 'Portfolio', 'tophica'),
+		'singular_name' => __( 'Portfolio' , 'tophica'),
+		'add_new' => _x('Add New', 'slide', 'tophica'),
+		'add_new_item' => __('Add New Portfolio', 'tophica'),
+		'edit_item' => __('Edit Portfolio', 'tophica'),
+		'new_item' => __('New Portfolio', 'tophica'),
+		'view_item' => __('View Portfolio', 'tophica'),
+		'search_items' => __('Search Portfolio', 'tophica'),
+		'not_found' =>  __('No portfolios found', 'tophica'),
+		'not_found_in_trash' => __('No portfolios found in Trash', 'tophica'), 
 		'parent_item_colon' => ''
 	  );
 	  
@@ -44,7 +44,7 @@ function tz_create_post_type_portfolios()
 
 
 function tz_build_taxonomies(){
-	register_taxonomy( "skill-type", array( "portfolio" ), array("hierarchical" => true, "label" => __( "Skill Types", 'framework' ), "singular_label" => __( "Skill Type", 'framework' ), "rewrite" => array('slug' => 'skill-type', 'hierarchical' => true))); 
+	register_taxonomy( "skill-type", array( "portfolio" ), array("hierarchical" => true, "label" => __( "Skill Types", 'tophica' ), "singular_label" => __( "Skill Type", 'tophica' ), "rewrite" => array('slug' => 'skill-type', 'hierarchical' => true))); 
 }
 
 
@@ -52,7 +52,7 @@ function tz_portfolio_edit_columns($columns){
 
         $columns = array(  
             "cb" => "<input type=\"checkbox\" />",  
-            "title" => __( 'Portfolio Item Title', 'framework' ),
+            "title" => __( 'Portfolio Item Title', 'tophica' ),
             "type" => 'type'
         );  
   

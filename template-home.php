@@ -118,7 +118,7 @@ Template Name: Home
 				
 				 <h3><?php echo stripslashes(get_option('tz_portfolio_title')); ?></h3>
 				 
-				 <p class="portfolio-link"><a class="droid-italic" href="<?php echo get_permalink( get_option('tz_portfolio_page') ); ?>"><?php _e('View the Portfolio &rarr;', 'framework'); ?></a></p>
+				 <p class="portfolio-link"><a class="droid-italic" href="<?php echo get_permalink( get_option('tz_portfolio_page') ); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
 				
 
 						<?php 
@@ -149,7 +149,7 @@ Template Name: Home
                             	<?php if(get_post_meta(get_the_ID(), 'upload_image_thumb', true) != '') : ?>
 								
 									<div class="post-thumb">
-										<a title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>" href="<?php the_permalink(); ?>">
+										<a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>">
                                         	<img src="<?php echo get_post_meta(get_the_ID(), 'upload_image_thumb', true); ?>" alt="<?php the_title(); ?>" />
                                         </a>
 									</div>
@@ -158,13 +158,13 @@ Template Name: Home
 								
 									if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
 									<div class="post-thumb">
-										<a title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-post'); /* post thumbnail settings configured in functions.php */ ?></a>
+										<a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-post'); /* post thumbnail settings configured in functions.php */ ?></a>
 									</div>
 									<?php endif; ?>
                                 
                                 <?php endif; ?>
                                                 
-                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
+                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
             
                                 <!--BEGIN .entry-content -->
                                 <div class="entry-content">
@@ -205,7 +205,7 @@ Template Name: Home
                     
                     <p><?php echo stripslashes(get_option('tz_recent_description')); ?></p>
                     
-                    <p><a class="droid-italic" href="<?php echo get_permalink( get_option('tz_blog_page') ); ?>"><?php _e('Read the Blog &rarr;', 'framework'); ?></a></p>
+                    <p><a class="droid-italic" href="<?php echo get_permalink( get_option('tz_blog_page') ); ?>"><?php _e('Read the Blog &rarr;', 'tophica'); ?></a></p>
                    
                 <!--END .sidebar -->
                 </div>
@@ -240,18 +240,18 @@ Template Name: Home
                             
                             <?php if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
                                 <div class="post-thumb">
-                                    <a title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-post'); /* post thumbnail settings configured in functions.php */ ?></a>
+                                    <a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-post'); /* post thumbnail settings configured in functions.php */ ?></a>
                                 </div>
                             <?php endif; ?>
                                                 
-                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
+                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
                                 
                                 <!--BEGIN .entry-meta .entry-header-->
                                 <div class="entry-meta entry-header">
                                     <span class="published"><?php the_time( get_option('date_format') ); ?></span>
                                     <span class="meta-sep">&middot;</span>
-                                    <span class="comment-count"><?php comments_popup_link(__('No Comments', 'framework'), __('1 Comment', 'framework'), __('% Comments', 'framework')); ?></span>
-                                    <?php edit_post_link( __('edit', 'framework'), '<span class="edit-post">[', ']</span>' ); ?>
+                                    <span class="comment-count"><?php comments_popup_link(__('No Comments', 'tophica'), __('1 Comment', 'tophica'), __('% Comments', 'tophica')); ?></span>
+                                    <?php edit_post_link( __('edit', 'tophica'), '<span class="edit-post">[', ']</span>' ); ?>
                                 <!--END .entry-meta entry-header -->
                                 </div>
                         

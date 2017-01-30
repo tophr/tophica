@@ -6,7 +6,7 @@ header("Status: 404 Not Found");
 <?php get_header(); ?>
 			
 			<h1 class="page-title">
-				<?php _e('Error 404 - Not Found', 'framework') ?>
+				<?php _e('Error 404 - Not Found', 'tophica') ?>
             </h1>
             
 			<!--BEGIN #primary .hfeed-->
@@ -17,7 +17,7 @@ header("Status: 404 Not Found");
 				
 					<!--BEGIN .entry-content-->
 					<div class="entry-content">
-						<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+						<p><?php _e("Sorry, but you are looking for something that isn't here.", "tophica") ?></p>
 					<!--END .entry-content-->
 					</div>
 				

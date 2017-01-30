@@ -1,36 +1,36 @@
 <?php
 
 /*-----------------------------------------------------------------------------------*/
-/* Options Admin Interface - zillaframework_add_admin */
+/* Options Admin Interface - tophica_add_admin */
 /*-----------------------------------------------------------------------------------*/
 
 // Load static framework options pages 
 $functions_path = TZ_FILEPATH . '/admin/';
 
-function zillaframework_add_admin() {
+function tophica_add_admin() {
 
     global $query_string;
     
     $themename =  get_option('tz_themename');      
     $shortname =  get_option('tz_shortname'); 
    
-    if ( isset($_REQUEST['page']) && $_REQUEST['page'] == 'zillaframework' ) {
+    if ( isset($_REQUEST['page']) && $_REQUEST['page'] == 'tophica' ) {
 		if (isset($_REQUEST['tz_save']) && 'reset' == $_REQUEST['tz_save']) {
 			$options =  get_option('tz_template'); 
-			tz_reset_options($options,'zillaframework');
-			header("Location: admin.php?page=zillaframework&reset=true");
+			tz_reset_options($options,'tophica');
+			header("Location: admin.php?page=tophica&reset=true");
 			die;
 		}
     }
 		
-    $tz_page = add_submenu_page('themes.php', $themename, 'Theme Options', 'edit_theme_options', 'zillaframework','zillaframework_options_page'); // Default
+    $tz_page = add_submenu_page('themes.php', $themename, 'Theme Options', 'edit_theme_options', 'tophica','tophica_options_page'); // Default
 	
 	// Add framework functionaily to the head individually
 	add_action("admin_print_scripts-$tz_page", 'tz_load_only');
 	add_action("admin_print_styles-$tz_page",'tz_style_only');
 } 
 
-add_action('admin_menu', 'zillaframework_add_admin');
+add_action('admin_menu', 'tophica_add_admin');
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -82,7 +82,7 @@ function tz_reset_options($options,$page = ''){
 	}
 	
 	//When Theme Options page is reset - Add the tz_options option
-	if($page == 'zillaframework'){
+	if($page == 'tophica'){
 		$query_inner .= " OR option_name = 'tz_options'";
 	}
 	
@@ -95,10 +95,10 @@ function tz_reset_options($options,$page = ''){
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Build the Options Page - zillaframework_options_page */
+/* Build the Options Page - tophica_options_page */
 /*-----------------------------------------------------------------------------------*/
 
-function zillaframework_options_page(){
+function tophica_options_page(){
     $options =  get_option('tz_template');      
     $themename =  get_option('tz_themename');
     
@@ -110,10 +110,7 @@ function zillaframework_options_page(){
             $theme_obj = wp_get_theme();
         }
         $themeversion = $theme_obj->get('Version');
-    } else { 
-        $theme_data = get_theme_data(STYLESHEETPATH . '/style.css');
-    	$themeversion = $theme_data['Version'];
-	}
+    } 
 ?>
 
 	<div class="wrap" id="tz_container">
@@ -134,7 +131,7 @@ function zillaframework_options_page(){
     </div>
 	<?php 
 		// Rev up the Options Machine
-        $return = zillaframework_machine($options);
+        $return = tophica_machine($options);
 	?>
 	<div id="main">
 		<div id="tz-nav">
@@ -458,7 +455,7 @@ function tz_admin_head() {
 				
 					 //var data = {data : serializedReturn};
 					var data = {
-						<?php if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'zillaframework'){ ?>
+						<?php if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'tophica'){ ?>
 						type: 'options',
 						<?php } ?>
 
@@ -524,7 +521,7 @@ function tz_ajax_callback() {
 			$wpdb->query($query);
 	
 	}	
-	elseif ($save_type == 'options' OR $save_type == 'framework') {
+	elseif ($save_type == 'options' OR $save_type == 'tophica') {
 		$data = $_POST['data'];
 		
 		parse_str($data,$output);
@@ -626,10 +623,10 @@ function tz_ajax_callback() {
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Generates The Options Within the Panel - zillaframework_machine */
+/* Generates The Options Within the Panel - tophica_machine */
 /*-----------------------------------------------------------------------------------*/
 
-function zillaframework_machine($options) {
+function tophica_machine($options) {
         
     $counter = 0;
 	$menu = '';
@@ -693,8 +690,8 @@ function zillaframework_machine($options) {
 			if ( $std != "") { $val = $std; }
 			
 			$args = array(
-				'show_option_all'    => __('All Categories', 'framework'),
-				'show_option_none'   => __('No Categories', 'framework'),
+				'show_option_all'    => __('All Categories', 'tophica'),
+				'show_option_none'   => __('No Categories', 'tophica'),
 				'hide_empty'         => 0, 
 				'echo'               => 0,
 				'selected'           => $val,
@@ -740,8 +737,8 @@ function zillaframework_machine($options) {
 			if ( $std != "") { $val = $std; }
 			
 			$args = array(
-				'show_option_all'    => sprintf(__('All %s', 'framework'), $value['taxonomy']),
-				'show_option_none'   => sprintf(__('No %s', 'framwork'), $value['taxonomy']),
+				'show_option_all'    => sprintf(__('All %s', 'tophica'), $value['taxonomy']),
+				'show_option_none'   => sprintf(__('No %s', 'tophica'), $value['taxonomy']),
 				'hide_empty'         => 0, 
 				'echo'               => 0,
 				'selected'           => $val,
@@ -881,12 +878,12 @@ function zillaframework_machine($options) {
 		break;
 		case "upload":
 			
-			$output .= zillaframework_uploader_function($value['id'],$value['std'],null);
+			$output .= tophica_uploader_function($value['id'],$value['std'],null);
 			
 		break;
 		case "upload_min":
 			
-			$output .= zillaframework_uploader_function($value['id'],$value['std'],'min');
+			$output .= tophica_uploader_function($value['id'],$value['std'],'min');
 			
 		break;
 		
@@ -1102,10 +1099,10 @@ function zillaframework_machine($options) {
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Options Uploader - zillaframework_uploader_function */
+/* Options Uploader - tophica_uploader_function */
 /*-----------------------------------------------------------------------------------*/
 
-function zillaframework_uploader_function($id,$std,$mod){
+function tophica_uploader_function($id,$std,$mod){
 
     //$uploader .= '<input type="file" id="attachement_'.$id.'" name="attachement_'.$id.'" class="upload_input"></input>';
     //$uploader .= '<span class="submit"><input name="save" type="submit" value="Upload" class="button upload_save" /></span>';
