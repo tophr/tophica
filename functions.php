@@ -493,6 +493,11 @@ require_once (TZ_FILEPATH . '/functions/theme-options.php');
 require_once (TZ_FILEPATH . '/functions/theme-functions.php');
 require_once (TZ_FILEPATH . '/tinymce/tinymce.loader.php');
 
+/**
+ * Customizer additions.
+ */
+require (TZ_FILEPATH . '/admin/customizer.php');
+
 /*-----------------------------------------------------------------------------------*/
 /*	Custom Function Overrides
 /*-----------------------------------------------------------------------------------*/
