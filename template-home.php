@@ -31,11 +31,10 @@ Template Name: Home
 			</ul>                
 		<!--END #home-slider -->
 		</div>
-	<?php endif; ?>
-            
+	<?php endif; ?>            
 	
 	<!--BEGIN #recent-portfolio  .home-recent -->
-	<div id="recent-portfolio" class="home-recent clearfix <?php if($sliderEnabled == 'false') : ?>no-border<?php endif; ?>">
+	<div id="recent-portfolio" class="home-recent clearfix">
 
 		<!--BEGIN .recent-wrap -->
 		<div class="recent-wrap">
