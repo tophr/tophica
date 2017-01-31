@@ -13,7 +13,7 @@
             
             <!--BEGIN .page-back -->
             <div class="page-back">
-            	<span class="back"><a href="<?php echo get_permalink(get_option('tz_portfolio_page')); ?>"><?php _e('&larr; Back to the Portfolio', 'tophica'); ?></a></span>
+            	<span class="back"><a href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('&larr; Back to the Portfolio', 'tophica'); ?></a></span>
             <!--END .page-back -->
             </div>
             
@@ -34,9 +34,7 @@
                     
                         <!--BEGIN .hentry -->
                         <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-                        
-                        	<!--Added for Version 1.1 Classica Theme by Orman Clark-->
-                            
+                                                    
                             <?php 
 							$add_info = get_post_meta(get_the_ID(), 'tz_additional_info', true); 
 							$video_url = get_post_meta(get_the_ID(), 'tz_video_url', true);
@@ -120,7 +118,7 @@
                                 <!--END .slides_container -->
                                 </div>
                                 
-                                <?php if(get_post_meta(get_the_ID(), 'upload_image2', true) != '' && get_option('tz_portfolio_enable_slider') != 'false') : ?>
+                                <?php if(get_post_meta(get_the_ID(), 'upload_image2', true) != '' ) : ?>
                                 <!--BEGIN .pagination -->
                                 <ul class="pagination">
                                     
@@ -176,9 +174,8 @@
                 <!--BEGIN .sidebar -->
             	<div class="sidebar">
 
-                    <h3><?php echo stripslashes(get_option('tz_related_portfolio_title')); ?></h3>
-                    
-                    <p><?php echo stripslashes(get_option('tz_related_portfolio_description')); ?></p>
+                    <h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3>                    
+                    <p><?php echo get_theme_mod( 'related_portfolio_desc', 'See related projects.' ); ?></p>
 
                 <!--END .sidebar -->
                 </div>

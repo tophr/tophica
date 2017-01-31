@@ -21,8 +21,7 @@
 
 			<h3 id="comments"><?php comments_number(__('No Comments', 'tophica'), __('One Comment', 'tophica'), __('% Comments', 'tophica')); ?></h3>
 
-            <p><?php echo get_option('tz_comment_description'); ?>
-            <a href="#respond"><span class="continue-reading "><?php comment_form_title( __('Leave a Comment', 'tophica'), __('Leave a Reply to %s', 'tophica') ); ?></span></a></p>
+            <p><a href="#respond"><span class="continue-reading "><?php comment_form_title( __('Leave a Comment', 'tophica'), __('Leave a Reply to %s', 'tophica') ); ?></span></a></p>
 
 		</div>
 
@@ -85,8 +84,7 @@
     <div class="comments-sidebar">
     
     	<h3><?php comment_form_title( __('Leave a Comment', 'tophica'), __('Leave a Reply to %s', 'tophica') ); ?></h3>
-    	<p><?php echo stripslashes(get_option('tz_respond_description')); ?></p>
-        
+    	
     </div>
 
 	<div id="respond" class="clearfix">

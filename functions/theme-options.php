@@ -72,51 +72,6 @@ $body_pos = array("top left","top center","top right","center left","center cent
 
 // Set the Options Array
 $options = array();
-			                                              
-
-$options[] = array( "name" => __('Homepage Settings','tophica'),
-                    "type" => "heading");
-                    
-$options[] = array( "name" => "",
-					"message" => __('Setup the display of your homepage. Choose to display a welcome message and enter the text for your blog and portfolio sections.','tophica'),
-					"type" => "intro");			
-	
-$options[] = array( "name" => __('Display Recent Portfolio','tophica'),
-					"desc" => __('Check this to enable the recent portfolio section','tophica'),
-					"id" => $shortname."_recent_portfolio",
-					"std" => "false",
-					"type" => "checkbox");
-					
-$options[] = array( "name" => __('Portfolio Posts','tophica'),
-					"desc" => __('Enter the amount of portfolio posts you would like to show on the homepage.','tophica'),
-					"id" => $shortname."_portfolio_number",
-					"std" => "3",
-					"type" => "text");
-					
-$options[] = array( "name" => __('Portfolio Title','tophica'),
-					"desc" => __('Enter the title of the portfolio area.','tophica'),
-					"id" => $shortname."_portfolio_title",
-					"std" => "Recent Projects",
-					"type" => "text");
-					
-$options[] = array( "name" => __('Portfolio Description','tophica'),
-					"desc" => __('Enter the description of the portfolio area.','tophica'),
-					"id" => $shortname."_portfolio_description",
-					"std" => "Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id...",
-					"type" => "textarea");
-					
-					
-$options[] = array( "name" => __('Portfolio Page','tophica'),
-					"desc" => __('Select the page used as a portfolio, this will be used for the portfolio link.','tophica'),
-					"id" => $shortname."_portfolio_page",
-					"std" => "Select a page:",
-					"type" => "select-page");
-										
-$options[] = array( "name" => __('Blog Page','tophica'),
-					"desc" => __('Select the page used as a blog, this will be used for the blog link.','tophica'),
-					"id" => $shortname."_blog_page",
-					"std" => "Select a page:",
-					"type" => "select-page");
 					
 $options[] = array( "name" => __('Posts &amp; Portfolio','tophica'),
 					"type" => "heading");

@@ -365,17 +365,6 @@ class Portfolio_Walker extends Walker_Category {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	Added v1.1 Set the new options to true
-/*-----------------------------------------------------------------------------------*/
-
-if(!get_option('tz_lightbox'))
-	update_option('tz_lightbox', 'true');
-	
-if(!get_option('tz_enable_welcome_message'))
-	update_option('tz_enable_welcome_message', 'true');
-
-
-/*-----------------------------------------------------------------------------------*/
 /*	Load Widgets & Shortcodes
 /*-----------------------------------------------------------------------------------*/
 
@@ -419,7 +408,7 @@ define('TZ_FILEPATH', get_template_directory());
 define('TZ_DIRECTORY', get_template_directory_uri());
 
 require_once (TZ_FILEPATH . '/admin/admin-functions.php');
-require_once (TZ_FILEPATH . '/admin/admin-interface.php');
+//require_once (TZ_FILEPATH . '/admin/admin-interface.php');
 require_once (TZ_FILEPATH . '/functions/theme-options.php');
 require_once (TZ_FILEPATH . '/functions/theme-functions.php');
 require_once (TZ_FILEPATH . '/tinymce/tinymce.loader.php');

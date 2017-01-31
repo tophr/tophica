@@ -33,8 +33,7 @@ Template Name: Home
 		</div>
 	<?php endif; ?>
             
-	<?php $portfolioEnable = get_option('tz_recent_portfolio'); ?>
-	<?php if($portfolioEnable == 'true') : ?>
+	
 	<!--BEGIN #recent-portfolio  .home-recent -->
 	<div id="recent-portfolio" class="home-recent clearfix <?php if($sliderEnabled == 'false') : ?>no-border<?php endif; ?>">
 
@@ -42,11 +41,9 @@ Template Name: Home
 		<div class="recent-wrap">
 
 		<!-- BEGIN PORTFOLIO TITLE & LINK -->
+		 <h3><?php echo get_theme_mod( 'portfolio_title', 'Featured Projects' ); ?></h3>
 
-		 <h3><?php echo stripslashes(get_option('tz_portfolio_title')); ?></h3>
-
-		 <p class="portfolio-link"><a class="droid-italic" href="<?php echo get_permalink( get_option('tz_portfolio_page') ); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
-
+		 <p class="portfolio-link"><a class="droid-italic" href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
 
 				<?php 
 
@@ -56,7 +53,7 @@ Template Name: Home
 				$finish = 1;
 
 				$query = new WP_Query();
-				$query->query('post_type=portfolio&posts_per_page=' . get_option('tz_portfolio_number'));
+				$query->query('post_type=portfolio&posts_per_page=' . get_theme_mod( 'portfolio_posts', '9' ));
 
 				//Get the total amount of posts
 				$post_count = $query->post_count;
@@ -118,8 +115,6 @@ Template Name: Home
 		</div>
 
 	<!--END #recent-portfolio .home-recent -->
-	</div>
-	<?php endif; ?>
-            
+	</div>            
             
 <?php get_footer(); ?>

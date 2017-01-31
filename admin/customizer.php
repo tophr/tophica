@@ -39,7 +39,6 @@ function tophica_customize_register( $wp_customize ) {
 	) ) 
 	);
 	
-	
 /**
  * Theme options.
  */
@@ -66,9 +65,44 @@ function tophica_customize_register( $wp_customize ) {
 		//'active_callback' => 'tophica_is_view_with_layout_option',
 	) );
 	
+	$wp_customize->add_setting( 'portfolio_posts', array(
+		'default'           => '9',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'portfolio_posts', array(
+		'label'       => __( 'Portfolio Posts', 'tophica' ),
+		'section'     => 'theme_options',
+		'type'        => 'text',
+		'description' => __( 'Enter the amount of portfolio posts you would like to show on the homepage.','tophica' ),
+	) );
+	
+	$wp_customize->add_setting( 'portfolio_title', array(
+		'default'           => 'Featured Projects',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'portfolio_title', array(
+		'label'       => __( 'Portfolio Title', 'tophica' ),
+		'section'     => 'theme_options',
+		'type'        => 'text',
+		'description' => __( 'Enter the title of the portfolio area.','tophica' ),
+	) );
+	
+	$wp_customize->add_setting( 'portfolio_page', array(
+		'default'           => '',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'portfolio_page', array(
+		'label'       => __( 'Portfolio Page', 'tophica' ),
+		'section'     => 'theme_options',
+		'type'        => 'dropdown-pages',
+		'description' => __( 'Select the page used for the portfolio.','tophica' ),
+	) );
+	
 	$wp_customize->add_setting( 'footer_text', array(
 		'default'           => 'I am a pretty lady.',
-		//'sanitize_callback' => 'tophica_sanitize_page_layout',
 		'transport'         => 'postMessage',
 	) );
 
@@ -87,6 +121,45 @@ function tophica_customize_register( $wp_customize ) {
 		'type'        => 'textarea',
 		'description' => __( 'Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme.','tophica' ),
 	) );
+
+/**
+ * Portfolio Options
+ */
+	$wp_customize->add_section( 'portfolio_options', array(
+		'title'    => __( 'Portfolio Options', 'tophica' ),
+		'priority' => 135, // Before Additional CSS.
+	) );
+	
+	$wp_customize->add_setting( 'related_portfolio_title', array(
+		'default'           => 'Similar Projects',
+	) );
+
+	$wp_customize->add_control( 'related_portfolio_title', array(
+		'label'       => __( 'Related Portfolio Title', 'tophica' ),
+		'section'     => 'portfolio_options',
+		'type'        => 'text',
+	) );
+	
+	$wp_customize->add_setting( 'related_portfolio_desc', array(
+		'default'           => 'See related projects.',
+	) );
+
+	$wp_customize->add_control( 'related_portfolio_desc', array(
+		'label'       => __( 'Related Portfolio Description', 'tophica' ),
+		'section'     => 'portfolio_options',
+		'type'        => 'textarea',
+	) );
+	
+	$wp_customize->add_setting( 'related_portfolio_number', array(
+		'default'           => '3',
+	) );
+
+	$wp_customize->add_control( 'related_portfolio_number', array(
+		'label'       => __( 'Related Portfolio Number', 'tophica' ),
+		'section'     => 'portfolio_options',
+		'type'        => 'number',
+	) );
+	
 	
 	}
 add_action( 'customize_register', 'tophica_customize_register' );
