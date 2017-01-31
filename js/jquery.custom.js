@@ -8,54 +8,11 @@
 jQuery(document).ready(function() {
 	
 
-/*-----------------------------------------------------------------------------------*/
-/*	Superfish Settings - http://users.tpg.com.au/j_birch/plugins/superfish/
-/*-----------------------------------------------------------------------------------*/
-	
-	if (jQuery().superfish) {
-		
-		jQuery('#primary-menu')
-			.superfish({
-				delay: 200,
-				animation: {opacity:'show', height:'show'},
-				speed: 'fast',
-				cssArrows: false,
-				disableHI: true
-			}); 
-	
-	}
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	Slides Navigation Effect
-/*-----------------------------------------------------------------------------------*/
-	
-	if (jQuery().slides) {
-		
-		jQuery("#slider").hover( function() {
-			jQuery('.slides-nav').fadeIn(200);
-		}, function () {
-			jQuery('.slides-nav').fadeOut(200);
-		});
-		
-	}
-	
-	
-/*-----------------------------------------------------------------------------------*/
-/*	Contact From Validation
-/*-----------------------------------------------------------------------------------*/
-	
-	if (jQuery().validate) {
-		
-		jQuery("#contactForm").validate();
-		
-	}
-
 
 /*-----------------------------------------------------------------------------------*/
 /*	Portfolio Overlay Effect
 /*-----------------------------------------------------------------------------------*/
-	
+/*	
 	function tz_overlay() {
 			
 		jQuery('.post-thumb a').hover( function () {
@@ -70,12 +27,12 @@ jQuery(document).ready(function() {
 	}
 	
 	tz_overlay();
-
+*/
 
 /*-----------------------------------------------------------------------------------*/
 /*	PrettyPhoto - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 /*-----------------------------------------------------------------------------------*/
-	
+	/*
 	function tz_lightbox() {
 		
 		jQuery("a[rel^='prettyPhoto']").prettyPhoto({
@@ -93,7 +50,7 @@ jQuery(document).ready(function() {
 		tz_lightbox(); 
 			
 	}
-
+*/
 
 /*-----------------------------------------------------------------------------------*/
 /*	Opacity changes
@@ -232,8 +189,8 @@ jQuery(document).ready(function() {
 						});
 		
 						$list.quicksand($sorted_data, $preferences, function () {
-								tz_overlay();
-								tz_lightbox();
+								//tz_overlay();
+								//tz_lightbox();
 						});
 			
 					}
