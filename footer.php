@@ -54,9 +54,8 @@
         <!-- BEGIN #footer -->
         <div id="footer" class="clearfix">
         
-            <p class="copyright">&copy; Copyright <?php echo date( 'Y' ); ?> <a href="http://tophermcculloch.com/contact">Topher McCulloch.</a></p>
-            
-            <p class="credit"><?php if (get_option('tz_footer_text')) echo stripslashes(get_option('tz_footer_text')); ?></p>
+            <p class="copyright">&copy; Copyright <?php echo date( 'Y' ); ?> <a href="http://tophermcculloch.com/contact">Topher McCulloch</a></p>            
+            <p class="credit"><?php echo get_theme_mod( 'footer_text' ); ?></p>
         
         <!-- END #footer -->
         </div>

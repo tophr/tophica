@@ -4,47 +4,61 @@
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Output Custom CSS from theme options
-/*-----------------------------------------------------------------------------------*/
-
-function zilla_custom_css($content) {
-		
-	$custom_css = get_option('tz_custom_css');
-	
-	if ($custom_css <> '') {
-		$content .= "\n/* Custom CSS by User */\n";
-		$content .= stripslashes($custom_css) . "\n";
-	}
-	
-	return $content;
-	
-}
-
-add_filter('zilla_custom_styles', 'zilla_custom_css');
-
-
-/*-----------------------------------------------------------------------------------*/
 /* Add Body Classes for Layout
 /*-----------------------------------------------------------------------------------*/
 
-add_filter('body_class','tz_body_class');
- 
-function tz_body_class($classes) {
-	$shortname = get_option('tz_shortname');
-	$layout = get_option($shortname .'_layout');
-	if ($layout == '') {
-		$layout = 'layout-2cr';
+function tophica_body_classes( $classes ) {
+	
+	// Add class if we're viewing the Customizer for easier styling of theme options.
+	if ( is_customize_preview() ) {
+		$classes[] = 'twentyseventeen-customizer';
 	}
-	$classes[] = $layout;
+
+	// Add class for page layouts.
+	if ( is_page() || is_archive() ) {
+		if ( 'layout-2cr' === get_theme_mod( 'page_layout' ) ) {
+			$classes[] = 'layout-2cr';
+		} else {
+			$classes[] = 'layout-2cl';
+		}
+	}
+
+	// Add class if the site title and tagline is hidden.
+	if ( 'blank' === get_header_textcolor() ) {
+		$classes[] = 'title-tagline-hidden';
+	}
+
 	return $classes;
 }
+add_filter( 'body_class', 'tophica_body_classes' );
+
+function tophica_custom_css_output() {
+	$link_color = get_theme_mod( 'link_color', '#006699' );
+	$link_hover_color = get_theme_mod( 'link_hover_color', '#cd2931' );
+  echo '<style type="text/css" id="custom-theme-css">
+  	a, .tz_tweet_widget ul li span a { color: ' .  $link_color . '}
+  	a:hover,
+	#commentform small span,
+	.tz_blog .entry-title a:hover,
+	.tz_tweet_widget ul li span a:hover,
+	#primary .entry-meta a:hover,
+	.recent-wrap .entry-title a:hover,
+	.tab-comments h3 a:hover,
+	.author-tag { color: ' .  $link_hover_color . '; }
+
+	::selection { background: ' .  $link_hover_color . '; color: #fff; }
+	::-moz-selection { background: ' .  $link_hover_color . '; color: #fff; }  
+  </style>';
+  
+}
+add_action( 'wp_head', 'tophica_custom_css_output');
 
 
 /*-----------------------------------------------------------------------------------*/
 /* Add Favicon
 /*-----------------------------------------------------------------------------------*/
 
-function tz_favicon() {
+/*function tz_favicon() {
 	$shortname = get_option('tz_shortname');
 	if (get_option($shortname . '_custom_favicon') != '') {
 	echo '<link rel="shortcut icon" href="'. get_option('tz_custom_favicon') .'"/>'."\n";
@@ -54,7 +68,7 @@ function tz_favicon() {
 	<?php }
 }
 
-add_action('wp_head', 'tz_favicon');
+add_action('wp_head', 'tz_favicon');*/
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -62,12 +76,17 @@ add_action('wp_head', 'tz_favicon');
 /*-----------------------------------------------------------------------------------*/
 
 function tz_analytics(){
-	$shortname =  get_option('tz_shortname');
+	/*$shortname =  get_option('tz_shortname');
 	$output = get_option($shortname . '_google_analytics');
+	if ( $output <> "" ) 
+		echo stripslashes($output) . "\n";*/
+	$output = get_theme_mod('tracking_code', '');
 	if ( $output <> "" ) 
 		echo stripslashes($output) . "\n";
 }
 add_action('wp_footer','tz_analytics');
+
+
 
 
 /*-----------------------------------------------------------------------------------*/

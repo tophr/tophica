@@ -376,76 +376,6 @@ if(!get_option('tz_enable_welcome_message'))
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  Custom CSS
-/*-----------------------------------------------------------------------------------*/
-
-/**
- * Output custom styles CSS file
- */
-function zilla_link_custom_styles() {
-    $output = '';
-    if( apply_filters('zilla_custom_styles', $output) ) {
-      $permalink_structure = get_option('permalink_structure');
-      $url = site_url() .'/zilla-custom-styles.css?'. time();
-      if(!$permalink_structure) $url = site_url() .'/?page_id=zilla-custom-styles.css';
-        echo '<link rel="stylesheet" href="'. $url .'" type="text/css" media="screen" />' . "\n";
-    }
-}
-add_action( 'wp_head', 'zilla_link_custom_styles', 12 );
-
-/**
- * Create custom styles CSS file
- */
-function zilla_create_custom_styles() {
-      $permalink_structure = get_option('permalink_structure');
-      $show_css = false;
-
-      if($permalink_structure){
-        if( !isset($_SERVER['REQUEST_URI']) ){
-            $_SERVER['REQUEST_URI'] = substr($_SERVER['PHP_SELF'], 1);
-            if(isset($_SERVER['QUERY_STRING'])){ $_SERVER['REQUEST_URI'].='?'.$_SERVER['QUERY_STRING']; }
-        }
-        $url = (isset($GLOBALS['HTTP_SERVER_VARS']['REQUEST_URI'])) ? $GLOBALS['HTTP_SERVER_VARS']['REQUEST_URI'] : $_SERVER["REQUEST_URI"];
-        if(preg_replace('/\\?.*/', '', basename($url)) == 'zilla-custom-styles.css') $show_css = true;
-      } else {
-        if(isset($_GET['page_id']) && $_GET['page_id'] == 'zilla-custom-styles.css') $show_css = true;
-      }
-
-      if($show_css){
-          $output = '';
-        header('Content-Type: text/css');
-        echo apply_filters('zilla_custom_styles', $output);
-        exit;
-      }
-}
-add_action( 'init', 'zilla_create_custom_styles' );
-
-/**
- * Output the custom CSS
- */
-function zilla_custom_color_css($content) {
-    
-    $primary = get_option('tz_primary_colour');
-    $hover = get_option('tz_primary_hover_colour');
-
-    if( $primary || $hover ) {
-        $content .= "\n/* Custom CSS */\n";
-        if( $primary ) {
-            $content .= "a,\n.tz_tweet_widget ul li span a { color: $primary; }\n\n";
-        }
-        if( $hover ) {
-            $content .= "a:hover,\n#commentform small span,\n.tz_blog .entry-title a:hover,\n.tz_tweet_widget ul li span a:hover,\n#primary .entry-meta a:hover,\n.recent-wrap .entry-title a:hover,\n.tab-comments h3 a:hover,\n.author-tag { color: $hover; }\n\n";
-            $content .= "::selection { background: $hover; color: #fff; }\n\n";
-            $content .= "::-moz-selection { background: $hover; color: #fff; }\n\n";
-        }
-    }
-
-    return $content;
-    
-}
-add_filter( 'zilla_custom_styles', 'zilla_custom_color_css' );
-
-/*-----------------------------------------------------------------------------------*/
 /*	Load Widgets & Shortcodes
 /*-----------------------------------------------------------------------------------*/
 
@@ -497,7 +427,8 @@ require_once (TZ_FILEPATH . '/tinymce/tinymce.loader.php');
 /**
  * Customizer additions.
  */
-require (TZ_FILEPATH . '/admin/customizer.php');
+require_once (TZ_FILEPATH . '/admin/customizer.php');
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Custom Function Overrides

@@ -5,7 +5,6 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS Feed" href="<?php if (get_option('tz_feedburner')) { echo get_option('tz_feedburner'); } else { bloginfo( 'rss2_url' ); } ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     
     <?php wp_head(); ?>
@@ -35,11 +34,8 @@
                 <!-- BEGIN #logo -->
                 <div id="logo">
                     <?php 
-                    if (get_option('tz_plain_logo') == 'true') { ?>
-                    <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
-                    <p id="tagline"><?php bloginfo( 'description' ); ?></p>
-                    <?php } elseif (get_option('tz_logo')) { ?>
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_option('tz_logo'); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+                    if (get_header_image()) { ?>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo( get_header_image() ); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
                     <?php } else { ?>
                     <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" width="350" height="35" /></a>
                     <?php } ?>
