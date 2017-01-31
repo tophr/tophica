@@ -410,12 +410,10 @@ add_filter('widget_text', 'do_shortcode');
 define('TZ_FILEPATH', get_template_directory());
 define('TZ_DIRECTORY', get_template_directory_uri());
 
-require_once (TZ_FILEPATH . '/admin/admin-functions.php');
-require_once (TZ_FILEPATH . '/functions/theme-options.php');
+//require_once (TZ_FILEPATH . '/admin/admin-functions.php');
+//require_once (TZ_FILEPATH . '/functions/theme-options.php');
 require_once (TZ_FILEPATH . '/functions/theme-functions.php');
-//require_once (TZ_FILEPATH . '/tinymce/tinymce.loader.php');
-
-require_once (TZ_FILEPATH . '/admin/customizer.php');
+require_once (TZ_FILEPATH . '/functions/customizer.php');
 
 
 ?>
