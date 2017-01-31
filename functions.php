@@ -154,6 +154,7 @@ function tz_enqueue_scripts() {
 	
 	wp_register_script('validation', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js', 'jquery');
 	wp_register_script('superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '1.7.4', true);
+	wp_register_script('slides', get_template_directory_uri() . '/js/slides.min.jquery.js', 'jquery'); //this runs the client filter on the portfolio page
 	wp_register_script('quicksand', get_template_directory_uri() . '/js/jquery.quicksand.js', 'jquery');
 	wp_register_script('selectivizr', get_template_directory_uri() . '/js/selectivizr.js', 'jquery');
 	wp_register_script('prettyPhoto', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', 'jquery');
@@ -180,6 +181,7 @@ function tz_enqueue_scripts() {
 	    wp_enqueue_script('prettyPhoto');
 	    wp_enqueue_style('prettyPhotoCSS');
     }
+	if ( get_post_type() == 'portfolio' ) { wp_enqueue_script('slides'); }
 	if ( get_post_type() == 'portfolio' || is_page_template( 'template-home.php' ) ) { wp_enqueue_script('tm_bxslider'); }
 	global $is_IE;
 	if ( $is_IE ) { wp_enqueue_script('selectivizr'); }
