@@ -79,20 +79,7 @@ $options[] = array( "name" => __('Homepage Settings','tophica'),
                     
 $options[] = array( "name" => "",
 					"message" => __('Setup the display of your homepage. Choose to display a welcome message and enter the text for your blog and portfolio sections.','tophica'),
-					"type" => "intro");
-					
-$options[] = array( "name" => __('Display Welcome Message','tophica'),
-					"desc" => __('Check this to enable the welcome message','tophica'),
-					"id" => $shortname."_enable_welcome_message",
-					"std" => "false",
-					"type" => "checkbox");
-					
-					
-$options[] = array( "name" => __('Home Welcome Message','tophica'),
-					"desc" => __('The large welcome message that appears above the slider.','tophica'),
-					"id" => $shortname."_home_message",
-					"std" => "Hey there! I'm John Doe and I make awesome WordPress themes. This can be used to describe what you do, how you do it, and who you do it for.",
-					"type" => "textarea");					
+					"type" => "intro");			
 	
 $options[] = array( "name" => __('Display Recent Portfolio','tophica'),
 					"desc" => __('Check this to enable the recent portfolio section','tophica'),
@@ -124,155 +111,12 @@ $options[] = array( "name" => __('Portfolio Page','tophica'),
 					"id" => $shortname."_portfolio_page",
 					"std" => "Select a page:",
 					"type" => "select-page");
-					
-$options[] = array( "name" => __('Display Recent Posts','tophica'),
-					"desc" => __('Check this to enable the recent post section','tophica'),
-					"id" => $shortname."_recent_posts",
-					"std" => "false",
-					"type" => "checkbox");
-					
-$options[] = array( "name" => __('Recent Posts','tophica'),
-					"desc" => __('Enter the amount of recent posts you would like to show on the homepage.','tophica'),
-					"id" => $shortname."_recent_number",
-					"std" => "3",
-					"type" => "text");
-					
-$options[] = array( "name" => __('Recent Title','tophica'),
-					"desc" => __('Enter the title of the portfolio area.','tophica'),
-					"id" => $shortname."_recent_title",
-					"std" => "Recently Published",
-					"type" => "text");
-					
-$options[] = array( "name" => __('Recent Description','tophica'),
-					"desc" => __('Enter the description of the recent posts area.','tophica'),
-					"id" => $shortname."_recent_description",
-					"std" => "Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id...",
-					"type" => "textarea");
-					
+										
 $options[] = array( "name" => __('Blog Page','tophica'),
 					"desc" => __('Select the page used as a blog, this will be used for the blog link.','tophica'),
 					"id" => $shortname."_blog_page",
 					"std" => "Select a page:",
 					"type" => "select-page");
-					
-					
-
-
-$options[] = array( "name" => __('Slider Options','tophica'),
-					"type" => "heading");
-					
-$options[] = array( "name" => "",
-					"message" => __('Setup and configure your homepage slider. Upload your slider images and link them to URLs of your choice.','tophica'),
-					"type" => "intro");
-
-$options[] = array( "name" => __('Enable Slider','tophica'),
-					"desc" => __('Check this to enable the slider on the homepage.','tophica'),
-					"id" => $shortname."_enable_slider",
-					"std" => "false",
-					"type" => "checkbox");
-					
-$options[] = array( "name" => __('Slider Autoplay','tophica'),
-					"desc" => __('Choose the time in milliseconds between slider transitions where 1000 = 1second. Leave blank to disable.','tophica'),
-					"id" => $shortname."_slider_autoplay",
-					"std" => "5000",
-					"type" => "text");	
-					
-$options[] = array( "name" => __('Slider Image 1','tophica'),
-					"desc" => __('Image must be 940px x 350px','tophica'),
-					"id" => $shortname."_slider_1",
-					"std" => "",
-					"type" => "upload_min");
-					
-$options[] = array( "name" => __('Slider Image 1 URL','tophica'),
-					"desc" => __('Choose a link URL for this image.','tophica'),
-					"id" => $shortname."_slider_url_1",
-					"std" => "",
-					"type" => "text");
-
-// CUSTOM ALT TAGS
-$options[] = array( "name" => __('Slider Image 1 Alt Tag','tophica'),
-					"desc" => __('Enter an alt description for this image.','tophica'),
-					"id" => $shortname."_slider_alt_1",
-					"std" => "",
-					"type" => "text");								
-					
-$options[] = array( "name" => __('Slider Image 2','tophica'),
-					"desc" => __('Image must be 940px x 350px','tophica'),
-					"id" => $shortname."_slider_2",
-					"std" => "",
-					"type" => "upload_min");
-					
-$options[] = array( "name" => __('Slider Image 2 URL','tophica'),
-					"desc" => __('Choose a link URL for this image.','tophica'),
-					"id" => $shortname."_slider_url_2",
-					"std" => "",
-					"type" => "text");
-
-// CUSTOM ALT TAGS
-$options[] = array( "name" => __('Slider Image 2 Alt Tag','tophica'),
-					"desc" => __('Enter an alt description for this image.','tophica'),
-					"id" => $shortname."_slider_alt_2",
-					"std" => "",
-					"type" => "text");								
-					
-					
-$options[] = array( "name" => __('Slider Image 3','tophica'),
-					"desc" => __('Image must be 940px x 350px','tophica'),
-					"id" => $shortname."_slider_3",
-					"std" => "",
-					"type" => "upload_min");
-					
-$options[] = array( "name" => __('Slider Image 3 URL','tophica'),
-					"desc" => __('Choose a link URL for this image.','tophica'),
-					"id" => $shortname."_slider_url_3",
-					"std" => "",
-					"type" => "text");
-
-// CUSTOM ALT TAGS
-$options[] = array( "name" => __('Slider Image 3 Alt Tag','tophica'),
-					"desc" => __('Enter an alt description for this image.','tophica'),
-					"id" => $shortname."_slider_alt_3",
-					"std" => "",
-					"type" => "text");			
-					
-$options[] = array( "name" => __('Slider Image 4','tophica'),
-					"desc" => __('Image must be 940px x 350px','tophica'),
-					"id" => $shortname."_slider_4",
-					"std" => "",
-					"type" => "upload_min");
-					
-$options[] = array( "name" => __('Slider Image 4 URL','tophica'),
-					"desc" => __('Choose a link URL for this image.','tophica'),
-					"id" => $shortname."_slider_url_4",
-					"std" => "",
-					"type" => "text");
-	
-// CUSTOM ALT TAGS
-$options[] = array( "name" => __('Slider Image 4 Alt Tag','tophica'),
-					"desc" => __('Enter an alt description for this image.','tophica'),
-					"id" => $shortname."_slider_alt_4",
-					"std" => "",
-					"type" => "text");						
-					
-$options[] = array( "name" => __('Slider Image 5','tophica'),
-					"desc" => __('Image must be 940px x 350px','tophica'),
-					"id" => $shortname."_slider_5",
-					"std" => "",
-					"type" => "upload_min");
-					
-$options[] = array( "name" => __('Slider Image 5 URL','tophica'),
-					"desc" => __('Choose a link URL for this image.','tophica'),
-					"id" => $shortname."_slider_url_5",
-					"std" => "",
-					"type" => "text");
-
-// CUSTOM ALT TAGS
-$options[] = array( "name" => __('Slider Image 5 Alt Tag','tophica'),
-					"desc" => __('Enter an alt description for this image.','tophica'),
-					"id" => $shortname."_slider_alt_5",
-					"std" => "",
-					"type" => "text");			
-					
 					
 $options[] = array( "name" => __('Posts &amp; Portfolio','tophica'),
 					"type" => "heading");
