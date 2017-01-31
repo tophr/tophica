@@ -30,22 +30,6 @@ if ( ! isset( $content_width ) ) $content_width = 680;
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-		'name' => 'Main Sidebar',
-		'id' => 'sidebar-1',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
-		'name' => 'Page Sidebar',
-		'id' => 'sidebar-2',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
 		'name' => 'Footer One',
 		'id' => 'sidebar-3',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -170,17 +154,16 @@ function tz_enqueue_scripts() {
 	
 	wp_register_script('validation', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js', 'jquery');
 	wp_register_script('superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '1.7.4', true);
-	wp_register_script('slides', get_template_directory_uri() . '/js/slides.min.jquery.js', 'jquery');
 	wp_register_script('quicksand', get_template_directory_uri() . '/js/jquery.quicksand.js', 'jquery');
 	wp_register_script('selectivizr', get_template_directory_uri() . '/js/selectivizr.js', 'jquery');
 	wp_register_script('prettyPhoto', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', 'jquery');
 	wp_register_script('tz_custom', get_template_directory_uri() . '/js/jquery.custom.js', array('jquery', 'superfish', 'prettyPhoto', 'quicksand', 'slides', 'selectivizr'), '1.0', TRUE);	
+	wp_register_script('tm_bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '4.1');	
 	
 	wp_enqueue_style('tz_stylesheet', get_stylesheet_uri(), '1.2.7' );
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i');
 	wp_register_style('tz_shortcodes', get_template_directory_uri() . '/css/shortcodes.css' );
 	wp_register_style('prettyPhotoCSS', get_template_directory_uri() . '/css/prettyPhoto.css');
-	wp_register_style('bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css');
 		
 	// Enqueue our scripts
 	wp_enqueue_script('jquery');
@@ -192,19 +175,47 @@ function tz_enqueue_scripts() {
 	wp_enqueue_script('tz_custom');
 	wp_enqueue_script('tz_shortcodes'); 
 	wp_enqueue_style( 'tz_shortcodes' );
-	wp_enqueue_style( 'bxslider' );
 	if ( is_page_template('template-portfolio.php') ) {
 	    wp_enqueue_script('quicksand'); 
 	    wp_enqueue_script('prettyPhoto');
 	    wp_enqueue_style('prettyPhotoCSS');
     }
-	if ( get_post_type() == 'portfolio' || is_page_template( 'template-home.php' ) ) { wp_enqueue_script('slides'); }
+	if ( get_post_type() == 'portfolio' || is_page_template( 'template-home.php' ) ) { wp_enqueue_script('tm_bxslider'); }
 	global $is_IE;
 	if ( $is_IE ) { wp_enqueue_script('selectivizr'); }
 	if ( is_singular() ) { wp_enqueue_script( 'comment-reply' ); } // loads the javascript required for threaded comments 
     if ( is_page_template( 'template-contact.php' ) ) { wp_enqueue_script('validation'); }
 }
 add_action('wp_enqueue_scripts', 'tz_enqueue_scripts');
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	Add bxslider
+/*-----------------------------------------------------------------------------------*/
+
+function tm_home_slider() {
+	
+	if (is_page_template('template-home.php') ) {
+		
+		?>
+    	
+        <script type="text/javascript">
+			
+		jQuery(document).ready(function() {
+			
+			jQuery('.bxslider').bxSlider({
+				mode: 'fade',
+				auto: true,
+			});						
+			
+		});
+    
+    </script>
+    <?php
+	}
+}
+
+add_action('wp_head', 'tm_home_slider');
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -269,7 +280,7 @@ function tz_comment($comment, $args, $depth) {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	Seperated Pings Styling
+/*	Separated Pings Styling
 /*-----------------------------------------------------------------------------------*/
 
 function tz_list_pings($comment, $args, $depth) {
@@ -368,17 +379,11 @@ class Portfolio_Walker extends Walker_Category {
 /*	Load Widgets & Shortcodes
 /*-----------------------------------------------------------------------------------*/
 
-// Add the Latest Tweets Custom Widget
-include("functions/widget-tweets.php");
-
 // Add the Latest Blog Posts Custom Widget
 include("functions/widget-blog.php");
 
 // Add the Flickr Photos Custom Widget
 include("functions/widget-flickr.php");
-
-// Add the Custom Video Widget
-include("functions/widget-video.php");
 
 // Add the Theme Post types
 include("functions/theme-posttypes.php");
@@ -418,51 +423,5 @@ require_once (TZ_FILEPATH . '/tinymce/tinymce.loader.php');
  */
 require_once (TZ_FILEPATH . '/admin/customizer.php');
 
-
-/*-----------------------------------------------------------------------------------*/
-/*	Custom Function Overrides
-/*-----------------------------------------------------------------------------------*/
-
-function tm_enqueue_scripts() {
-    // Register bxslider
-	wp_register_script('tm_bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '4.1');	
-	
-	// Un-enqueue theme slider and enqueue bxslider
-	if ( get_post_type() == 'portfolio' || is_page_template( 'template-home.php' ) ) { wp_dequeue_script('slides'); wp_enqueue_script('tm_bxslider'); }
-	}
-add_action('wp_enqueue_scripts', 'tm_enqueue_scripts');
-
-// Unhook Slider JS from Classica
-function unhook_classica_slider() {
-    remove_action('wp_head', 'tz_home_js');
-}
-add_action('init','unhook_classica_slider');
-
-
-// Add bxslider
-
-function tm_home_slider() {
-	
-	if (is_page_template('template-home.php') ) {
-		
-		?>
-    	
-        <script type="text/javascript">
-			
-		jQuery(document).ready(function() {
-			
-			jQuery('.bxslider').bxSlider({
-				mode: 'fade',
-				auto: true,
-			});						
-			
-		});
-    
-    </script>
-    <?php
-	}
-}
-
-add_action('wp_head', 'tm_home_slider');
 
 ?>

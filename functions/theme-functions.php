@@ -53,125 +53,17 @@ function tophica_custom_css_output() {
 }
 add_action( 'wp_head', 'tophica_custom_css_output');
 
-
-/*-----------------------------------------------------------------------------------*/
-/* Add Favicon
-/*-----------------------------------------------------------------------------------*/
-
-/*function tz_favicon() {
-	$shortname = get_option('tz_shortname');
-	if (get_option($shortname . '_custom_favicon') != '') {
-	echo '<link rel="shortcut icon" href="'. get_option('tz_custom_favicon') .'"/>'."\n";
-	}
-	else { ?>
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/admin/images/favicon.ico" />
-	<?php }
-}
-
-add_action('wp_head', 'tz_favicon');*/
-
-
 /*-----------------------------------------------------------------------------------*/
 /* Show analytics code in footer */
 /*-----------------------------------------------------------------------------------*/
 
-function tz_analytics(){
-	/*$shortname =  get_option('tz_shortname');
-	$output = get_option($shortname . '_google_analytics');
-	if ( $output <> "" ) 
-		echo stripslashes($output) . "\n";*/
+function tz_analytics(){	
 	$output = get_theme_mod('tracking_code', '');
 	if ( $output <> "" ) 
 		echo stripslashes($output) . "\n";
 }
 add_action('wp_footer','tz_analytics');
 
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/* Show Slider JS if enabled from options
-/*-----------------------------------------------------------------------------------*/
-
-function tz_home_js() {
-	
-	if (is_page_template('template-home.php') ) {
-		
-		$autoplay = get_option('tz_slider_autoplay');
-		
-		?>
-    	
-        <script type="text/javascript">
-
-		jQuery(document).ready(function() {
-			
-			if (jQuery().slides) {
-				
-				jQuery("#slider").slides({
-					preload: true,
-					effect: 'fade',
-					fadeSpeed: 250,
-					<?php if($autoplay != '') : ?>
-					play: <?php echo $autoplay; ?>,
-					<?php endif; ?>
-					crossfade: true,
-					generatePagination: false,
-					autoHeight: true
-				});
-			}
-			
-		});
-    
-    </script>
-    <?php
-	}
-}
-
-add_action('wp_head', 'tz_home_js');
-
-
-/*-----------------------------------------------------------------------------------*/
-/* Show Slider JS on Portfolio pages if enabled
-/*-----------------------------------------------------------------------------------*/
-
-function tz_portfolio_js() {
-	
-	if (get_post_type() == 'portfolio' ) { 
-	
-	$autoplay = get_option('tz_portfolio_slider_autoplay');
-	
-	?>
-    	
-        <script type="text/javascript">
-
-		jQuery(document).ready(function() {
-			
-			if (jQuery().slides) {
-				
-				jQuery("#slider").slides({
-					preload: true,
-					effect: 'fade',
-					<?php if($autoplay != '') : ?>
-					play: <?php echo $autoplay; ?>,
-					<?php endif; ?>
-					fadeSpeed: 250,
-					// v 1.1 update, disable crossfade. Doesn't look too god with differnet sized images.
-					//crossfade: true,
-					generatePagination: false,
-					autoHeight: true
-				});
-			}
-			
-		});
-    
-    </script>
-    <?php
-	}
-}
-
-if(get_option('tz_portfolio_enable_slider') == 'true') {
-	add_action('wp_head', 'tz_portfolio_js');
-}
 
 /*-----------------------------------------------------------------------------------*/
 /* ADDED V1.1 - Check video url functions
