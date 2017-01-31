@@ -8,50 +8,6 @@
 jQuery(document).ready(function() {
 	
 
-
-/*-----------------------------------------------------------------------------------*/
-/*	Portfolio Overlay Effect
-/*-----------------------------------------------------------------------------------*/
-/*	
-	function tz_overlay() {
-			
-		jQuery('.post-thumb a').hover( function () {
-			
-			jQuery(this).find('.overlay').stop().animate({ opacity: 1 }, 200);
-		
-		}, function () {
-			
-			jQuery(this).find('.overlay').stop().animate({ opacity: 0 }, 200);
-		});
-	
-	}
-	
-	tz_overlay();
-*/
-
-/*-----------------------------------------------------------------------------------*/
-/*	PrettyPhoto - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
-/*-----------------------------------------------------------------------------------*/
-	/*
-	function tz_lightbox() {
-		
-		jQuery("a[rel^='prettyPhoto']").prettyPhoto({
-			animationSpeed:'fast',
-			slideshow:5000,
-			theme:'dark_rounded',
-			show_title:false,
-			overlay_gallery: false
-		});
-	
-	}
-	
-	if(jQuery().prettyPhoto) {
-	
-		tz_lightbox(); 
-			
-	}
-*/
-
 /*-----------------------------------------------------------------------------------*/
 /*	Opacity changes
 /*-----------------------------------------------------------------------------------*/
