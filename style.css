@@ -628,35 +628,6 @@ button:hover {
 input:focus,
 textarea:focus { color: #444; }
 
-#commentform #submit,
-.contactform #submit {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	cursor: pointer;
-	font-weight: 600;
-	font-size: 13px;
-	background: url(images/submit_bg.gif) repeat-x;
-	border: 1px solid #b7d6df;
-	border-color: #b7d6df;
-    border-radius: 2px;
-	float: left;
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
-	width: auto;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
-	color: #437182;
-	padding: 6px 10px 6px 10px;
-	height: auto;
-}
-
-#commentform #submit:hover,
-.contactform #submit:hover { 
-	cursor: pointer;
-	background: url(images/submit_hover_bg.gif) repeat-x;
-	border: 1px solid #9fbac0;
-}
-
-.ie li #commentform { padding-bottom: 40px; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -1769,22 +1740,21 @@ padding-top: 20px;
 #behance a:hover {
 	background-position: -146px -48px;
 }
-#commentform #submit, .contactform #submit {
+#commentform #submit, .contactform #submit,
+.contact-submit input.pushbutton-wide {
 	background: transparent url("images/submit.gif") left top no-repeat;
 	width: 92px;
 	height: 29px;
 	padding: 0;
 	text-indent: -9999px;
-	-moz-border-radius: none;
-	-webkit-border-radius: none;
 	border-radius: none;
 	border: none;
 	box-shadow: none;
 }
-#commentform #submit:hover, .contactform #submit:hover {
+#commentform #submit:hover, 
+.contactform #submit:hover, 
+.contact-submit input.pushbutton-wide:hover {
 	background: transparent url("images/submit.gif") left -30px no-repeat;
-	-moz-border-radius: none;
-	-webkit-border-radius: none;
 	border: none;
 	border-radius: none;
 }
