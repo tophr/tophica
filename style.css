@@ -1682,63 +1682,50 @@ padding-top: 20px;
 #social-top li, #social-bottom li {
 	display: inline;
 }
-#social-top li a, #social-bottom li a {
+#social-top li a, 
+#social-bottom li a {
 	display: block;
 	float: left;
 	width: 48px;
 	height: 48px;
 	text-indent: -9999px;
 	margin: 0 9px 9px 0;
-	background-image: url(images/cv_sm_icons.png);
+	background-image: url(images/social_icons.svg);
 	background-repeat: no-repeat;
+	filter: grayscale(100%);
+	transition: all 0.5s ease;
 }
-#plus a:hover {
+#social-top li a:hover, 
+#social-bottom li a:hover {
+filter: none;
+}
+
+#plus a {
 	background-position: left top;
 }
-#plus a {
-	background-position: left -96px;
-}
 #twitter a {
-	background-position: -49px -96px;
-}
-#twitter a:hover {
 	background-position: -49px top;
 }
-#flickr a:hover {
-	background-position: -97px top;
-}
 #flickr a {
-	background-position: -97px -96px;
-}
-#linkedin a:hover {
-	background-position: -146px top;
+	background-position: -96px top;
 }
 #linkedin a {
-	background-position: -146px -96px;
-}
-#youtube a:hover {
-	background-position: left -48px;
+	background-position: -144px top;
 }
 #youtube a {
-	background-position: left -145px;
+	background-position: left -48px;
 }
 #vimeo a {
-	background-position: -49px -145px;
-}
-#vimeo a:hover {
-	background-position: -49px -48px;
+	background-position: -48px -48px;
 }
 #lastfm a {
-	background-position: -97px -145px;
-}
-#lastfm a:hover {
-	background-position: -97px -48px;
+	background-position: -96px -48px;
 }
 #behance a {
-	background-position: -146px -145px;
+	background-position: -144px -48px;
 }
-#behance a:hover {
-	background-position: -146px -48px;
+#facebook a {
+	background-position: left -96px;
 }
 #commentform #submit, .contactform #submit,
 .contact-submit input.pushbutton-wide {
