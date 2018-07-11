@@ -7,9 +7,7 @@ Template Name: Home
 <?php get_header(); ?>
 			
 	<?php if( have_rows('slider') ): ?>
-		<!--BEGIN #slider .clearfix -->
 		<div id="slider2" class="clearfix">
-			<!--BEGIN .slides_container -->
 			<ul class="slides_container2 bxslider">
 			<?php while( have_rows('slider') ): the_row(); 
 				// vars
@@ -27,25 +25,19 @@ Template Name: Home
 						<?php endif; ?>
 					</li>
 			<?php endwhile; ?>
-			<!--END .slides_container -->
 			</ul>                
-		<!--END #home-slider -->
 		</div>
 	<?php endif; ?>            
 	
-	<!--BEGIN #recent-portfolio  .home-recent -->
 	<div id="recent-portfolio" class="home-recent clearfix">
 
-		<!--BEGIN .recent-wrap -->
 		<div class="recent-wrap">
 
-		<!-- BEGIN PORTFOLIO TITLE & LINK -->
-		 <h3><?php echo get_theme_mod( 'portfolio_title', 'Featured Projects' ); ?></h3>
+		<h3><?php echo get_theme_mod( 'portfolio_title', 'Featured Projects' ); ?></h3>
 
 		 <p class="portfolio-link"><a class="droid-italic" href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
 
 				<?php 
-
 				//Set the starter count
 				$start = 3;
 				//Set the finish count
@@ -62,11 +54,9 @@ Template Name: Home
 				?>
 
 				<?php if(is_multiple($start, 3)) : /* if the start count is a multiple of 3 */ ?>
-				<!--BEGIN .hentry-wrap -->
 				<div class="hentry-wrap clearfix"> 
 				<?php endif; ?>
 
-					<!--BEGIN .hentry -->
 					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 						<?php if(get_post_meta(get_the_ID(), 'upload_image_thumb', true) != '') : ?>
@@ -89,17 +79,13 @@ Template Name: Home
 
 						<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
 
-						<!--BEGIN .entry-content -->
 						<div class="entry-content">
 							<?php the_excerpt(); ?>
-						<!--END .entry-content -->
 						</div>
 
-					<!--END .hentry-->  
 					</div>
 
 				<?php if(is_multiple($finish, 3) || $post_count == $finish) : /* if the finish count is a multiple of 3 or equals the total posts */  ?>
-				<!--END .hentry-wrap-->  
 				</div>
 				<?php endif; ?>
 
@@ -110,10 +96,8 @@ Template Name: Home
 
 				<?php endwhile; wp_reset_query(); ?>
 
-		<!--END .recent-wrap -->
 		</div>
 
-	<!--END #recent-portfolio .home-recent -->
 	</div>            
             
 <?php get_footer(); ?>

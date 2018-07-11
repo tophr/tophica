@@ -17,12 +17,10 @@ Template Name: Portfolio
 				?>
             </h1>
             
-            <!--BEGIN #recent-portfolio  .home-recent -->
             <div id="recent-portfolio" class="home-recent portfolio-recent clearfix">
             	
                 <?php while (have_posts()) : the_post(); ?>
-                <!--BEGIN .sidebar -->
-            	<div class="sidebar">
+                <div class="sidebar">
                     
                     <?php the_content(); ?>
                     
@@ -33,11 +31,9 @@ Template Name: Portfolio
                       <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'skill-type', 'walker' => new Portfolio_Walker())); ?>
                     </ul>
                     
-                <!--END .sidebar -->
                 </div>
                 <?php endwhile; ?>
                 
-                <!--BEGIN .recent-wrap -->
                 <div class="recent-wrap">
 				
                 	<ul id="items" class="image-grid">
@@ -53,7 +49,6 @@ Template Name: Portfolio
                         	
                             <li data-id="id-<?php echo $count; ?>" class="<?php if($terms) : foreach ($terms as $term) { echo 'term-'.$term->term_id.' '; } endif; ?>">
                     
-                            <!--BEGIN .hentry -->
                             <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                                 
                                 <div class="post-thumb">
@@ -64,13 +59,10 @@ Template Name: Portfolio
                                  
                                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
             
-                                <!--BEGIN .entry-content -->
                                 <div class="entry-content">
                                     <?php the_excerpt(); ?>
-                                <!--END .entry-content -->
                                 </div>
                             
-                            <!--END .hentry-->  
                             </div>
                         
                         <?php
@@ -83,11 +75,8 @@ Template Name: Portfolio
                       
                     </ul>
                         
-                <!--END .recent-wrap -->
                 </div>
 
-            <!--END #recent-portfolio .home-recent -->
-            </div>
-            
+            </div>            
 
 <?php get_footer(); ?>
