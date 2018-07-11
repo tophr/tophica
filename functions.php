@@ -374,6 +374,23 @@ class Portfolio_Walker extends Walker_Category {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*	Hide Password Protected Posts
+/*-----------------------------------------------------------------------------------*/
+function tz_password_post_filter( $where = '' ) {
+	if (!is_single() && !is_admin()) {
+		$where .= " AND post_password = ''";
+	}
+	return $where;
+}
+add_filter( 'posts_where', 'tz_password_post_filter' );
+
+// Remove 'Protected' Prefix
+function change_protected_title_prefix() {
+	return '%s';
+}
+add_filter('protected_title_format', 'change_protected_title_prefix');
+
+/*-----------------------------------------------------------------------------------*/
 /*	Load Widgets & Shortcodes
 /*-----------------------------------------------------------------------------------*/
 
