@@ -8,7 +8,7 @@
 	Text Domain: tophica
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 1.4.0
+	Version: 1.4.1
 	
 	Designed & Handcrafted by ThemeZilla
 	All files, unless otherwise stated, are released under the GNU General Public License
@@ -1813,253 +1813,256 @@ body.page-id-15 {
 }
 
 @media (max-width: 940px) {
-.back {
-	max-width: 300px;
-}
-#primary .entry-content {
-	width: 100%;
-	padding-bottom: 0;
-}
-.single #primary .entry-content, .blog #primary .entry-content, .archive #primary .entry-content, .search-results #primary .entry-content {
-	max-width: 100%; /*500px*/
-}
-#content {
-	margin-bottom: 0;
-}
-#container {
-	/*width: 940px;*/
-	width: auto;
-	padding: 20px;
-}
-#primary {
-	width: 100%; /*680px;*/
-}
-#logo {
-	margin-bottom: 0;
-}
-#logo img {
-	max-width: 100%;
-	height: auto;
-}
-#primary-nav {
-	float: left;
-	margin-bottom: 10px;
-	margin-left: -9px;
-}
-#primary-nav ul a {
-	padding: 0 9px;
-}
-#sidebar {
-	/*width: 220px;*/
-	width: 100%;
-}
-#sidebar.aside {
-	display: none;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	6.	Post Content Styles
-/*-----------------------------------------------------------------------------------*/
+	.back {
+		max-width: 300px;
+	}
+	#primary .entry-content {
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.single #primary .entry-content, .blog #primary .entry-content, .archive #primary .entry-content, .search-results #primary .entry-content {
+		max-width: 100%; 
+	}
+	#content {
+		margin-bottom: 0;
+	}
+	#container {
+		width: auto;
+		padding: 20px;
+	}
+	#primary {
+		width: 100%; 
+	}
+	#logo {
+		margin-bottom: 0;
+	}
+	#logo img {
+		max-width: 100%;
+		height: auto;
+	}
+	#primary-nav {
+		float: none;
+		margin: 0;
+		clear: both;
+		text-align: center;
+	}
+	#primary-nav ul a {
+		padding: 0 9px;
+	}
+	#primary-menu {
+		margin: 10px auto;
+		display: inline-block;
+	}
+	#sidebar {
+		width: 100%;
+	}
+	#sidebar.aside {
+		display: none;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	6.	Post Content Styles
+	/*-----------------------------------------------------------------------------------*/
 
-#primary .entry-title {
-	padding: 0;
-	margin-bottom: 0;
-}
-#primary .entry-meta {
-	width: 100%;
-	margin: 0 0 10px 0;
-	text-align: left;
-}
-#primary .entry-meta span {
-	display: inline;
-}
-.entry-content img {
-	max-width: 100%;
-	height: auto;
-}
-img.size-large {
-	margin: 10px 0;
-}
-.wp-caption {
-	margin: 0;
-}
-.video-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-.video-container iframe, .video-container object, .video-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	7.	Comments
-/*-----------------------------------------------------------------------------------*/
+	#primary .entry-title {
+		padding: 0;
+		margin-bottom: 0;
+	}
+	#primary .entry-meta {
+		width: 100%;
+		margin: 0 0 10px 0;
+		text-align: left;
+	}
+	#primary .entry-meta span {
+		display: inline;
+	}
+	.entry-content img {
+		max-width: 100%;
+		height: auto;
+	}
+	img.size-large {
+		margin: 10px 0;
+	}
+	.wp-caption {
+		margin: 0;
+	}
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+	.video-container iframe, .video-container object, .video-container embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	7.	Comments
+	/*-----------------------------------------------------------------------------------*/
 
-#respond-wrap .comments-sidebar {
-	padding-top: 0px;
-}
-#commentform {
-	width: 97%;
-}
-.comments-sidebar {
-	width: 100%;
-	text-align: left;
-	margin: 0;
-}
-.commentlist {
-	max-width: 500px;
-}
-.page-template-template-full-width-php .commentlist {
-	max-width: 760px;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	9.	Footer Styles
-/*-----------------------------------------------------------------------------------*/
+	#respond-wrap .comments-sidebar {
+		padding-top: 0px;
+	}
+	#commentform {
+		width: 97%;
+	}
+	.comments-sidebar {
+		width: 100%;
+		text-align: left;
+		margin: 0;
+	}
+	.commentlist {
+		max-width: 500px;
+	}
+	.page-template-template-full-width-php .commentlist {
+		max-width: 760px;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	9.	Footer Styles
+	/*-----------------------------------------------------------------------------------*/
 
-#footer-container {
-	/*background: url(images/bg-foot.gif) left top repeat-x #f5f5f5;*/
-	margin: 0;
-	padding: 20px;
-}
-.single #footer-container {
-	margin: 0;
-}
-#footer {
-	/*width: 940px;*/
-	width: 100%;
-}
-#footer-widgets {
-	/*width: 940px;*/
-	width: 100%;
-	padding: 0;
-}
-#footer-widgets .widget-wrap { /*width: 960px;*/
-	width: 100%;
-}
-#footer-widgets .widget-section {
-	/*width: 220px;*/
-	width: 100%;
-	margin: 0;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	10.	Page Templates
-/*-----------------------------------------------------------------------------------*/
+	#footer-container {
+		/*background: url(images/bg-foot.gif) left top repeat-x #f5f5f5;*/
+		margin: 0;
+		padding: 20px;
+	}
+	.single #footer-container {
+		margin: 0;
+	}
+	#footer {
+		/*width: 940px;*/
+		width: 100%;
+	}
+	#footer-widgets {
+		/*width: 940px;*/
+		width: 100%;
+		padding: 0;
+	}
+	#footer-widgets .widget-wrap { /*width: 960px;*/
+		width: 100%;
+	}
+	#footer-widgets .widget-section {
+		/*width: 220px;*/
+		width: 100%;
+		margin: 0;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	10.	Page Templates
+	/*-----------------------------------------------------------------------------------*/
 
-.full-width { /*width: 940px!important;*/
-	width: 100%!important;
-}
-.single .slides_container img {
-	max-width: 100%;
-	height: auto;
-}
-.single-page-navigation {
-	padding-top: 0;
-}
-.hentry, .navigation-links, .hfeed, .pinglist {
-	margin-bottom: 20px;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	11.	Widgets
-/*-----------------------------------------------------------------------------------*/
+	.full-width { /*width: 940px!important;*/
+		width: 100%!important;
+	}
+	.single .slides_container img {
+		max-width: 100%;
+		height: auto;
+	}
+	.single-page-navigation {
+		padding-top: 0;
+	}
+	.hentry, .navigation-links, .hfeed, .pinglist {
+		margin-bottom: 20px;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	11.	Widgets
+	/*-----------------------------------------------------------------------------------*/
 
 
-/* Search Widget */
-.widget_search #s { /*width: 208px;*/
-	width: 100%;
-}
-.tz_tweet_widget ul li {
-	/*padding: 0 0 20px 35px;
-	width: 180px;*/
-	width: 90%;
-}
-/* Flickr Widget */
-.tz_flickr_widget {
-	padding-right: 0;
-	/*width: 228px;*/
-	width: 100%;
-}
-.flickr_badge_image img {
-	width: 75px;
-	height: 75px;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	12.	Homepage Elements
-/*-----------------------------------------------------------------------------------*/
+	/* Search Widget */
+	.widget_search #s { /*width: 208px;*/
+		width: 100%;
+	}
+	.tz_tweet_widget ul li {
+		/*padding: 0 0 20px 35px;
+		width: 180px;*/
+		width: 90%;
+	}
+	/* Flickr Widget */
+	.tz_flickr_widget {
+		padding-right: 0;
+		/*width: 228px;*/
+		width: 100%;
+	}
+	.flickr_badge_image img {
+		width: 75px;
+		height: 75px;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	12.	Homepage Elements
+	/*-----------------------------------------------------------------------------------*/
 
-.single .slides_container { /*width:700px;*/
-	width: 100%;
-}
-/* Recent */
+	.single .slides_container { /*width:700px;*/
+		width: 100%;
+	}
+	/* Recent */
 
-.home-recent .sidebar, .sidebar {
-	width: 100%;
-	margin: 0;
-	padding: 20px 0 0 0;
-	border: none;
-}
-.home .sidebar {
-	padding: 0;
-}
+	.home-recent .sidebar, .sidebar {
+		width: 100%;
+		margin: 0;
+		padding: 20px 0 0 0;
+		border: none;
+	}
+	.home .sidebar {
+		padding: 0;
+	}
 
-.recent-wrap {
-	width: 100%;
-	padding: 0;
-	border: none;
-}
-.home .home-recent .sidebar {
-	border-top: 1px solid #efefef;
-	padding-top: 20px;
-}
-.portfolio-recent .recent-wrap {
-	border: none;
-}
-.home.page .recent-wrap .hentry-wrap, .home.page .recent-wrap .hentry, .single-portfolio .portfolio-recent .sidebar {
-	/*	width: 200px;*/
-	width: 100%;
-}
-.recent-wrap .hentry-wrap {
-	width: 100%; /*730px*/
-}
-.recent-wrap .hentry {
-	width: 100%; /* 210px */
-	margin: 0;/*margin: 0 30px 0 0;*/
-}
-.post-thumb a span.overlay {
-	width: 100%;
-}
-.recent-wrap .post-thumb a {
-	width: 100%;
-	height: auto;
-	text-align: center;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	14.	Portfolio Sorter, MANDATORY styling
-/*-----------------------------------------------------------------------------------*/
+	.recent-wrap {
+		width: 100%;
+		padding: 0;
+		border: none;
+	}
+	.home .home-recent .sidebar {
+		border-top: 1px solid #efefef;
+		padding-top: 20px;
+	}
+	.portfolio-recent .recent-wrap {
+		border: none;
+	}
+	.home.page .recent-wrap .hentry-wrap, .home.page .recent-wrap .hentry, .single-portfolio .portfolio-recent .sidebar {
+		/*	width: 200px;*/
+		width: 100%;
+	}
+	.recent-wrap .hentry-wrap {
+		width: 100%; /*730px*/
+	}
+	.recent-wrap .hentry {
+		width: 100%; /* 210px */
+		margin: 0;/*margin: 0 30px 0 0;*/
+	}
+	.post-thumb a span.overlay {
+		width: 100%;
+	}
+	.recent-wrap .post-thumb a {
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	/*-----------------------------------------------------------------------------------*/
+	/*	14.	Portfolio Sorter, MANDATORY styling
+	/*-----------------------------------------------------------------------------------*/
 
-#recent-portfolio .entry-title, #recent-portfolio .entry-content, #recent-portfolio .entry-meta {
-	padding-left: 0;
-}
-.image-grid {
-	width: 100%; /*720px*/
-}
-.image-grid li {
-	width: 100%;
-	margin: 0;
-	height: auto;
-}
-/* Added v1.1 ---*/
+	#recent-portfolio .entry-title, #recent-portfolio .entry-content, #recent-portfolio .entry-meta {
+		padding-left: 0;
+	}
+	.image-grid {
+		width: 100%; /*720px*/
+	}
+	.image-grid li {
+		width: 100%;
+		margin: 0;
+		height: auto;
+	}
+	/* Added v1.1 ---*/
 
-.video_info {
-	max-width: 100%;
-}
-.post_video {
-	width: 100%; /*700px;*/
-}
+	.video_info {
+		max-width: 100%;
+	}
+	.post_video {
+		width: 100%; /*700px;*/
+	}
 }
 
 @media (max-width: 600px) {

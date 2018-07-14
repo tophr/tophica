@@ -24,7 +24,7 @@
                     if (get_header_image()) { ?>
                     <a href="<?php echo home_url(); ?>"><img src="<?php echo( get_header_image() ); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
                     <?php } else { ?>
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" width="350" height="35" /></a>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/tophermcculloch-header.svg" alt="<?php bloginfo( 'name' ); ?>" width="546" height="51" /></a>
                     <?php } ?>
                 </div>
                 
