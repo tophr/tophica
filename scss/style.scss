@@ -42,6 +42,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
 
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	1.	Document Setup (body, common classes, vertical rhythm, structure etc)
 /*-----------------------------------------------------------------------------------*/
@@ -226,7 +230,7 @@ width: 760px;
 }	
 
 #container {
-	width: 940px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 30px 0 0 0;
 }
@@ -1768,56 +1772,61 @@ body.page-id-15 {
 }
 /* Homepage */
 
-.home.page .recent-wrap {
-	width: 100%;
-	padding: 0;
-	border: none;
-}
-.home.page .recent-wrap h3 {
-	font-weight: 400;
-	font-size: 20px;
-	float: left;
-	width: 50%;
-	margin-bottom: 20px;
-}
-
-.home.page .recent-wrap .portfolio-link {
-	float: right;
-	width: 50%;
-	text-align: right;	
-}
-
-.home.page .recent-wrap .hentry-wrap {
-	width: 960px;
-}
-.home.page .recent-wrap .hentry {
-	width: 300px;
-	margin: 0 20px 0 0;
-}
-
-.home.page .recent-wrap .post-thumb a {
-	width: auto;
-	height: auto;
-	padding: 0;
-}
-
-.home.page .recent-wrap .hentry img {
-	width: 100%;
-}
-
-.recent-wrap .hentry img {
-	max-width: 100%;
-	height: auto;
+.home.page {
+	.recent-wrap {
+		width: 100%;
+		padding: 0;
+		border: none;
+		
+		h3 {
+			font-weight: 400;
+			font-size: 20px;
+			float: left;
+			width: 50%;
+			margin-bottom: 20px;
+		}
+		.portfolio-link {
+			float: right;
+			width: 50%;
+			text-align: right;	
+		}
+		.hentry-wrap {
+			width: 960px;
+		}
+		.hentry {
+			width: 300px;
+			margin: 0 20px 0 0;
+			img {
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		.post-thumb a {
+			width: auto;
+			height: auto;
+			padding: 0;
+		}
+	}
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*	Desktop
+/*-----------------------------------------------------------------------------------*/
+
+@media (min-width: 940px) {
+	#container {
+		width: 940px;
+	}
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	Large Desktop
 /*-----------------------------------------------------------------------------------*/
 
-@media (min-width: 1100px) {
+@media (min-width: 1230px) {
 	#container {
-		
+		width: 1140px;
 	}
 }
 
@@ -1841,7 +1850,6 @@ body.page-id-15 {
 		margin-bottom: 0;
 	}
 	#container {
-		width: auto;
 		padding: 20px;
 	}
 	#primary {
