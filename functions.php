@@ -72,9 +72,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 35, 35, true );
 	add_image_size( 'thumbnail-large', 600, 200, true ); // Alt Large thumbnails
-	add_image_size( 'thumbnail-post', 210, 160, true ); // Post thumbnails
+	add_image_size( 'thumbnail-post', 712, 560, true ); // Portfolio thumbnails
 	add_image_size( 'thumbnail-archive', 680, 180, true ); // Archive thumbnails
-	add_image_size( 'thumbnail-portfolio', 700, '', true ); // Portfolio thumbnails
+	add_image_size( 'thumbnail-portfolio', 820, '', true ); // Portfolio images
 }
 
 add_theme_support( 'custom-header' );

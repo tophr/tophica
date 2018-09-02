@@ -1499,7 +1499,7 @@ body.page-id-15 {
 
 /* Recent */
 .portfolio-recent .sidebar {
-  width: 25%;
+  width: 20%;
   float: left;
   padding: 40px 0 25px 0; }
   .portfolio-recent .sidebar p {
@@ -1509,7 +1509,7 @@ body.page-id-15 {
     margin-bottom: 5px; }
 
 .portfolio-recent .recent-wrap {
-  width: 75%; }
+  width: 80%; }
   .portfolio-recent .recent-wrap .hentry {
     width: 100%; }
 
@@ -1559,14 +1559,24 @@ body.page-id-15 {
   float: right;
   width: 75%;
   padding-top: 20px;
+  padding-left: 35px;
   text-align: center; }
+  .single-portfolio .slides_container img {
+    width: 100%;
+    height: auto; }
 
 .single-portfolio .portfolio-recent .sidebar {
-  padding-top: 20px; }
+  padding-top: 20px;
+  width: 25%; }
 
-.single-portfolio .recent-wrap .hentry {
-  width: 33%;
-  float: left; }
+.single-portfolio .recent-wrap {
+  width: 75%; }
+  .single-portfolio .recent-wrap .hentry {
+    width: 33%;
+    float: left; }
+
+.single-portfolio .portfolio-item {
+  margin-bottom: 20px; }
 
 #home-border .recent-wrap,
 #home-border .sidebar {
@@ -1577,8 +1587,8 @@ body.page-id-15 {
   .post-thumb a span.overlay {
     background: url(images/overlay.png) center no-repeat;
     position: absolute;
-    width: 210px;
-    height: 160px;
+    width: 281px;
+    height: 221px;
     display: block;
     z-index: 5;
     opacity: 0; }
@@ -1609,8 +1619,8 @@ body.page-id-15 {
     margin-bottom: 10px; }
     @media (min-width: 940px) {
       .image-grid li .post-thumb img {
-        width: 262px;
-        height: 210px;
+        width: 281px;
+        height: 221px;
         max-width: none;
         -o-object-fit: cover;
            object-fit: cover; } }
@@ -1632,7 +1642,7 @@ body.page-id-15 {
 /*-----------------------------------------------------------------------------------*/
 /*	Desktop
 /*-----------------------------------------------------------------------------------*/
-@media (min-width: 940px) {
+@media (min-width: 960px) {
   .container {
     width: 940px; } }
 
@@ -1646,7 +1656,7 @@ body.page-id-15 {
 /*-----------------------------------------------------------------------------------*/
 /*	Tablet and below
 /*-----------------------------------------------------------------------------------*/
-@media (max-width: 940px) {
+@media (max-width: 959px) {
   .back {
     max-width: 300px; }
   #primary .entry-content {
@@ -1710,12 +1720,14 @@ body.page-id-15 {
     padding-top: 30px;
     height: 0;
     overflow: hidden; }
-  .video-container iframe, .video-container object, .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   /*-----------------------------------------------------------------------------------*/
   /*	7.	Comments
 	/*-----------------------------------------------------------------------------------*/
@@ -1772,10 +1784,6 @@ body.page-id-15 {
   /*-----------------------------------------------------------------------------------*/
   /*	12.	Homepage Elements
 	/*-----------------------------------------------------------------------------------*/
-  .single .slides_container {
-    /*width:700px;*/
-    width: 100%; }
-  /* Recent */
   .home-recent .sidebar, .sidebar {
     width: 100%;
     margin: 0;
@@ -1821,6 +1829,8 @@ body.page-id-15 {
     width: 100%; } }
 
 @media (max-width: 767px) {
+  .single .slides_container {
+    width: 100%; }
   #footer-widgets {
     padding: 20px 0; }
     #footer-widgets .widget-section {
