@@ -18,7 +18,7 @@
 
 	0.	CSS Reset & Clearfix
 	1.	Document Setup (body, common classes, vertical rhythm, structure etc)
-	2.  bxSlider Styles
+	2.	bxSlider Styles
 	3.	Header Styles
 	4.	Navigation & Menus
 	5.	Main Content Styles
@@ -31,7 +31,7 @@
 	12.	Shortcode Styles
 	13.	Homepage Elements
 	14.	Portfolio Thumbnails & Sorter
-	15. Mobile Styles
+	15.	Mobile Styles
 
 -----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
@@ -505,10 +505,6 @@ h6 {
   padding: 0;
   list-style: none; }
 
-.sf-menu li {
-  position: relative;
-  white-space: nowrap; }
-
 .sf-menu ul {
   position: absolute;
   display: none;
@@ -516,6 +512,10 @@ h6 {
   left: 0;
   min-width: 12em;
   z-index: 99; }
+
+.sf-menu li {
+  position: relative;
+  white-space: nowrap; }
 
 .sf-menu > li {
   float: left; }
