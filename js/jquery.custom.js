@@ -9,27 +9,7 @@ jQuery(document).ready(function() {
 	
 
 /*-----------------------------------------------------------------------------------*/
-/*	Opacity changes
-/*-----------------------------------------------------------------------------------*/
-
-	jQuery(".blog .post-thumb img, .archive .post-thumb img, .search-results .post-thumb img").css({
-		opacity: 1
-	});
-	
-	jQuery(".blog .post-thumb img, .archive .post-thumb img, .search-results .post-thumb img").hover(function() {
-		jQuery(this).stop().animate({
-			opacity: 0.6
-			}, 200);
-	},function() {
-		jQuery(this).stop().animate({
-			opacity: 1
-			}, 500);
-	});
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	Portfolio Sorting - UPDATED 09 Feb 2011
+/*	Portfolio Sorting - UPDATED 1 Sept 2018
 /*-----------------------------------------------------------------------------------*/
 	
 	if (jQuery().quicksand) {
