@@ -386,9 +386,6 @@ add_filter('protected_title_format', 'change_protected_title_prefix');
 // Add the Latest Blog Posts Custom Widget
 include("functions/widget-blog.php");
 
-// Add the Flickr Photos Custom Widget
-include("functions/widget-flickr.php");
-
 // Add the Theme Post types
 include("functions/theme-posttypes.php");
 

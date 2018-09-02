@@ -106,21 +106,18 @@
 		
 			<?php else : ?>
 		
-			<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" />
-			<label for="author"><small><?php _e('Name', 'tophica') ?> <span><?php if ($req) _e("*", 'tophica'); ?></span></small></label></p>
+			<p><label for="author"><?php _e('Name', 'tophica') ?> <span><?php if ($req) _e("*", 'tophica'); ?></span></label><br><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" />
+			</p>
 		
-			<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" />
-			<label for="email"><small><?php _e('Email', 'tophica') ?><span> <?php if ($req) _e("*", 'tophica'); ?></span> <span class="grey"><?php _e('(never published)', 'tophica'); ?></span> </small></label></p>
+			<p><label for="email"><?php _e('Email', 'tophica') ?><span> <?php if ($req) _e("*", 'tophica'); ?></span> <span class="grey"><?php _e('(never published)', 'tophica'); ?></span></label><br><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" />
+			</p>
 		
-			<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-			<label for="url"><small><?php _e('Website', 'tophica') ?></small></label></p>
+			<p><label for="url"><?php _e('Website', 'tophica') ?></label><br><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" /></p>
 		
 			<?php endif; ?>
 		
 			<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
 			
-			<!--<p class="allowed-tags"><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
-		
 			<p><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'tophica') ?>" />
 			<?php comment_id_fields(); ?>
 			</p>

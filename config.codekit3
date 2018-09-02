@@ -120,13 +120,6 @@
 		"oAP": "\/functions\/widget-blog.php",
 		"oF": 0
 		},
-	"\/functions\/widget-flickr.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/functions\/widget-flickr.php",
-		"oF": 0
-		},
 	"\/header.php": {
 		"cB": 0,
 		"ft": 8192,
