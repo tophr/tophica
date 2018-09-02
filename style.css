@@ -101,7 +101,7 @@ table {
 body {
   border-top: 10px solid #cd2931;
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.5;
   font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
   background: #fff;
   color: #444; }
@@ -255,7 +255,8 @@ h6 {
   width: 70%;
   min-height: 130px;
   padding-bottom: 20px;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  line-height: 1.75; }
 
 .page-template-template-full-width #primary .entry-content {
   width: 100%; }
@@ -624,7 +625,7 @@ kbd,
 samp,
 code,
 pre {
-  font: 12px/18px Consolas, "Andale Mono", Courier, "Courier New", monospace; }
+  font: 16px/20px Consolas, "Andale Mono", Courier, "Courier New", monospace; }
 
 kbd {
   font-weight: 600; }
@@ -675,7 +676,7 @@ td {
   text-align: center; }
 
 .entry-content img {
-  max-width: 680px;
+  max-width: 100%;
   height: auto; }
 
 img.alignleft {
@@ -914,6 +915,13 @@ textarea:focus {
 /*-----------------------------------------------------------------------------------*/
 /*	7.	Comments
 /*-----------------------------------------------------------------------------------*/
+#comment-wrap p {
+  margin-bottom: .5em; }
+
+#comment-wrap h3 {
+  font-size: 24px;
+  line-height: 26px; }
+
 .comments-sidebar {
   width: 15%;
   padding-right: 30px;
@@ -926,18 +934,15 @@ textarea:focus {
   padding-top: 30px; }
 
 .commentlist {
+  float: left;
+  width: 65%;
   margin: 10px 0 40px 0;
   padding-top: 50px;
-  list-style-type: none;
-  width: 500px;
-  float: left;
-  border-top: 1px solid #efefef; }
-
-.page-template-template-full-width-php .commentlist {
-  width: 760px; }
-
-.commentlist .line {
-  display: none; }
+  padding-right: 30px;
+  border-top: 1px solid #efefef;
+  list-style-type: none; }
+  .commentlist .line {
+    display: none; }
 
 .commentlist li li li .line {
   display: block;
@@ -954,7 +959,7 @@ textarea:focus {
   padding-left: 30px; }
 
 .commentlist ul {
-  border-left: 1px solid #efefef;
+  border-left: 2px solid #efefef;
   margin: 0 0 0 63px; }
 
 .commentlist ul ul {
@@ -988,9 +993,10 @@ textarea:focus {
   background: #fff; }
 
 #commentform {
-  margin-top: 30px;
   float: left;
-  width: 70%; }
+  width: 70%;
+  margin-top: 30px;
+  padding-right: 30px; }
 
 li li .cancel-comment-reply {
   padding-left: 30px; }
@@ -1040,25 +1046,21 @@ ol #commentform {
   list-style-type: none; }
 
 .avatar {
-  padding: 2px 0 12px 0;
   position: relative;
   background: #fff;
   z-index: 5; }
 
 li li .avatar {
-  margin: -8px 0 0 -18px;
-  padding-top: 10px; }
+  margin: -8px 0 0 -18px; }
 
 .comment-meta {
   margin-bottom: 15px; }
-
-.comment-meta a {
-  color: #999;
-  font-style: italic;
-  font-size: 11px; }
-
-.comment-meta a:hover {
-  color: #666; }
+  .comment-meta a {
+    color: #999;
+    font-style: italic;
+    font-size: 14px; }
+    .comment-meta a:hover {
+      color: #666; }
 
 .comment-meta,
 .comment-author {
@@ -1068,18 +1070,15 @@ li li .comment-meta,
 li li .comment-author {
   padding-left: 30px; }
 
-.comment-author a {
-  color: #444444; }
-
-.comment-author a:after {
-  content: " \2192"; }
-
 .comment-author {
-  margin-top: -53px; }
-
-.comment-author cite {
-  font-style: normal;
-  font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif; }
+  margin-top: -47px; }
+  .comment-author a {
+    color: #444444; }
+  .comment-author a:after {
+    content: " \2192"; }
+  .comment-author cite {
+    font-style: normal;
+    font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif; }
 
 .says {
   display: none; }
@@ -1092,10 +1091,9 @@ li li .comment-author {
   list-style-type: disc;
   border: none;
   margin-bottom: 20px; }
-
-.comment-body ul li {
-  padding: 0;
-  margin: 0; }
+  .comment-body ul li {
+    padding: 0;
+    margin: 0; }
 
 .comment-body ol {
   list-style-type: decimal; }
@@ -1107,6 +1105,9 @@ li li .comment-author {
 
 .author-tag {
   font-size: 11px; }
+
+#pings {
+  padding-top: 60px; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	8.	Pagination

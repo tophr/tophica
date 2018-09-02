@@ -61,7 +61,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body { 
 	border-top: 10px solid $brand-color1; 
 	font-size: 1rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-family: $primary-font;
 	background: #fff;
 	color: #444;
@@ -222,6 +222,7 @@ h6 {
 	min-height: 130px;
 	padding-bottom: 20px;
 	font-size: 1.25rem;
+	line-height: 1.75;
 }
 
 .page-template-template-full-width #primary .entry-content { width: 100%; }
@@ -643,7 +644,7 @@ var,
 kbd,
 samp,
 code,
-pre { font: 12px/18px Consolas, "Andale Mono", Courier, "Courier New", monospace; }
+pre { font: 16px/20px Consolas, "Andale Mono", Courier, "Courier New", monospace; }
 
 kbd { font-weight: 600; }
 
@@ -691,7 +692,9 @@ td {
 	text-align: center;
 }
 
-.entry-content img { max-width: 680px; height: auto; }
+.entry-content img { 
+	max-width: 100%; 
+	height: auto; }
 
 img.alignleft {
 	float: left;
@@ -951,6 +954,16 @@ textarea:focus { color: #444; }
 /*	7.	Comments
 /*-----------------------------------------------------------------------------------*/
 
+#comment-wrap {
+	p {
+		margin-bottom: .5em;
+	}
+	h3 {
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+
 .comments-sidebar {
 	width: 15%;
 	padding-right: 30px;
@@ -958,25 +971,24 @@ textarea:focus { color: #444; }
 	text-align: right;
 	float: left;
 	font-size: 11px;
-	h3 {
-
-	}
 }
 
 #respond-wrap .comments-sidebar { padding-top: 30px; }
 
 .commentlist {
+	float: left;
+	width: 65%;
 	margin: 10px 0 40px 0;
 	padding-top: 50px;
-	list-style-type: none;
-	width: 500px;
-	float: left;
+	padding-right: 30px;
 	border-top: 1px solid #efefef;
+	list-style-type: none;
+	.line { display: none; }
 }
 
-.page-template-template-full-width-php .commentlist { width: 760px; }
-
-.commentlist .line { display: none; }
+.page-template-template-full-width-php .commentlist { 
+	//width: 760px; 
+}
 
 .commentlist li li li .line{
 	display: block;
@@ -992,7 +1004,7 @@ textarea:focus { color: #444; }
 .commentlist li li .comment-body { padding-left: 30px; }
 
 .commentlist ul {
-	border-left: 1px solid #efefef;
+	border-left: 2px solid #efefef;
 	margin: 0 0 0 63px;
 }
 
@@ -1027,9 +1039,10 @@ textarea:focus { color: #444; }
 }
 
 #commentform {
-	margin-top: 30px;
 	float: left;
 	width: 70%;
+	margin-top: 30px;
+	padding-right: 30px;
 }
 
 li li .cancel-comment-reply { padding-left: 30px; }
@@ -1077,7 +1090,6 @@ ol #commentform { width: 100%; }
 .children { list-style-type: none; }
 
 .avatar {
-	padding: 2px 0 12px 0;
 	position: relative;
 	background: #fff;
 	z-index: 5;
@@ -1085,18 +1097,17 @@ ol #commentform { width: 100%; }
 
 li li .avatar {
 	margin:-8px 0 0 -18px;
-	padding-top: 10px;
 }
 
-.comment-meta { margin-bottom: 15px; }
-
-.comment-meta a { 
-	color: #999;
-	font-style: italic;
-	font-size: 11px;
+.comment-meta { 
+	margin-bottom: 15px; 
+	a { 
+		color: #999;
+		font-style: italic;
+		font-size: 14px;
+		&:hover { color: #666; }
+	}
 }
-
-.comment-meta a:hover { color: #666; }
 
 .comment-meta,
 .comment-author { padding-left: 48px; }
@@ -1104,15 +1115,14 @@ li li .avatar {
 li li .comment-meta,
 li li .comment-author { padding-left: 30px; }
 
-.comment-author a{ color: #444444; }
-
-.comment-author a:after{ content: " \2192"; }
-
-.comment-author { margin-top: -53px; }
-
-.comment-author cite { 
-	font-style: normal;
-	font-family: $primary-font;
+.comment-author {
+	margin-top: -47px;
+	a{ color: #444444; }
+	a:after{ content: " \2192"; }
+	cite { 
+		font-style: normal;
+		font-family: $primary-font;
+	}
 }
 
 .says { display: none; }
@@ -1122,18 +1132,18 @@ li li .comment-author { padding-left: 30px; }
 	padding: 20px;
 }
 
-.comment-body ul { 
-	list-style-type: disc; 
-	border: none;
-	margin-bottom: 20px;
+.comment-body {
+	ul { 
+		list-style-type: disc; 
+		border: none;
+		margin-bottom: 20px;
+		li {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	ol { list-style-type: decimal; }
 }
-
-.comment-body ul li {
-	padding: 0;
-	margin: 0;
-}
-
-.comment-body ol { list-style-type: decimal; }
 
 .moderation {
 	padding-left: 45px;
@@ -1143,6 +1153,10 @@ li li .comment-author { padding-left: 30px; }
 
 .author-tag {
 	font-size: 11px;
+}
+
+#pings {
+	padding-top: 60px;
 }
 
 /*-----------------------------------------------------------------------------------*/

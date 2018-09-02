@@ -133,7 +133,7 @@
 		"oA": 0,
 		"oAP": "\/images\/bg-foot.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/bx_loader.gif": {
 		"ft": 4194304,
@@ -141,7 +141,7 @@
 		"oA": 0,
 		"oAP": "\/images\/bx_loader.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/controls.png": {
 		"ft": 32768,
@@ -149,8 +149,8 @@
 		"oA": 0,
 		"oAP": "\/images\/controls.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -160,8 +160,8 @@
 		"oA": 0,
 		"oAP": "\/images\/custom-login-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -171,8 +171,8 @@
 		"oA": 0,
 		"oAP": "\/images\/gravatar.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -182,8 +182,8 @@
 		"oA": 0,
 		"oAP": "\/images\/overlay.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -193,8 +193,8 @@
 		"oA": 0,
 		"oAP": "\/images\/permalink_icon.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -204,7 +204,7 @@
 		"oA": 0,
 		"oAP": "\/images\/pre_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/quote.png": {
 		"ft": 32768,
@@ -212,8 +212,8 @@
 		"oA": 0,
 		"oAP": "\/images\/quote.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -223,8 +223,8 @@
 		"oA": 0,
 		"oAP": "\/images\/quote_content.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -234,7 +234,7 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/alerts\/alert_green_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/shortcodes\/alerts\/alert_orange_bg.gif": {
 		"ft": 4194304,
@@ -242,7 +242,7 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/alerts\/alert_orange_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/shortcodes\/alerts\/alert_red_bg.gif": {
 		"ft": 4194304,
@@ -250,7 +250,7 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/alerts\/alert_red_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/shortcodes\/alerts\/alert_white_bg.gif": {
 		"ft": 4194304,
@@ -258,7 +258,7 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/alerts\/alert_white_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/shortcodes\/buttons\/button_black.png": {
 		"ft": 32768,
@@ -266,8 +266,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_black.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -277,8 +277,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_black_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -288,8 +288,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_blue.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -299,8 +299,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_blue_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -310,8 +310,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_green.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -321,8 +321,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_green_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -332,8 +332,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_grey.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -343,8 +343,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_grey_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -354,8 +354,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_navy.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -365,8 +365,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_navy_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -376,8 +376,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_orange.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -387,8 +387,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_orange_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -398,8 +398,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_purple.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -409,8 +409,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_purple_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -420,8 +420,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_red.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -431,8 +431,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_red_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -442,8 +442,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_teal.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -453,8 +453,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_teal_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -464,8 +464,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_white.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -475,8 +475,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/buttons\/button_white_large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -486,8 +486,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/toggles\/toggle-closed.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -497,8 +497,8 @@
 		"oA": 0,
 		"oAP": "\/images\/shortcodes\/toggles\/toggle-open.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -518,8 +518,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sprite.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -536,7 +536,7 @@
 		"oA": 0,
 		"oAP": "\/images\/submit-hover.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/submit.gif": {
 		"ft": 4194304,
@@ -544,7 +544,7 @@
 		"oA": 0,
 		"oAP": "\/images\/submit.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/submit_bg.gif": {
 		"ft": 4194304,
@@ -552,7 +552,7 @@
 		"oA": 0,
 		"oAP": "\/images\/submit_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/submit_hover_bg.gif": {
 		"ft": 4194304,
@@ -560,7 +560,7 @@
 		"oA": 0,
 		"oAP": "\/images\/submit_hover_bg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/topherbg.gif": {
 		"ft": 4194304,
@@ -568,7 +568,7 @@
 		"oA": 0,
 		"oAP": "\/images\/topherbg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/topherbg2.gif": {
 		"ft": 4194304,
@@ -576,7 +576,7 @@
 		"oA": 0,
 		"oAP": "\/images\/topherbg2.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/tophermcculloch-header.svg": {
 		"ft": 2097152,
@@ -594,7 +594,7 @@
 		"oA": 0,
 		"oAP": "\/images\/wavybg.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/images\/wavybg.png": {
 		"ft": 32768,
@@ -602,8 +602,8 @@
 		"oA": 0,
 		"oAP": "\/images\/wavybg.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -694,8 +694,8 @@
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
