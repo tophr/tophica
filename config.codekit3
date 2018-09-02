@@ -692,6 +692,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/js\/selectivizr.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/selectivizr-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -780,13 +790,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-archives.php",
-		"oF": 0
-		},
-	"\/template-contact.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/template-contact.php",
 		"oF": 0
 		},
 	"\/template-full-width.php": {
