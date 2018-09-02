@@ -68,13 +68,6 @@
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
-	"\/functions\/custom-fields.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/functions\/custom-fields.php",
-		"oF": 0
-		},
 	"\/functions\/customizer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -783,6 +776,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-archives.php",
+		"oF": 0
+		},
+	"\/template-centered-column.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-centered-column.php",
 		"oF": 0
 		},
 	"\/template-full-width.php": {

@@ -134,33 +134,29 @@
                             <?php endif; ?>
 
                                 <div <?php post_class(); ?> id="related-post-<?php the_ID(); ?>">
-                                
-                                    <?php if(get_post_meta(get_the_ID(), 'upload_image_thumb', true) != '') : ?>
-                                    
-                                        <div class="post-thumb">
-                                            <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-                                                <img src="<?php echo get_post_meta(get_the_ID(), 'upload_image_thumb', true); ?>" alt="<?php the_title(); ?>">
-                                            </a>
-                                        </div>  
-                                    
-                                    <?php else: 
-                                    
-                                        if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
-                                        <div class="post-thumb">
-                                            <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-                                                <?php the_post_thumbnail('thumbnail-post'); /* post thumbnail settings configured in functions.php */ ?>
-                                            </a>
-                                        </div>
-                                        <?php endif; ?>
-                                        
-                                    <?php endif; ?>
-                                                    
-                                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
-                
-                                    <div class="entry-content">
-                                        <?php the_excerpt(); ?>
-                                    </div>
-                                
+									<a href="<?php the_permalink(); ?>">
+										<?php if(get_post_meta(get_the_ID(), 'upload_image_thumb', true) != '') : ?>
+
+											<div class="post-thumb">
+											   <img src="<?php echo get_post_meta(get_the_ID(), 'upload_image_thumb', true); ?>" alt="<?php the_title(); ?>">                                           
+											</div>  
+
+										<?php else: 
+
+											if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
+											<div class="post-thumb">
+												<?php the_post_thumbnail('thumbnail-post'); ?>
+											</div>
+											<?php endif; ?>
+
+										<?php endif; ?>
+
+										<h2 class="entry-title"><?php the_title(); ?></h2>
+
+										<div class="entry-content">
+											<?php the_excerpt(); ?>
+										</div>
+									</a>                                
                                 </div>
                             
                             <?php if(is_multiple($finish, 3) || $post_count == $finish) : /* if the finish count is a multiple of 3 or equals the total posts */  ?>

@@ -8,7 +8,7 @@
 	Text Domain: tophica
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 1.4.1
+	Version: 1.5.1
 	
 	Designed & Handcrafted by ThemeZilla
 	All files, unless otherwise stated, are released under the GNU General Public License
@@ -30,7 +30,7 @@
 	11.	Widgets
 	12.	Shortcode Styles
 	13.	Homepage Elements
-	14.	Portfolio Sorter
+	14.	Portfolio Thumbnails & Sorter
 	15. Mobile Styles
 
 -----------------------------------------------------------------------------------*/
@@ -99,16 +99,16 @@ table {
 /*	1.	Document Setup (body, common classes, vertical rhythm, structure etc)
 /*-----------------------------------------------------------------------------------*/
 body {
-  border-top: 10px solid #f5f5f5;
+  border-top: 10px solid #cd2931;
   font-size: 1rem;
   line-height: 1.75;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
   background: #fff;
   color: #444; }
 
 input,
 textarea {
-  font: 14px/20px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/20px "Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
   background: #fff;
   color: #999;
   border: 1px solid #fff; }
@@ -138,6 +138,9 @@ textarea {
 
 a {
   text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
 
 a img {
   border: none; }
@@ -182,42 +185,40 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  font-weight: 700;
   padding: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Poppins", Helvetica, Arial, sans-serif; }
 
 h1 {
-  font-size: 24px;
-  line-height: 28px; }
+  font-size: 36px;
+  line-height: 38px; }
 
 h2 {
-  font-size: 20px;
-  line-height: 22px; }
+  font-size: 32px;
+  line-height: 36px; }
 
 h3 {
-  font-size: 16px;
-  line-height: 20px; }
+  font-size: 28px;
+  line-height: 30px; }
 
 h4 {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 21px;
+  line-height: 24px;
   margin-bottom: 15px; }
 
 h5 {
-  font-size: 12px;
-  line-height: 18px; }
+  font-size: 18px;
+  line-height: 24px; }
 
 h6 {
-  font-size: 10px;
-  line-height: 16px; }
+  font-size: 16px;
+  line-height: 20px; }
 
 .entry-content h2,
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  font-weight: 600;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 15px;
   font-style: normal;
   padding-top: 5px; }
@@ -233,31 +234,37 @@ h6 {
 
 .page-title {
   padding: 30px 0 0 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-size: 22px; }
+  text-transform: uppercase;
+  font-size: 2rem; }
 
 .entry-title,
 .entry-title a {
-  font-size: 24px;
-  line-height: 36px;
-  color: #444444; }
+  color: #444;
+  text-transform: uppercase; }
 
 #primary .entry-title {
   padding-left: 180px;
-  margin-bottom: 14px; }
+  margin-bottom: 14px;
+  font-size: 2rem; }
 
 .page #primary .entry-title {
   padding-left: 0; }
 
 #primary .entry-content {
   float: left;
-  width: 680px;
+  width: 72%;
   min-height: 130px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-size: 1.25rem; }
 
-.page-template-template-full-width-php #primary .entry-content {
+.page-template-template-full-width #primary .entry-content {
   width: 100%; }
+
+.centered-column {
+  width: 70%;
+  margin: 0 auto; }
+  .centered-column .entry-content {
+    width: 100% !important; }
 
 .archive #primary .entry-content,
 .blog #primary .entry-content,
@@ -279,14 +286,8 @@ h6 {
   float: left;
   width: 100%; }
 
-.page-template-template-full-width-php #primary {
-  width: 100%; }
-
 .layout-2cl #primary {
   float: right; }
-
-#content {
-  margin-bottom: 40px; }
 
 #sidebar {
   float: right;
@@ -335,8 +336,6 @@ h6 {
 /** THEME
 ===================================*/
 .bx-wrapper .bx-viewport {
-  -webkit-box-shadow: 0 0 5px #ccc;
-          box-shadow: 0 0 5px #ccc;
   left: -5px;
   background: #fff; }
 
@@ -541,9 +540,10 @@ h6 {
 /* Skin */
 #primary-nav {
   float: right;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 22px; }
+  font-size: 1rem;
+  font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
+  margin-top: 9px;
+  margin-bottom: 30px; }
 
 #primary-menu a {
   color: #999999;
@@ -596,7 +596,7 @@ blockquote {
   color: #999; }
 
 strong {
-  font-weight: 600; }
+  font-weight: 700; }
 
 em,
 dfn,
@@ -845,6 +845,22 @@ textarea:focus {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+/* Misc Custom Styles */
+.droid-italic {
+  font-style: italic;
+  font-size: 11px; }
+
+.gray {
+  color: #999; }
+
+.intro-text {
+  font-size: 16px;
+  line-height: 28px; }
+
+.search-no-results #post-0,
+#primary .hentry {
+  padding-top: 20px; }
+
 /*-----------------------------------------------------------------------------------*/
 /*	6.	Post Content Styles
 /*-----------------------------------------------------------------------------------*/
@@ -868,17 +884,15 @@ textarea:focus {
 
 #primary .entry-meta a {
   color: #444444;
-  font-style: normal;
-  font-family: "Open Sans", "Helvetica Neue", arial, sans-serif; }
+  font-style: normal; }
 
 #primary .entry-meta span {
   display: block; }
 
 .published strong {
-  color: #444444;
+  color: #444;
   font-weight: normal;
-  font-style: normal;
-  font-family: "Open Sans", "Helvetica Neue", arial, sans-serif; }
+  font-style: normal; }
 
 .permalink img {
   padding: 0 3px 0 0; }
@@ -1004,7 +1018,8 @@ ol #commentform {
   margin-right: 10px;
   width: 60%; }
 
-#commentform textarea {
+#commentform textarea,
+#contact-form-comment-g35-comment {
   width: 100%; }
 
 #commentform small span,
@@ -1015,6 +1030,24 @@ ol #commentform {
 .contactform small span.grey {
   color: #999;
   font-style: italic; }
+
+#commentform #submit,
+.contactform #submit,
+.contact-submit input.pushbutton-wide {
+  background: transparent url("images/submit.gif") left top no-repeat;
+  width: 92px;
+  height: 29px;
+  padding: 0;
+  text-indent: -9999px;
+  border-radius: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  #commentform #submit:hover,
+  .contactform #submit:hover,
+  .contact-submit input.pushbutton-wide:hover {
+    background: transparent url("images/submit.gif") left -30px no-repeat;
+    border-radius: none; }
 
 .children {
   list-style-type: none; }
@@ -1059,7 +1092,7 @@ li li .comment-author {
 
 .comment-author cite {
   font-style: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif; }
 
 .says {
   display: none; }
@@ -1112,13 +1145,10 @@ li li .comment-author {
 /*-----------------------------------------------------------------------------------*/
 #footer-container {
   background-color: #f5f5f5;
-  margin: 80px 0 0 0; }
-
-.single #footer-container {
-  margin: 0; }
+  margin-top: 30px; }
 
 #footer-widgets {
-  padding: 70px 0 40px;
+  padding: 60px 0 40px;
   font-size: .8625em; }
   #footer-widgets .widget {
     font-style: normal;
@@ -1141,9 +1171,16 @@ li li .comment-author {
   padding: 25px 0 20px 0;
   border-top: 1px solid #e0e0e0;
   background: #f5f5f5;
-  font-size: 11px;
+  font-size: .8625rem;
   color: #999;
   clear: both; }
+
+#footer-wave {
+  height: 15px;
+  width: 100%;
+  float: left;
+  margin-top: -15px;
+  background-image: url("images/wavybg.png"); }
 
 .copyright {
   float: left;
@@ -1188,14 +1225,32 @@ li li .comment-author {
 label.error {
   color: red; }
 
+.page-template-template-portfolio .page-title {
+  display: none; }
+
+/* About Page */
+.page-id-15 #container {
+  padding-bottom: 80px; }
+
+body.page-id-15 {
+  background: #fff url(images/topherbg2.gif) -140px 172px no-repeat; }
+
+.page-id-15 .entry-content p {
+  background: rgba(255, 255, 255, 0.6); }
+
 /*-----------------------------------------------------------------------------------*/
 /*	11.	Widgets
 /*-----------------------------------------------------------------------------------*/
 .widget {
-  margin-bottom: 40px; }
-
-.widget:last-child {
-  border-bottom: none; }
+  margin-bottom: 20px; }
+  .widget:last-child {
+    border-bottom: none; }
+  .widget ul {
+    list-style-type: none;
+    margin: 0; }
+  .widget ol {
+    list-style-type: decimal;
+    margin-bottom: 0; }
 
 .widget-title {
   text-transform: uppercase;
@@ -1203,16 +1258,7 @@ label.error {
   color: #999;
   margin: 0 0 20px 0;
   font-style: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px; }
-
-.widget ul {
-  list-style-type: none;
-  margin: 0; }
-
-.widget ol {
-  list-style-type: decimal;
-  margin-bottom: 0; }
 
 /* Recent Comments Widget */
 .widget_recent_comments {
@@ -1246,12 +1292,9 @@ label.error {
 /* Blog Widget */
 .tz_blog .entry-title a,
 .tz_blog .entry-title {
-  color: #444444;
-  font-weight: 600;
+  color: #444;
   font-size: 14px;
-  line-height: 21px;
-  /*margin-bottom: 10px;*/
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  line-height: 21px; }
 
 .tz_blog .entry-meta a {
   color: #999;
@@ -1270,55 +1313,79 @@ label.error {
 .widget_calendar table {
   width: 100%; }
 
-/* Twitter Widget */
-.twitter-link {
-  padding: 15px 0 0 0;
-  display: block; }
-
-.zilla-tweet-widget ul {
-  margin: 0;
-  list-style-type: none; }
-
-.zilla-tweet-widget ul li {
-  padding: 0 0 20px 35px;
-  background: url(images/quote.png) no-repeat;
-  width: 180px;
-  color: #444444;
-  font-style: italic; }
-
-.zilla-tweet-widget ul li:last-child {
-  padding: 0 0 0 35px; }
-
-.zilla-tweet-widget ul li .twitter-time-stamp {
-  color: #999;
-  display: block;
-  font-size: 9px;
-  font-style: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase; }
-
-.zilla-tweet-widget ul li .twitter-time-stamp:hover {
-  color: #666; }
-
 /* Flickr Widget */
-.tz_flickr_widget {
-  margin-right: -10px; }
-
-.flickr_badge_image {
-  float: left;
-  margin: 0 8px 8px 0; }
-  .flickr_badge_image img {
-    background: #fff;
+.flickr_badge_image,
+.flickr-images {
+  margin-right: -6px; }
+  .flickr_badge_image img,
+  .flickr-images img {
+    margin: 0 5px 5px 0 !important;
     padding: 3px;
-    width: 60px;
-    height: 60px;
+    width: 62px;
+    height: 62px;
+    background: #fff;
     border: 1px solid #e5e5e5; }
-    .flickr_badge_image img:hover {
+    .flickr_badge_image img:hover,
+    .flickr-images img:hover {
       border-color: #d5d5d5; }
 
 /* Video Widget */
 .tz_video {
   margin-bottom: 10px; }
+
+/* Social Icons */
+#social-top,
+#social-bottom {
+  list-style-type: none;
+  clear: both; }
+  #social-top li,
+  #social-bottom li {
+    display: inline; }
+  #social-top a,
+  #social-bottom a {
+    display: block;
+    float: left;
+    width: 48px;
+    height: 48px;
+    text-indent: -9999px;
+    margin: 0 9px 9px 0;
+    background-image: url(images/social_icons.svg);
+    background-repeat: no-repeat;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    #social-top a:hover,
+    #social-bottom a:hover {
+      -webkit-filter: none;
+              filter: none; }
+
+#plus a {
+  background-position: left top; }
+
+#twitter a {
+  background-position: -49px top; }
+
+#flickr a {
+  background-position: -96px top; }
+
+#linkedin a {
+  background-position: -144px top; }
+
+#youtube a {
+  background-position: left -48px; }
+
+#vimeo a {
+  background-position: -48px -48px; }
+
+#lastfm a {
+  background-position: -96px -48px; }
+
+#behance a {
+  background-position: -144px -48px; }
+
+#facebook a {
+  background-position: left -96px; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	12.	Shortcode Styles
@@ -1380,6 +1447,30 @@ label.error {
 /*-----------------------------------------------------------------------------------*/
 /*	13.	Homepage Elements
 /*-----------------------------------------------------------------------------------*/
+/* Hero Image */
+.hero-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 85%;
+  background-attachment: fixed;
+  height: 55vh;
+  margin-bottom: 30px; }
+  .hero-image .container {
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .hero-image h1 {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1; }
+
 /* Slider */
 .bxslider {
   margin: 0; }
@@ -1399,35 +1490,33 @@ label.error {
 #slider2 {
   margin-bottom: 30px; }
 
+/*-----------------------------------------------------------------------------------*/
+/*	14.	Portfolio Thumbnails & Sorter
+/*-----------------------------------------------------------------------------------*/
 .home.page .recent-wrap {
   padding: 0;
   border: none; }
   .home.page .recent-wrap h3 {
-    font-weight: 400;
     font-size: 20px;
     float: left;
     width: 50%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    text-transform: uppercase; }
   .home.page .recent-wrap .portfolio-link {
     float: right;
     width: 50%;
     text-align: right; }
   .home.page .recent-wrap .hentry-wrap {
     margin: 0 -15px; }
-  .home.page .recent-wrap .post-thumb a {
-    width: auto;
-    height: auto;
-    padding: 0; }
 
 /* Recent */
 .portfolio-recent .sidebar {
   width: 25%;
   float: left;
-  padding: 40px 15px 25px 0; }
+  padding: 40px 0 25px 0; }
   .portfolio-recent .sidebar p {
     margin-bottom: 15px; }
   .portfolio-recent .sidebar h3 {
-    font-weight: 600;
     font-size: 12px;
     margin-bottom: 5px; }
 
@@ -1446,7 +1535,6 @@ label.error {
   float: left;
   padding: 40px 0 20px 0;
   position: relative;
-  font-size: .8625rem;
   line-height: 1.5; }
   .recent-wrap .hentry {
     width: 33%;
@@ -1459,26 +1547,30 @@ label.error {
       height: auto; }
   .recent-wrap .post-thumb {
     margin-bottom: 10px; }
-    .recent-wrap .post-thumb a {
-      display: block; }
-      .recent-wrap .post-thumb a:hover {
-        background: #f5f5f5; }
     .recent-wrap .post-thumb img {
       width: 100%;
       height: auto; }
-  .recent-wrap .entry-title a,
   .recent-wrap .entry-title {
     color: #444;
-    font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 21px;
     margin-bottom: 10px;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+  .recent-wrap a {
+    display: block;
+    color: #444; }
+    .recent-wrap a:hover {
+      color: #444;
+      text-decoration: none; }
+      .recent-wrap a:hover .entry-title {
+        color: #cd2931; }
 
 /* Portfolio Entry Page */
 .single-portfolio .slides_container {
-  width: 75%;
   float: right;
+  width: 75%;
+  padding-top: 20px;
   text-align: center; }
 
 .single-portfolio .portfolio-recent .sidebar {
@@ -1492,10 +1584,6 @@ label.error {
 #home-border .sidebar {
   padding: 0; }
 
-.droid-italic {
-  font-style: italic;
-  font-size: 11px; }
-
 .post-thumb a {
   cursor: pointer; }
   .post-thumb a span.overlay {
@@ -1507,11 +1595,6 @@ label.error {
     z-index: 5;
     opacity: 0; }
 
-#recent-portfolio .entry-title,
-#recent-portfolio .entry-content,
-#recent-portfolio .entry-meta {
-  padding-left: 0; }
-
 #recent-portfolio .entry-title {
   margin-bottom: 0; }
 
@@ -1522,9 +1605,6 @@ label.error {
 #recent-portfolio-detail .entry-content {
   margin-left: 5px; }
 
-/*-----------------------------------------------------------------------------------*/
-/*	14.	Portfolio Sorter, MANDATORY styling
-/*-----------------------------------------------------------------------------------*/
 .image-grid {
   margin: 0 -15px; }
   .image-grid:after {
@@ -1534,11 +1614,17 @@ label.error {
     overflow: hidden;
     clear: both; }
   .image-grid li {
-    width: 33%;
-    margin-bottom: 30px;
     float: left;
-    height: 320px;
-    overflow: hidden; }
+    height: 340px;
+    width: 33%;
+    overflow: hidden;
+    margin-bottom: 10px; }
+    .image-grid li .post-thumb img {
+      width: 262px;
+      height: 210px;
+      max-width: none;
+      -o-object-fit: cover;
+         object-fit: cover; }
 
 .video_info {
   display: block;
@@ -1546,122 +1632,10 @@ label.error {
   margin-bottom: 20px; }
 
 .post_video {
-  display: block;
+  display: inline-block;
   width: 700px;
   overflow: hidden;
   margin-bottom: 20px; }
-
-/* Other Styles */
-.page-template-template-portfolio .page-title {
-  display: none; }
-
-.widget {
-  margin-bottom: 20px; }
-
-.gray {
-  color: #999; }
-
-.intro-text {
-  font-size: 16px;
-  line-height: 28px; }
-
-#primary-nav {
-  margin-top: 9px;
-  margin-bottom: 30px; }
-
-.search-no-results #post-0, #primary .hentry {
-  padding-top: 20px; }
-
-#social-top,
-#social-bottom {
-  list-style-type: none;
-  clear: both; }
-  #social-top li,
-  #social-bottom li {
-    display: inline; }
-  #social-top a,
-  #social-bottom a {
-    display: block;
-    float: left;
-    width: 48px;
-    height: 48px;
-    text-indent: -9999px;
-    margin: 0 9px 9px 0;
-    background-image: url(images/social_icons.svg);
-    background-repeat: no-repeat;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
-    #social-top a:hover,
-    #social-bottom a:hover {
-      -webkit-filter: none;
-              filter: none; }
-
-#plus a {
-  background-position: left top; }
-
-#twitter a {
-  background-position: -49px top; }
-
-#flickr a {
-  background-position: -96px top; }
-
-#linkedin a {
-  background-position: -144px top; }
-
-#youtube a {
-  background-position: left -48px; }
-
-#vimeo a {
-  background-position: -48px -48px; }
-
-#lastfm a {
-  background-position: -96px -48px; }
-
-#behance a {
-  background-position: -144px -48px; }
-
-#facebook a {
-  background-position: left -96px; }
-
-#commentform #submit, .contactform #submit,
-.contact-submit input.pushbutton-wide {
-  background: transparent url("images/submit.gif") left top no-repeat;
-  width: 92px;
-  height: 29px;
-  padding: 0;
-  text-indent: -9999px;
-  border-radius: none;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
-
-#commentform #submit:hover,
-.contactform #submit:hover,
-.contact-submit input.pushbutton-wide:hover {
-  background: transparent url("images/submit.gif") left -30px no-repeat;
-  border: none;
-  border-radius: none; }
-
-.page-id-15 #container {
-  padding-bottom: 80px; }
-
-body.page-id-15 {
-  background: #fff url(images/topherbg2.gif) -140px 172px no-repeat; }
-
-.page-id-15 .entry-content p {
-  background: rgba(255, 255, 255, 0.6); }
-
-.page-id-15 #footer-container {
-  margin-top: 0; }
-
-#footer-wave {
-  height: 15px;
-  width: 100%;
-  float: left;
-  margin-top: -15px;
-  background-image: url("images/wavybg.png"); }
 
 /*-----------------------------------------------------------------------------------*/
 /*	15.	Mobile Styles
@@ -1670,7 +1644,6 @@ body.page-id-15 {
 /*	Desktop
 /*-----------------------------------------------------------------------------------*/
 @media (min-width: 940px) {
-  #container,
   .container {
     width: 940px; } }
 
@@ -1678,7 +1651,6 @@ body.page-id-15 {
 /*	Large Desktop
 /*-----------------------------------------------------------------------------------*/
 @media (min-width: 1230px) {
-  #container,
   .container {
     width: 1140px; } }
 
@@ -1696,9 +1668,7 @@ body.page-id-15 {
   .archive #primary .entry-content,
   .search-results #primary .entry-content {
     max-width: 100%; }
-  #content {
-    margin-bottom: 0; }
-  #container {
+  .container {
     padding: 20px; }
   #primary {
     width: 100%; }
@@ -1771,7 +1741,6 @@ body.page-id-15 {
   /*	9.	Footer Styles
 	/*-----------------------------------------------------------------------------------*/
   #footer-container {
-    /*background: url(images/bg-foot.gif) left top repeat-x #f5f5f5;*/
     margin: 0;
     padding: 20px; }
   .single #footer-container {
@@ -1796,18 +1765,14 @@ body.page-id-15 {
 	/*-----------------------------------------------------------------------------------*/
   /* Search Widget */
   .widget_search #s {
-    /*width: 208px;*/
     width: 100%; }
-  .tz_tweet_widget ul li {
-    /*padding: 0 0 20px 35px;
-		width: 180px;*/
-    width: 90%; }
   /* Flickr Widget */
   .tz_flickr_widget {
     padding-right: 0;
     /*width: 228px;*/
     width: 100%; }
-  .flickr_badge_image img {
+  .flickr_badge_image img,
+  .flickr_images img {
     width: 75px;
     height: 75px; }
   /*-----------------------------------------------------------------------------------*/
@@ -1884,8 +1849,8 @@ body.page-id-15 {
   .post-15 {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0 20px; }
-  .page-id-15 #container {
-    padding-bottom: 0; } }
+    .post-15 .container {
+      padding-bottom: 0; } }
 
 @media (max-width: 360px) {
   .recent-wrap .post-thumb a {

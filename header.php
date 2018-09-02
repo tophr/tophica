@@ -13,9 +13,9 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="container">
+	<div class="container clearfix">
 	
-		<div id="header" class="clearfix">
+		<header id="header" class="clearfix">
         
         	<div id="upper-wrap" class="clearfix">
 			
@@ -37,7 +37,5 @@
                 
             </div>
 			
-		</div>
-
-		<div id="content" class="clearfix">
+		</header>
 		

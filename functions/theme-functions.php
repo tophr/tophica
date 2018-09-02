@@ -151,21 +151,21 @@ function tz_lightbox($postid) {
 
 		if($embed != '')
 		{
-			$output = '<a rel="prettyPhoto[gallery]" title="'.get_the_title($postid).'" href="'.get_template_directory_uri().'/includes/portfolio-video.php?id='.$postid.'&iframe=true&width=710&height='. $lightbox_height .'"><span class="overlay"></span>'.$thumb.'</a>';
+			$output = '<span class="overlay"></span>'.$thumb.'';
 		}
 		elseif($video != '' && $embed == '') 
 		{
-			$output = '<a rel="prettyPhoto[gallery]" title="'.get_the_title($postid).'" href="'.$video.'"><span class="overlay"></span>'.$thumb.'</a>';
+			$output = '</span>'.$thumb.'';
 		}
 		else
 		{
-			$output = '<a rel="prettyPhoto[gallery]" title="'.get_the_title($postid).'" href="'.$link.'"><span class="overlay"></span>'.$thumb.'</a>';
+			$output = '<span class="overlay"></span>'.$thumb.'';
 		}
 		
 	}
 	else
 	{	
-		$output = '<a title="'.get_the_title($postid).'" href="'.get_permalink($postid).'">'.$thumb.'</a>';
+		$output = ''.$thumb.'';
 	}
 	
 	echo $output;

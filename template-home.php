@@ -6,7 +6,18 @@ Template Name: Home
 
 <?php get_header(); ?>
 			
-	<?php if( have_rows('slider') ): ?>
+	<?php 
+	$image = get_field('hero_image');
+
+	if( !empty($image) ): ?>
+	</div>
+	<div class="hero-image" style="background-image: url(<?php echo $image['url']; ?>);">
+		<div class="container">
+			<?php if ( get_field('headline') ) { echo '<h1>' . get_field('headline') . '</h1>'; } ?></h1>
+		</div>
+	</div>
+	<div class="container">
+	<?php elseif( have_rows('slider') ): ?>
 		<div id="slider2" class="clearfix">
 			<ul class="slides_container2 bxslider">
 			<?php while( have_rows('slider') ): the_row(); 
@@ -27,15 +38,17 @@ Template Name: Home
 			<?php endwhile; ?>
 			</ul>                
 		</div>
-	<?php endif; ?>            
+	<?php endif; ?>    	
 	
 	<div id="recent-portfolio" class="home-recent clearfix">
 
 		<div class="recent-wrap">
 
-		<h3><?php echo get_theme_mod( 'portfolio_title', 'Featured Projects' ); ?></h3>
+			<div class="clearfix">
+				<h3><?php echo get_theme_mod( 'portfolio_title', 'Featured Projects' ); ?></h3>
 
-		 <p class="portfolio-link"><a class="droid-italic" href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
+				<p class="portfolio-link"><a href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
+			</div>
 
 				<?php 
 				//Set the starter count
@@ -58,30 +71,32 @@ Template Name: Home
 				<?php endif; ?>
 
 					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+						
+						<a href="<?php the_permalink(); ?>">
 
-						<?php if(get_post_meta(get_the_ID(), 'upload_image_thumb', true) != '') : ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image_thumb', true) != '') : ?>
 
-							<div class="post-thumb">
-								<a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>">
+								<div class="post-thumb">								
 									<img src="<?php echo get_post_meta(get_the_ID(), 'upload_image_thumb', true); ?>" alt="<?php the_title(); ?>" />
-								</a>
-							</div>
+								</div>
 
-						<?php else: 
+							<?php else: 
 
-							if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
-							<div class="post-thumb">
-								<a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-post'); /* post thumbnail settings configured in functions.php */ ?></a>
-							</div>
+								if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
+								<div class="post-thumb">
+									<?php the_post_thumbnail('thumbnail-post'); ?>
+								</div>
+								<?php endif; ?>
+
 							<?php endif; ?>
 
-						<?php endif; ?>
+							<h2 class="entry-title"><?php the_title(); ?></h2>
 
-						<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-						</div>
+							<div class="entry-content">
+								<?php the_excerpt(); ?>
+							</div>
+							
+						</a>
 
 					</div>
 

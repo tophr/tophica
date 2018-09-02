@@ -157,9 +157,9 @@ function tz_enqueue_scripts() {
 	
 	wp_register_script('tm_bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '4.1');	
 	
-	wp_enqueue_style('tz_stylesheet', get_stylesheet_uri(), '1.2.7' );
-	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i');
-	wp_register_style('tz_shortcodes', get_template_directory_uri() . '/css/shortcodes.css' );
+	wp_enqueue_style('tz_stylesheet', get_stylesheet_uri(), '1.5.1' );
+	//wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i');
+	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i|Poppins:700');
 		
 	// Enqueue our scripts
 	wp_enqueue_script('jquery');
@@ -168,8 +168,8 @@ function tz_enqueue_scripts() {
 	//wp_enqueue_script('jquery-ui-tabs');
 	//wp_enqueue_script('jquery-ui-accordion');
 	
-	wp_enqueue_script('tz_shortcodes'); 
-	wp_enqueue_style( 'tz_shortcodes' );
+	//wp_enqueue_script('tz_shortcodes'); 
+	//wp_enqueue_style( 'tz_shortcodes' );
 	if ( is_page_template('template-portfolio.php') ) {
 		wp_enqueue_script('tz_custom');
 	    wp_enqueue_script('quicksand'); 
@@ -397,9 +397,6 @@ include("functions/portfolio-meta.php");
 
 // Add the Theme Shortcodes
 include("functions/theme-shortcodes.php");
-
-// Add the Theme Custom Fields
-include("functions/custom-fields.php");
 
 
 /*-----------------------------------------------------------------------------------*/

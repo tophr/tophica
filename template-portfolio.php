@@ -50,19 +50,19 @@ Template Name: Portfolio
                             <li data-id="id-<?php echo $count; ?>" class="<?php if($terms) : foreach ($terms as $term) { echo 'term-'.$term->term_id.' '; } endif; ?>">
                     
                             <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-                                
-                                <div class="post-thumb">
-                                    <?php tz_lightbox(get_the_ID()); ?>
-                                </div>
-                                
-                                <div class="count hidden"><?php echo $count; ?></div>
-                                 
-                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
-            
-                                <div class="entry-content">
-                                    <?php the_excerpt(); ?>
-                                </div>
-                            
+                                <a href="<?php the_permalink(); ?>"> 
+									<div class="post-thumb">
+										<?php tz_lightbox(get_the_ID()); ?>
+									</div>
+
+									<div class="count hidden"><?php echo $count; ?></div>
+
+									<h2 class="entry-title"><?php the_title(); ?></h2>
+
+									<div class="entry-content">
+										<?php the_excerpt(); ?>
+									</div>
+								</a>                            
                             </div>
                         
                         <?php

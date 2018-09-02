@@ -1,10 +1,7 @@
-		<!-- END #content -->
-		</div>
         
-    <!-- END #container -->
     </div> 	
     
-    <div id="footer-container">
+    <footer id="footer-container">
     	<div id="footer-wave">&nbsp;</div>
         <div id="footer-widgets" class="container">
         	
@@ -36,7 +33,7 @@
         </div>	
    	
 	<?php wp_footer(); ?>
-	</div>	
+	</footer>	
 
 </body>
 </html>
