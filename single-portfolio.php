@@ -15,7 +15,7 @@
             	<span class="back"><a href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('&larr; Back to the Portfolio', 'tophica'); ?></a></span>
             </div>
             
-            <div id="recent-portfolio" class="home-recent portfolio-recent clearfix">
+            <div id="recent-portfolio" class="portfolio-recent clearfix">
             
                 <?php while (have_posts()) : the_post(); ?>
                 
@@ -23,7 +23,7 @@
                     <?php the_content(); ?>            
                 </div>
                 
-                <div class="recent-wrap">                    
+                <div class="slides_container">                    
 					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 						<?php 
@@ -53,85 +53,46 @@
 
 						<div id="slider" class="clearfix">
 
-							<div class="slides_container">
+							<?php if(get_post_meta(get_the_ID(), 'upload_image', true) != '') : ?>
+							<?php
 
-								<?php if(get_post_meta(get_the_ID(), 'upload_image', true) != '') : ?>
-								<?php
+							$height = get_post_meta(get_the_ID(), 'image1_height', true);
 
-								$height = get_post_meta(get_the_ID(), 'image1_height', true);
+							if($height == '') {
+								$image = getimagesize(get_post_meta(get_the_ID(), 'upload_image', true));
+								$height = $image[1];
+							}
 
-								if($height == '') {
-									$image = getimagesize(get_post_meta(get_the_ID(), 'upload_image', true));
-									$height = $image[1];
-								}
-
-								?>
-								<div><img width="700" height="<?php echo $height; ?>" src="<?php echo get_post_meta(get_the_ID(), 'upload_image', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image2', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image2', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image3', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image3', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image4', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image4', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image5', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image5', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image6', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image6', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image7', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image7', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image8', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image8', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image9', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image9', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image10', true) != '') : ?>
-								<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image10', true); ?>" alt="<?php the_title(); ?>"></div>
-								<?php endif; ?>
-
-							</div>
-
-							<?php if(get_post_meta(get_the_ID(), 'upload_image2', true) != '' ) : ?>
-							<ul class="pagination">
-
-								<li><a href="#"></a></li>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image2', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image3', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image4', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image5', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image6', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image7', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image8', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image9', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-								<?php if(get_post_meta(get_the_ID(), 'upload_image10', true) != '') : ?>
-								<li><a href="#"></a></li>
-								<?php endif; ?>
-
-							</ul>
+							?>
+							<div><img width="700" height="<?php echo $height; ?>" src="<?php echo get_post_meta(get_the_ID(), 'upload_image', true); ?>" alt="<?php the_title(); ?>"></div>
 							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image2', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image2', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image3', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image3', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image4', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image4', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image5', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image5', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image6', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image6', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image7', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image7', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image8', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image8', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image9', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image9', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>
+							<?php if(get_post_meta(get_the_ID(), 'upload_image10', true) != '') : ?>
+							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image10', true); ?>" alt="<?php the_title(); ?>"></div>
+							<?php endif; ?>		
 
 						</div>
 
@@ -142,13 +103,11 @@
                 
             </div>
 			
-            <div id="recent-posts" class="home-recent clearfix">
+            <div id="recent-posts" class="portfolio-recent clearfix">
             	
                 <div class="sidebar">
-
-                    <h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3>                    
+                    <h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3> 
                     <p><?php echo get_theme_mod( 'related_portfolio_desc', 'See related projects.' ); ?></p>
-
                 </div>
                 
                 <div class="recent-wrap">
@@ -213,17 +172,9 @@
 						$finish++;
 						?>
                         
-                        <?php endwhile; wp_reset_query(); ?>
-                        
-                </div>
-            
+                        <?php endwhile; wp_reset_query(); ?>                        
+                </div>            
             </div>
             
-            <div id="home-border" class="home-recent clearfix">
-                <div class="sidebar">
-                </div>
-                <div class="recent-wrap"> 
-                </div>
-            </div>
             
 <?php get_footer(); ?>

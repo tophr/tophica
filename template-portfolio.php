@@ -17,7 +17,7 @@ Template Name: Portfolio
 				?>
             </h1>
             
-            <div id="recent-portfolio" class="home-recent portfolio-recent clearfix">
+            <div id="recent-portfolio" class="portfolio-recent clearfix">
             	
                 <?php while (have_posts()) : the_post(); ?>
                 <div class="sidebar">
