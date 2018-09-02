@@ -8,7 +8,7 @@
 	Text Domain: tophica
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 1.5.1
+	Version: 1.5.2
 	
 	Designed & Handcrafted by ThemeZilla
 	All files, unless otherwise stated, are released under the GNU General Public License
@@ -35,7 +35,7 @@
 
 -----------------------------------------------------------------------------------*/
 
-$primary-font: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif; //"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-font: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif; 
 $display-font: "Poppins", Helvetica, Arial, sans-serif;
 $brand-color1: #cd2931;
 $brand-color2: #006699;
@@ -1483,6 +1483,7 @@ body.page-id-15 {
 
 /* Hero Image */
 .hero-image {
+	background-color: #5b93f7;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 85%;
