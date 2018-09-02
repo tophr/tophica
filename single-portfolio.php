@@ -110,33 +110,29 @@
                 <?php endwhile; ?>
                 
             </div>
-			
-           
+			<?php 						
+			//Set the starter count
+			$start = 3;
+			//Set the finish count
+			$finish = 1;
 
-						<?php 						
-						//Set the starter count
-						$start = 3;
-						//Set the finish count
-						$finish = 1;
-						
-						$postId = get_the_ID();						
-                        $related = get_posts_related_by_taxonomy($postId, 'skill-type', get_the_ID());
-						
-						//Get the total amount of posts
-						$post_count = $related->post_count;
+			$postId = get_the_ID();						
+			$related = get_posts_related_by_taxonomy($postId, 'skill-type', get_the_ID());
 
-						if ($post_count) {						
-							?>
+			//Get the total amount of posts
+			$post_count = $related->post_count;
+
+			if ($post_count) {						
+				?>
 						
- 			<div id="recent-posts" class="portfolio-recent clearfix">
+ 			<div id="recent-posts" class="portfolio-recent clearfix related-projects">
             	
-                <div class="sidebar">
-                    <h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3> 
-                    <p><?php echo get_theme_mod( 'related_portfolio_desc', 'See related projects.' ); ?></p>
+                <div class="sidebar">                    
                 </div>
                 
                 <div class="recent-wrap">
-
+					<h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3> 
+                    <p><?php echo get_theme_mod( 'related_portfolio_desc', 'See related projects.' ); ?></p>
 
 						<?php
 						}
@@ -144,9 +140,6 @@
                         while ($related->have_posts()) : $related->the_post(); 
 						
                         ?>
-
-
-
                         
 							<?php if(is_multiple($start, 3)) : /* if the start count is a multiple of 3 */ ?>
                             <div id="recent-portfolio-detail" class="hentry-wrap clearfix"> 

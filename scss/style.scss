@@ -1567,7 +1567,7 @@ body.page-id-15 {
 			margin-bottom: 15px;
 		}
 		h3 {
-			font-size: 12px;
+			font-size: 14px;
 			margin-bottom: 5px;
 		}
 	}
@@ -1646,13 +1646,13 @@ body.page-id-15 {
 	.portfolio-recent {
 		.sidebar {
 			padding-top: 20px;	
-			width: 25%;
+			width: 25%;			
 		}
 	}	
 	.recent-wrap {
 		width: 75%;
 		.hentry {
-			width: 33%;
+			width: 33.3333333333%;
 			float: left;
 		}
 	}	
@@ -1675,21 +1675,22 @@ body.page-id-15 {
 			display: block;
 			z-index: 5;
 			opacity: 0;
-		}
-	
+		}	
 	}
 }
 
-#recent-portfolio {
+#recent-portfolio {	
 	.entry-title { margin-bottom: 0; }	
 }
 
 #recent-portfolio-detail {
+	margin: 0 -15px;
+	h3 {
+		//margin-left: 15px;
+	}
 	.entry-title { 
 		margin-bottom: 5px;
-		margin-left: 5px;
-	}
-	.entry-content { margin-left: 5px; }
+	}	
 }
 
 .image-grid {

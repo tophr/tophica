@@ -1505,7 +1505,7 @@ body.page-id-15 {
   .portfolio-recent .sidebar p {
     margin-bottom: 15px; }
   .portfolio-recent .sidebar h3 {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 5px; }
 
 .portfolio-recent .recent-wrap {
@@ -1572,7 +1572,7 @@ body.page-id-15 {
 .single-portfolio .recent-wrap {
   width: 75%; }
   .single-portfolio .recent-wrap .hentry {
-    width: 33%;
+    width: 33.3333333333%;
     float: left; }
 
 .single-portfolio .portfolio-item {
@@ -1596,12 +1596,10 @@ body.page-id-15 {
 #recent-portfolio .entry-title {
   margin-bottom: 0; }
 
-#recent-portfolio-detail .entry-title {
-  margin-bottom: 5px;
-  margin-left: 5px; }
-
-#recent-portfolio-detail .entry-content {
-  margin-left: 5px; }
+#recent-portfolio-detail {
+  margin: 0 -15px; }
+  #recent-portfolio-detail .entry-title {
+    margin-bottom: 5px; }
 
 .image-grid {
   margin: 0 -15px; }
