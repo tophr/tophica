@@ -50,8 +50,18 @@
 						</div>
 
 						<?php endif; ?>
-
-						<div id="slider" class="clearfix">
+							
+							<?php if( have_rows('portfolio_images') ): ?>							
+								<?php while( have_rows('portfolio_images') ): the_row(); 
+									$image = get_sub_field('image');	
+									$size = 'thumbnail-portfolio';
+								?>					 
+									<div class="portfolio-item">								
+										<?php echo wp_get_attachment_image( $image, $size ); ?>		
+									</div>
+								<?php endwhile; ?>									
+							<?php endif; ?>  
+							
 
 							<?php if(get_post_meta(get_the_ID(), 'upload_image', true) != '') : ?>
 							<?php
@@ -92,9 +102,7 @@
 							<?php endif; ?>
 							<?php if(get_post_meta(get_the_ID(), 'upload_image10', true) != '') : ?>
 							<div><img width="700" src="<?php echo get_post_meta(get_the_ID(), 'upload_image10', true); ?>" alt="<?php the_title(); ?>"></div>
-							<?php endif; ?>		
-
-						</div>
+							<?php endif; ?>								
 
 					</div>
 
@@ -102,28 +110,32 @@
                 <?php endwhile; ?>
                 
             </div>
-			
-            <div id="recent-posts" class="portfolio-recent clearfix">
+			<?php 						
+			//Set the starter count
+			$start = 3;
+			//Set the finish count
+			$finish = 1;
+
+			$postId = get_the_ID();						
+			$related = get_posts_related_by_taxonomy($postId, 'skill-type', get_the_ID());
+
+			//Get the total amount of posts
+			$post_count = $related->post_count;
+
+			if ($post_count) {						
+				?>
+						
+ 			<div id="recent-posts" class="portfolio-recent clearfix related-projects">
             	
-                <div class="sidebar">
-                    <h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3> 
-                    <p><?php echo get_theme_mod( 'related_portfolio_desc', 'See related projects.' ); ?></p>
+                <div class="sidebar">                    
                 </div>
                 
                 <div class="recent-wrap">
+					<h3><?php echo get_theme_mod( 'related_portfolio_title', 'Similar Projects' ); ?></h3> 
+                    <p><?php echo get_theme_mod( 'related_portfolio_desc', 'See related projects.' ); ?></p>
 
-						<?php 						
-						//Set the starter count
-						$start = 3;
-						//Set the finish count
-						$finish = 1;
-						
-						$postId = get_the_ID();
-						
-                        $related = get_posts_related_by_taxonomy($postId, 'skill-type', get_the_ID());
-						
-						//Get the total amount of posts
-						$post_count = $related->post_count;
+						<?php
+						}
 						
                         while ($related->have_posts()) : $related->the_post(); 
 						
@@ -166,11 +178,17 @@
                         <?php
 						$start++;
 						$finish++;
-						?>
+						?>	
                         
-                        <?php endwhile; wp_reset_query(); ?>                        
-                </div>            
-            </div>
+                        <?php endwhile; wp_reset_query(); ?>  
+
+			<?php if ($post_count) { ?>
+					
+					</div>            
+          	  </div>
+
+			<?php } ?>
+               
             
             
 <?php get_footer(); ?>

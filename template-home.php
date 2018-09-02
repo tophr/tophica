@@ -47,7 +47,7 @@ Template Name: Home
 			<div class="clearfix">
 				<h3><?php echo get_theme_mod( 'portfolio_title', 'Featured Projects' ); ?></h3>
 
-				<p class="portfolio-link"><a href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('View the Portfolio &rarr;', 'tophica'); ?></a></p>
+				<p class="portfolio-link"><a href="<?php echo get_permalink(get_theme_mod( 'portfolio_page', '/portfolio/' )); ?>"><?php _e('See More Work &rarr;', 'tophica'); ?></a></p>
 			</div>
 
 				<?php 
