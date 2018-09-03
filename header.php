@@ -21,16 +21,19 @@
 			
                 <div id="logo">
                     <?php 
-                    if (get_header_image()) { ?>
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo( get_header_image() ); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
-                    <?php } else { ?>
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/tophermcculloch-header.svg" alt="<?php bloginfo( 'name' ); ?>" width="546" height="51" /></a>
-                    <?php } ?>
+					
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+					if ( has_custom_logo() ) {
+						echo '<a href="' . home_url() . '"><img src="'. esc_url( $logo[0] ) .'" alt="' . get_bloginfo('name') . '"></a>';
+					} else {
+						echo '<h1><a href="' . home_url() . '">'. get_bloginfo( 'name' ) .'</a></h1>';
+					} ?>
+					
                 </div>
                 
                 <div id="primary-nav">
                     <?php if ( has_nav_menu( 'primary-menu' ) ) { 
-                        /* if menu location 'primary-menu' exists then use custom menu */ 
                         wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_id' => 'primary-menu', 'menu_class' => 'sf-menu', 'container' => '' ) ); 
                     } ?>
                 </div>

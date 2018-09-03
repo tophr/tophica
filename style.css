@@ -449,17 +449,12 @@ h6 {
   border-bottom: 1px solid #efefef; }
 
 #logo {
-  float: left; }
-
-#logo,
-#logo a {
-  font-size: 28px;
-  line-height: 30px;
   color: #000;
-  font-weight: 600; }
-
-#logo a:hover {
-  text-decoration: none; }
+  float: left; }
+  #logo a {
+    color: #000; }
+    #logo a:hover {
+      text-decoration: none; }
 
 #tagline {
   color: #999;

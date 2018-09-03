@@ -25,6 +25,31 @@ if ( ! isset( $content_width ) ) $content_width = 680;
 
 
 /*-----------------------------------------------------------------------------------*/
+/*	Declare Theme Support Options & Configure WP2.9+ Thumbnails
+/*-----------------------------------------------------------------------------------*/
+
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 35, 35, true );
+	add_image_size( 'thumbnail-large', 600, 200, true ); // Alt Large thumbnails
+	add_image_size( 'thumbnail-post', 712, 560, true ); // Portfolio thumbnails
+	add_image_size( 'thumbnail-archive', 680, 180, true ); // Archive thumbnails
+	add_image_size( 'thumbnail-portfolio', 820, '', true ); // Portfolio images
+}
+
+// Add theme support for Custom Logo.
+add_theme_support( 'custom-logo', array(
+	'height'      => 60,
+	'width'       => 600,
+	'flex-height' => true,
+	'flex-width'  => true,
+) );
+
+add_theme_support( 'custom-header' );
+add_theme_support( 'title-tag' );
+add_theme_support( 'automatic-feed-links' );
+
+/*-----------------------------------------------------------------------------------*/
 /*	Register Sidebars
 /*-----------------------------------------------------------------------------------*/
 
@@ -63,23 +88,6 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-/*	Configure WP2.9+ Thumbnails
-/*-----------------------------------------------------------------------------------*/
-
-if ( function_exists( 'add_theme_support' ) ) {
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 35, 35, true );
-	add_image_size( 'thumbnail-large', 600, 200, true ); // Alt Large thumbnails
-	add_image_size( 'thumbnail-post', 712, 560, true ); // Portfolio thumbnails
-	add_image_size( 'thumbnail-archive', 680, 180, true ); // Archive thumbnails
-	add_image_size( 'thumbnail-portfolio', 820, '', true ); // Portfolio images
-}
-
-add_theme_support( 'custom-header' );
-add_theme_support( 'title-tag' );
-add_theme_support( 'automatic-feed-links' );
 
 /*-----------------------------------------------------------------------------------*/
 /*	Get related posts by taxonomy
@@ -190,6 +198,8 @@ function tm_home_slider() {
 			jQuery('.bxslider').bxSlider({
 				mode: 'fade',
 				auto: true,
+				nextText: '&rsaquo;',
+				prevText: '&lsaquo;'
 			});	
 		});
 		</script>

@@ -479,17 +479,14 @@ h6 {
 
 #upper-wrap { border-bottom: 1px solid #efefef; }
 
-#logo { float: left; }
-
-#logo,
-#logo a {
-	font-size: 28px;
-	line-height: 30px;
+#logo { 
 	color: #000;
-	font-weight: 600;
+	float: left; 
+	a {
+		color: #000;
+		&:hover { text-decoration: none; }
+	}
 }
-
-#logo a:hover { text-decoration: none; }
 
 #tagline {
 	color: #999;
