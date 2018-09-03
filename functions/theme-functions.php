@@ -38,15 +38,15 @@ function tophica_custom_css_output() {
   echo '<style type="text/css" id="custom-theme-css">
   	a, 
 	#primary-menu a:hover, 
-	#primary-menu .current-menu-item > a, 
-	.recent-wrap a:hover .entry-title { color: ' .  $link_color . '}
+	#primary-menu .current-menu-item > a { color: ' .  $link_color . '}
   	a:hover,
 	#commentform small span,
 	.tz_blog .entry-title a:hover,
 	#primary .entry-meta a:hover,
 	.recent-wrap .entry-title a:hover,
 	.tab-comments h3 a:hover,
-	.author-tag { color: ' .  $link_hover_color . '; }
+	.author-tag,
+	.recent-wrap a:hover .entry-title { color: ' .  $link_hover_color . '; }
 
 	::selection { background: ' .  $link_hover_color . '; color: #fff; }
 	::-moz-selection { background: ' .  $link_hover_color . '; color: #fff; }  
