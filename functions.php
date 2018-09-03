@@ -49,6 +49,9 @@ add_theme_support( 'custom-header' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );
 
+// Disabling srcset until we figure things out
+add_filter( 'wp_calculate_image_srcset', '__return_false' );
+
 /*-----------------------------------------------------------------------------------*/
 /*	Register Sidebars
 /*-----------------------------------------------------------------------------------*/
