@@ -1772,8 +1772,7 @@ body.page-id-15 {
   .home.page .recent-wrap .hentry-wrap {
     width: 100%; }
   .recent-wrap .hentry-wrap {
-    width: 100%;
-    /*730px*/ }
+    width: 100%; }
   .post-thumb a span.overlay {
     width: 100%; }
   .recent-wrap .post-thumb a {
@@ -1799,16 +1798,27 @@ body.page-id-15 {
 
 @media (max-width: 767px) {
   .single .slides_container {
+    width: 100%;
+    padding: 0; }
+  .page-back {
+    float: none;
+    text-align: center; }
+  .back {
+    width: 100%;
+    position: inherit;
+    margin: 10px 0;
+    font-size: .75em; }
+  .single-portfolio .page-title {
+    text-align: center; }
+  .single-portfolio .portfolio-recent .sidebar,
+  .single-portfolio .recent-wrap .hentry {
     width: 100%; }
   #footer-widgets {
     padding: 20px 0; }
     #footer-widgets .widget-section {
       width: 50%;
       height: 240px;
-      overflow: hidden; }
-  .single-portfolio .portfolio-recent .sidebar,
-  .single-portfolio .recent-wrap .hentry {
-    width: 100%; } }
+      overflow: hidden; } }
 
 @media (max-width: 600px) {
   .recent-wrap .hentry,
