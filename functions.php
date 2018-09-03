@@ -408,6 +408,9 @@ include("functions/theme-shortcodes.php");
 add_filter('widget_text', 'shortcode_unautop');
 add_filter('widget_text', 'do_shortcode');
 
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 12);
+
 /*-----------------------------------------------------------------------------------*/
 /*	Load Theme Options
 /*-----------------------------------------------------------------------------------*/

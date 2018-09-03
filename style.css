@@ -1008,6 +1008,9 @@ ol #commentform {
     background: transparent url("images/submit.gif") left -30px no-repeat;
     border-radius: none; }
 
+.contact-form label {
+  display: inline-block !important; }
+
 .children {
   list-style-type: none; }
 
