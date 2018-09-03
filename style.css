@@ -1446,6 +1446,8 @@ body.page-id-15 {
 
 #slider2 {
   margin-bottom: 30px; }
+  #slider2 img {
+    width: 100%; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	14.	Portfolio Thumbnails & Sorter
@@ -1494,7 +1496,7 @@ body.page-id-15 {
   position: relative;
   line-height: 1.5; }
   .recent-wrap .hentry {
-    width: 33%;
+    width: 33.3333333%;
     margin: 0;
     padding: 0 15px;
     float: left; }
@@ -1581,7 +1583,7 @@ body.page-id-15 {
   .image-grid li {
     float: left;
     height: 340px;
-    width: 33%;
+    width: 33.33333333%;
     overflow: hidden;
     margin-bottom: 10px; }
     @media (min-width: 940px) {

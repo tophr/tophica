@@ -1513,6 +1513,9 @@ body.page-id-15 {
 
 #slider2 {
 	margin-bottom: 30px;
+	img {
+		width: 100%;
+	}
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1575,7 +1578,7 @@ body.page-id-15 {
 	//font-size: .8625rem;
 	line-height: 1.5;
 	.hentry {
-		width: 33%;
+		width: 33.3333333%;
 		margin: 0;
 		padding: 0 15px;
 		float: left;
@@ -1689,7 +1692,7 @@ body.page-id-15 {
 	li {
 		float: left;
 		height: 340px;
-		width: 33%;
+		width: 33.33333333%;
 		overflow: hidden;
 		margin-bottom: 10px;	
 		@media (min-width: 940px) {

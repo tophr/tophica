@@ -130,6 +130,17 @@ function tophica_customize_register( $wp_customize ) {
 		'priority' => 135, // Before Additional CSS.
 	) );
 	
+	$wp_customize->add_setting( 'portfolio_filter', array(
+		'default'           => 'Filter by Client:',
+	) );
+
+	$wp_customize->add_control( 'portfolio_filter', array(
+		'label'       => __( 'Label for Portfolio Filter', 'tophica' ),
+		'section'     => 'portfolio_options',
+		'type'        => 'text',
+	) );
+	
+	
 	$wp_customize->add_setting( 'related_portfolio_title', array(
 		'default'           => 'Similar Projects',
 	) );

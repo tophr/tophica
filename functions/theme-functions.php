@@ -36,11 +36,13 @@ function tophica_custom_css_output() {
 	$link_color = get_theme_mod( 'link_color', '#006699' );
 	$link_hover_color = get_theme_mod( 'link_hover_color', '#cd2931' );
   echo '<style type="text/css" id="custom-theme-css">
-  	a, .tz_tweet_widget ul li span a { color: ' .  $link_color . '}
+  	a, 
+	#primary-menu a:hover, 
+	#primary-menu .current-menu-item > a, 
+	.recent-wrap a:hover .entry-title { color: ' .  $link_color . '}
   	a:hover,
 	#commentform small span,
 	.tz_blog .entry-title a:hover,
-	.tz_tweet_widget ul li span a:hover,
 	#primary .entry-meta a:hover,
 	.recent-wrap .entry-title a:hover,
 	.tab-comments h3 a:hover,
