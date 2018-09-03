@@ -1188,7 +1188,6 @@ li li .comment-author { padding-left: 30px; }
 	}
 	h3 {
 		text-transform: uppercase;
-		font-size: 12px;
 		color: #999;
 		margin: 0 0 17px 0;
 	}
@@ -1274,6 +1273,45 @@ body.page-id-15 {
 	background: rgba(255,255,255,0.6);
 }
 
+#blog {
+	width: 75%;
+	float: left;
+	padding-right: 15px;
+	.hentry {
+		margin: 30px 0;
+		border-bottom: 1px solid $mid-grey;
+	}	
+	.post-thumb {
+		float: left;
+		width: 210px;		
+		margin-right: 30px;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.entry-title {
+		font-size: 28px;
+		line-height: 1;
+	}
+}
+
+#secondary {
+	float: right;
+	width: 25%;
+	margin-top: 30px;
+	padding-left: 15px;
+	font-size: .8625em;	
+	a {
+		text-decoration: underline;
+	}
+	.widget {
+		li {
+			margin-bottom: 5px;
+		}
+	}
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	11.	Widgets
 /*-----------------------------------------------------------------------------------*/
@@ -1293,7 +1331,8 @@ body.page-id-15 {
 
 .widget-title {
 	text-transform: uppercase;
-	font-size: 9px;
+	font-size: 14px;
+	line-height: 1.2;
 	color: #999;
 	margin: 0 0 20px 0;
 	font-style: normal;
@@ -1316,7 +1355,7 @@ body.page-id-15 {
 .widget_categories { color: #999; }
 
 /* Search Widget */
-.widget_search #s { width: 208px; }
+.widget_search #s { width: 100%; max-width: 300px; }
 
 .widget_search form,
 .widget_search fieldset { margin: 0; }
@@ -1344,9 +1383,6 @@ body.page-id-15 {
 
 
 /* Flickr Widget */
-.tz_flickr_widget { 
-	//margin-right: -10px;
-}
 
 .flickr_badge_image,
 .flickr-images {
@@ -1653,16 +1689,7 @@ body.page-id-15 {
 
 .post-thumb {
 	a { 
-		cursor: pointer; 
-		span.overlay {
-			background: url(images/overlay.png) center no-repeat;
-			position: absolute;
-			width: 281px;
-			height: 221px;
-			display: block;
-			z-index: 5;
-			opacity: 0;
-		}	
+		cursor: pointer; 		
 	}
 }
 

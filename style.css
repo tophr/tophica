@@ -1119,7 +1119,6 @@ li li .comment-author {
     padding: 0 15px; }
   #footer-widgets h3 {
     text-transform: uppercase;
-    font-size: 12px;
     color: #999;
     margin: 0 0 17px 0; }
 
@@ -1194,6 +1193,35 @@ body.page-id-15 {
 .page-id-15 .entry-content p {
   background: rgba(255, 255, 255, 0.6); }
 
+#blog {
+  width: 75%;
+  float: left;
+  padding-right: 15px; }
+  #blog .hentry {
+    margin: 30px 0;
+    border-bottom: 1px solid #444; }
+  #blog .post-thumb {
+    float: left;
+    width: 210px;
+    margin-right: 30px; }
+    #blog .post-thumb img {
+      max-width: 100%;
+      height: auto; }
+  #blog .entry-title {
+    font-size: 28px;
+    line-height: 1; }
+
+#secondary {
+  float: right;
+  width: 25%;
+  margin-top: 30px;
+  padding-left: 15px;
+  font-size: .8625em; }
+  #secondary a {
+    text-decoration: underline; }
+  #secondary .widget li {
+    margin-bottom: 5px; }
+
 /*-----------------------------------------------------------------------------------*/
 /*	11.	Widgets
 /*-----------------------------------------------------------------------------------*/
@@ -1210,7 +1238,8 @@ body.page-id-15 {
 
 .widget-title {
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 14px;
+  line-height: 1.2;
   color: #999;
   margin: 0 0 20px 0;
   font-style: normal;
@@ -1239,7 +1268,8 @@ body.page-id-15 {
 
 /* Search Widget */
 .widget_search #s {
-  width: 208px; }
+  width: 100%;
+  max-width: 300px; }
 
 .widget_search form,
 .widget_search fieldset {
@@ -1555,14 +1585,6 @@ body.page-id-15 {
 
 .post-thumb a {
   cursor: pointer; }
-  .post-thumb a span.overlay {
-    background: url(images/overlay.png) center no-repeat;
-    position: absolute;
-    width: 281px;
-    height: 221px;
-    display: block;
-    z-index: 5;
-    opacity: 0; }
 
 #recent-portfolio .entry-title {
   margin-bottom: 0; }

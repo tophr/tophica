@@ -30,10 +30,10 @@ if ( ! isset( $content_width ) ) $content_width = 680;
 
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 35, 35, true );
+	set_post_thumbnail_size( 180, 180, true );
 	add_image_size( 'thumbnail-large', 600, 200, true ); // Alt Large thumbnails
 	add_image_size( 'thumbnail-post', 712, 560, true ); // Portfolio thumbnails
-	add_image_size( 'thumbnail-archive', 680, 180, true ); // Archive thumbnails
+	//add_image_size( 'thumbnail-archive', 680, 180, true ); // Archive thumbnails
 	add_image_size( 'thumbnail-portfolio', 820, '', true ); // Portfolio images
 }
 
@@ -52,6 +52,16 @@ add_theme_support( 'automatic-feed-links' );
 /*-----------------------------------------------------------------------------------*/
 /*	Register Sidebars
 /*-----------------------------------------------------------------------------------*/
+
+register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'Tophica' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar on blog and archive pages.', 'Tophica' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
@@ -139,8 +149,13 @@ add_filter('excerpt_length', 'tz_excerpt_length');
 /*-----------------------------------------------------------------------------------*/
 
 function tz_excerpt_more($excerpt) {
-return str_replace('[...]', '...', $excerpt); }
-add_filter('wp_trim_excerpt', 'tz_excerpt_more');
+//return '... Continue Reading &rarr;'; 
+return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Continue Reading &rarr;', 'Tophica' )
+    );
+}
+add_filter( 'excerpt_more', 'tz_excerpt_more' );
 
 
 /*-----------------------------------------------------------------------------------*/

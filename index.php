@@ -10,20 +10,20 @@
 			endif; 
 		?>           
 
-		<div id="primary" class="hfeed">
+		<div id="blog" class="hfeed">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">	
 
-				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
-
-				<?php /* if the post has a WP 2.9+ Thumbnail */
+				<?php 
 				if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) { ?>
 				<div class="post-thumb">
-					<a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-archive'); /* post thumbnail settings configured in functions.php */ ?></a>
+					<a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail-post'); ?></a>
 				</div>
 				<?php } ?>
+				
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>"> <?php the_title(); ?></a></h2>
 
 				<div class="clearfix">		
 
@@ -31,12 +31,11 @@
 						<span class="published"><?php _e('On', 'tophica') ?> <strong><?php the_time( get_option('date_format') ); ?></strong></span>
 						<span class="entry-categories"><?php _e('In', 'tophica') ?> <?php the_category(', ') ?></span>
 						<span class="comment-count"><?php _e('With', 'tophica') ?> <?php comments_popup_link(__('No Comments', 'tophica'), __('1 Comment', 'tophica'), __('% Comments', 'tophica')); ?></span>
-						<span class="permalink"><img src="<?php echo get_template_directory_uri(); ?>/images/permalink_icon.png" alt="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" /><a title="<?php printf(__('Permanent Link to %s', 'tophica'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Permalink', 'tophica') ?></a></span>
 						<?php edit_post_link( __('edit', 'tophica'), '<span class="edit-post">[', ']</span>' ); ?>
 					</div>
 
-					<div class="entry-content ">
-						<?php the_content(__('Continue Reading &rarr;', 'tophica')); ?>
+					<div class="entry-content">
+						<?php the_excerpt(); ?>
 					</div>
 
 				</div>     
