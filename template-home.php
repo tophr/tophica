@@ -10,23 +10,24 @@ Template Name: Home
 	$image = get_field('hero_image');
 
 	if( !empty($image) ): ?>
-	</div>
-	<div class="hero-image" style="background-image: url(<?php echo $image['url']; ?>);">
-		<div class="container">
-			<?php if ( get_field('headline') ) { echo '<h1>' . get_field('headline') . '</h1>'; } ?></h1>
 		</div>
-	</div>
-	<div class="container">
+		<div class="hero-image" style="background-image: url(<?php echo $image['url']; ?>);">
+			<div class="container">
+				<?php if ( get_field('headline') ) { echo '<h1>' . get_field('headline') . '</h1>'; } ?></h1>
+			</div>
+		</div>
+		<div class="container">
 	<?php elseif( have_rows('slider') ): ?>
+		</div>
 		<div id="slider2" class="clearfix">
 			<ul class="slides_container2 bxslider">
 			<?php while( have_rows('slider') ): the_row(); 
 				// vars
 				$image = get_sub_field('slider_image');					
 				$link = get_sub_field('slider_url');
-				$alt = get_sub_field('slider_alt_tag');
+				$alt = get_sub_field('slider_alt_tag'); 
 				?>					 
-					<li>							
+					<li>
 						<?php if( $link ): ?>
 							<a href="<?php echo $link; ?>">
 						<?php endif; ?>						
@@ -38,6 +39,7 @@ Template Name: Home
 			<?php endwhile; ?>
 			</ul>                
 		</div>
+		<div class="container">
 	<?php endif; ?>    	
 	
 	<div id="recent-portfolio" class="home-recent clearfix">
