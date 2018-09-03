@@ -159,7 +159,7 @@ function tz_enqueue_scripts() {
 	
 	wp_enqueue_style('tz_stylesheet', get_stylesheet_uri(), '1.5.1' );
 	//wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i');
-	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i|Poppins:700');
+	wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i|Poppins:700');
 		
 	// Enqueue our scripts
 	wp_deregister_script('jquery');
