@@ -541,7 +541,6 @@ h6 {
 #primary-nav {
 	float: right;
 	font-size: 1rem;
-	font-family: $primary-font;
 	margin-top: 9px;
 	margin-bottom: 20px;
 }
@@ -1102,7 +1101,6 @@ li li .comment-author { padding-left: 30px; }
 	a:after{ content: " \2192"; }
 	cite { 
 		font-style: normal;
-		font-family: $primary-font;
 	}
 }
 

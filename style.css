@@ -503,7 +503,6 @@ h6 {
 #primary-nav {
   float: right;
   font-size: 1rem;
-  font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
   margin-top: 9px;
   margin-bottom: 20px; }
 
@@ -1044,8 +1043,7 @@ li li .comment-author {
   .comment-author a:after {
     content: " \2192"; }
   .comment-author cite {
-    font-style: normal;
-    font-family: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif; }
+    font-style: normal; }
 
 .says {
   display: none; }
