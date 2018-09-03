@@ -154,11 +154,9 @@ function tz_enqueue_scripts() {
 	
 	wp_register_script('quicksand', get_template_directory_uri() . '/js/jquery.quicksand.js', 'jquery');
 	wp_register_script('tz_custom', get_template_directory_uri() . '/js/jquery.custom.js', array('jquery', 'quicksand'), '1.0', TRUE);	
-	
-	wp_register_script('tm_bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '4.1');	
+	wp_register_script('tm_bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '4.1');	
 	
 	wp_enqueue_style('tz_stylesheet', get_stylesheet_uri(), '1.5.1' );
-	//wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i');
 	wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i|Poppins:700');
 		
 	// Enqueue our scripts
@@ -174,10 +172,9 @@ function tz_enqueue_scripts() {
 	if ( is_page_template( 'template-home.php' ) && empty(get_field('hero_image', get_option( 'page_on_front' ))) ) { 
 		wp_enqueue_script('tm_bxslider'); 
 	}
-	if ( is_singular() ) { wp_enqueue_script( 'comment-reply' ); } // loads the javascript required for threaded comments 
+	if ( is_singular() ) { wp_enqueue_script( 'comment-reply' ); } 
 }
 add_action('wp_enqueue_scripts', 'tz_enqueue_scripts');
-
 
 
 /*-----------------------------------------------------------------------------------*/
