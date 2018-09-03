@@ -21,7 +21,7 @@ load_theme_textdomain('tophica');
 /*	Set Max Content Width (use in conjuction with ".entry-content img" css)
 /*-----------------------------------------------------------------------------------*/
 
-if ( ! isset( $content_width ) ) $content_width = 680;
+if ( ! isset( $content_width ) ) $content_width = 800;
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -33,7 +33,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( 180, 180, true );
 	add_image_size( 'thumbnail-large', 600, 200, true ); // Alt Large thumbnails
 	add_image_size( 'thumbnail-post', 712, 560, true ); // Portfolio thumbnails
-	//add_image_size( 'thumbnail-archive', 680, 180, true ); // Archive thumbnails
 	add_image_size( 'thumbnail-portfolio', 820, '', true ); // Portfolio images
 }
 
