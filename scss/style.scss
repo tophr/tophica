@@ -1283,11 +1283,14 @@ body.page-id-15 {
 	}	
 	.post-thumb {
 		float: left;
-		width: 210px;		
+		width: 210px;	
+		height: 165px;
 		margin-right: 30px;
+		margin-bottom: 30px;
 		img {
 			max-width: 100%;
 			height: auto;
+			border: 1px solid $light-grey;
 		}
 	}
 	.entry-title {

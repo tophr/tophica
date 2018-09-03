@@ -1203,10 +1203,13 @@ body.page-id-15 {
   #blog .post-thumb {
     float: left;
     width: 210px;
-    margin-right: 30px; }
+    height: 165px;
+    margin-right: 30px;
+    margin-bottom: 30px; }
     #blog .post-thumb img {
       max-width: 100%;
-      height: auto; }
+      height: auto;
+      border: 1px solid #f5f5f5; }
   #blog .entry-title {
     font-size: 28px;
     line-height: 1; }

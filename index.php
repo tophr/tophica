@@ -29,8 +29,8 @@
 
 					<div class="entry-meta entry-header">
 						<span class="published"><?php _e('On', 'tophica') ?> <strong><?php the_time( get_option('date_format') ); ?></strong></span>
-						<span class="entry-categories"><?php _e('In', 'tophica') ?> <?php the_category(', ') ?></span>
-						<span class="comment-count"><?php _e('With', 'tophica') ?> <?php comments_popup_link(__('No Comments', 'tophica'), __('1 Comment', 'tophica'), __('% Comments', 'tophica')); ?></span>
+						<span class="entry-categories"><?php _e('in', 'tophica') ?> <?php the_category(', ') ?></span>
+						<span class="comment-count"><?php _e('with', 'tophica') ?> <?php comments_popup_link(__('No Comments', 'tophica'), __('1 comment', 'tophica'), __('% comments', 'tophica')); ?></span>
 						<?php edit_post_link( __('edit', 'tophica'), '<span class="edit-post">[', ']</span>' ); ?>
 					</div>
 
