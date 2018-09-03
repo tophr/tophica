@@ -137,7 +137,7 @@ function tz_lightbox($postid) {
 	$height = get_post_meta($postid, 'tz_video_height', true);
 	$embed = trim(get_post_meta($postid, 'tz_embed_code', true));
 	
-	$lightbox_height = $height + 20;
+	$lightbox_height = (int)$height + 20;
 	
 	if($thumb == '')
 	{
