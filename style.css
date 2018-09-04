@@ -297,7 +297,8 @@ h6 {
   margin: 0; }
 
 #filter {
-  margin: 15px 0 0 0; }
+  margin: 15px 0 0 0;
+  list-style: none; }
   #filter a {
     color: #999; }
   #filter .selected-undefined a {
@@ -1781,10 +1782,9 @@ label.error {
   .portfolio-recent .recent-wrap {
     border: none; }
   .home.page .recent-wrap .hentry-wrap {
-    width: 100%; }
+    width: auto;
+    margin: 0 -20px; }
   .recent-wrap .hentry-wrap {
-    width: 100%; }
-  .post-thumb a span.overlay {
     width: 100%; }
   .recent-wrap .post-thumb a {
     width: 100%;
