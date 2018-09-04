@@ -22,7 +22,6 @@
                     <div class="clearfix">		
                     
                         <div class="entry-meta entry-header">
-                            <span class="author"><?php _e('By', 'tophica') ?> <?php the_author_posts_link(); ?></span>
                             <span class="published"><?php _e('On', 'tophica') ?> <strong><?php the_time( get_option('date_format') ); ?></strong></span>
                             <span class="entry-categories"><?php _e('In', 'tophica') ?> <?php the_category(', ') ?></span>
                             <span class="comment-count"><?php _e('With', 'tophica') ?> <?php comments_popup_link(__('No Comments', 'tophica'), __('1 Comment', 'tophica'), __('% Comments', 'tophica')); ?></span>
