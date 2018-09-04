@@ -151,7 +151,6 @@ add_filter('excerpt_length', 'tz_excerpt_length');
 /*-----------------------------------------------------------------------------------*/
 
 function tz_excerpt_more($excerpt) {
-//return '... Continue Reading &rarr;'; 
 return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
         get_permalink( get_the_ID() ),
         __( 'Continue Reading &rarr;', 'Tophica' )
@@ -159,6 +158,32 @@ return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
 }
 add_filter( 'excerpt_more', 'tz_excerpt_more' );
 
+add_action( 'init', 'tz_add_excerpts_to_pages' );
+function tz_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+
+function search_excerpt_highlight() {
+    $excerpt = get_the_excerpt();
+    $sr = get_query_var('s');
+    $keys = explode(" ",$sr);
+    $keys = array_filter($keys);
+	$regEx = '\'(?!((<.*?)|(<a.*?)))(\b'. implode('|', $keys) . '\b)(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+    $excerpt = preg_replace($regEx, '<strong class="search-highlight">\0</strong>', $excerpt);
+
+    echo '<p>' . $excerpt . '</p>';
+}
+
+function search_title_highlight() {
+    $title = get_the_title();
+    $sr = get_query_var('s');
+    $keys = explode(" ",$sr);
+    $keys = array_filter($keys);
+    $regEx = '\'(?!((<.*?)|(<a.*?)))(\b'. implode('|', $keys) . '\b)(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+	$title = preg_replace($regEx, '<strong class="search-highlight">\0</strong>', $title);
+
+    echo $title;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	Helpful function to see if a number is a multiple of another number
