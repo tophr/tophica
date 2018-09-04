@@ -969,10 +969,6 @@ textarea:focus { color: #444; }
 	.line { display: none; }
 }
 
-.page-template-template-full-width-php .commentlist { 
-	//width: 760px; 
-}
-
 .commentlist li li li .line{
 	display: block;
 	position: absolute;
@@ -1522,18 +1518,16 @@ display: none;
 	background-color: #5b93f7;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 50% 85%;
-	background-attachment: fixed;
+	background-position: 50% 85%;	
 	height: 55vh;
 	margin-bottom: 30px;
+	@media (min-width: 768px) { background-attachment: fixed; }
 	.container {
 		position: relative;
 		height: 100%;
 		display: flex;
 	}
 	h1 {
-		//position: absolute;
-		//bottom: 30px;
 		align-self: center;
 		margin: 0 auto;
 		padding: 20px;
