@@ -227,10 +227,12 @@ h6 {
 
 .page-template-template-full-width #primary .entry-content { width: 100%; }
 
-.centered-column { 
-	width: 70%; 
-	margin: 0 auto;
-	.entry-content { width: 100% !important; }
+@media (min-width: 768px) {
+	.centered-column { 
+		width: 70%; 
+		margin: 0 auto;
+		.entry-content { width: 100% !important; }
+	}
 }
 
 .archive #primary .entry-content,
@@ -258,7 +260,10 @@ h6 {
 	width: 100%;
 }
 
-.layout-2cl #primary { float: right; }
+.layout-2cl #primary { 
+	float: left;
+	width: 75%;
+}
 
 #sidebar {
 	float: right;
@@ -1262,18 +1267,28 @@ display: none;
 	padding-bottom: 80px;
 }
 
-body.page-id-15 {
-	background: #fff url(images/topherbg2.gif) -140px 172px no-repeat;
+@media (min-width: 768px) {
+	body.page-id-15 {
+		background: #fff url(images/topherbg2.gif) -140px 172px no-repeat;
+	}
 }
 
-.page-id-15 .entry-content p {
-	background: rgba(255,255,255,0.6);
+/* Blog */
+
+@media (min-width: 768px) {	
+	#blog {
+		width: 75%;
+		float: left;
+		padding-right: 15px;
+	}
+	
+	#secondary {
+		float: right;
+		width: 25%;
+	}
 }
 
 #blog {
-	width: 75%;
-	float: left;
-	padding-right: 15px;
 	.hentry {
 		margin: 30px 0;
 		border-bottom: 1px solid $mid-grey;		
@@ -1298,8 +1313,6 @@ body.page-id-15 {
 }
 
 #secondary {
-	float: right;
-	width: 25%;
 	margin-top: 30px;
 	padding-left: 15px;
 	font-size: .8625em;	
@@ -1462,39 +1475,41 @@ body.page-id-15 {
 /*	12.	Shortcode Styles
 /*-----------------------------------------------------------------------------------*/
 
-/* Columns */
-.one_half { width: 48%; }
-.one_third { width: 30.66%; }
-.two_third { width: 65.33%; }
-.one_fourth { width: 22%; }
-.three_fourth { width: 74%; }
-.one_fifth { width: 16.8%; }
-.two_fifth { width: 37.6%; }
-.three_fifth { width: 58.4%; }
-.four_fifth { width: 79.2%; }
-.one_sixth { width: 13.33%; }
-.five_sixth { width: 82.67%; }
+@media (min-width: 768px) {
+	/* Columns */
+	.one_half { width: 48%; }
+	.one_third { width: 30.66%; }
+	.two_third { width: 65.33%; }
+	.one_fourth { width: 22%; }
+	.three_fourth { width: 74%; }
+	.one_fifth { width: 16.8%; }
+	.two_fifth { width: 37.6%; }
+	.three_fifth { width: 58.4%; }
+	.four_fifth { width: 79.2%; }
+	.one_sixth { width: 13.33%; }
+	.five_sixth { width: 82.67%; }
 
-.one_half,
-.one_third,
-.two_third,
-.three_fourth,
-.one_fourth,
-.one_fifth,
-.two_fifth,
-.three_fifth,
-.four_fifth,
-.one_sixth,
-.five_sixth {
-	position: relative;
-	margin-right: 4%;
-	margin-bottom: 20px;
-	float: left;
-}
+	.one_half,
+	.one_third,
+	.two_third,
+	.three_fourth,
+	.one_fourth,
+	.one_fifth,
+	.two_fifth,
+	.three_fifth,
+	.four_fifth,
+	.one_sixth,
+	.five_sixth {
+		position: relative;
+		margin-right: 4%;
+		margin-bottom: 20px;
+		float: left;
+	}
 
-.column-last {
-	margin-right: 0!important;
-	clear: right;
+	.column-last {
+		margin-right: 0!important;
+		clear: right;
+	}
 }
 
 /*-----------------------------------------------------------------------------------*/
