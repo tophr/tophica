@@ -1176,12 +1176,14 @@ label.error {
   display: none; }
 
 /* About Page */
-.page-id-15 #container {
-  padding-bottom: 80px; }
-
-@media (min-width: 768px) {
-  body.page-id-15 {
-    background: #fff url(images/topherbg2.gif) -140px 172px no-repeat; } }
+.about-image {
+  margin: -60px 0 0 30px; }
+  @media (max-width: 500px) {
+    .about-image {
+      margin: -10px auto 20px;
+      text-align: center;
+      width: 100%;
+      float: none; } }
 
 /* Blog */
 @media (min-width: 768px) {
@@ -1845,13 +1847,6 @@ label.error {
     margin-top: -10px; }
   .bx-wrapper {
     margin-bottom: 20px; }
-  .page-id-15 .one_fourth {
-    display: none; }
-    .page-id-15 .one_fourth.column-last {
-      display: block;
-      margin-bottom: 0; }
-  .page-id-15 .one_half {
-    width: 74%; }
   .post-15 {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0 20px; }
@@ -1872,8 +1867,6 @@ label.error {
   .image-grid li img, .home-recent .post-thumb img {
     width: 100%;
     height: auto; }
-  .page-id-15 .one_half, .page-id-15 .one_fourth.column-last {
-    width: 100%; }
   .one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
     width: 100%;
     margin-right: 0;
