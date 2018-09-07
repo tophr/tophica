@@ -1302,10 +1302,21 @@ display: none;
 		margin-right: 30px;
 		margin-bottom: 30px;
 		overflow: hidden;
+		@media (max-width: 580px) {	
+			float: none;
+			margin: 0 auto 20px;
+			width: 100%;
+			height: auto;
+			text-align: center;
+		}		
 		img {
 			max-width: 100%;
 			height: auto;
 			border: 1px solid $light-grey;
+			@media (max-width: 580px) {	
+				height: 240px;
+				object-fit: cover;
+			}
 		}
 	}
 	.entry-title {
