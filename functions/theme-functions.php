@@ -88,7 +88,7 @@ function tz_video($postid) {
 			
 			if(preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $video_url, $matches))
 			{
-				$output = '<iframe title="YouTube video player" class="youtube-player" type="text/html" width="700" height="'.$height.'" src="http://www.youtube.com/embed/'.$matches[1].'" frameborder="0" allowFullScreen></iframe>';
+				$output = '<iframe title="YouTube video player" class="youtube-player embed-responsive-item" type="text/html" src="http://www.youtube.com/embed/'.$matches[1].'" allowFullScreen></iframe>';
 			}
 			else 
 			{
@@ -101,7 +101,7 @@ function tz_video($postid) {
 			
 			if(preg_match('~^http://(?:www\.)?vimeo\.com/(?:clip:)?(\d+)~', $video_url, $matches))
 			{
-				$output = '<iframe src="http://player.vimeo.com/video/'.$matches[1].'" width="700" height="'.$height.'" frameborder="0"></iframe>';
+				$output = '<iframe src="http://player.vimeo.com/video/'.$matches[1].'" class="embed-responsive-item"></iframe>';
 			}
 			else 
 			{

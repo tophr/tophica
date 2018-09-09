@@ -43,7 +43,7 @@
 							<?php endif; ?> 
 
 
-							<div class="post_video">
+							<div class="post_video embed-responsive embed-responsive-16by9">
 								<?php tz_video(get_the_ID()); ?>
 							</div>
 
