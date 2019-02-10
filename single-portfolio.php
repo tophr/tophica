@@ -54,7 +54,7 @@
 							<?php if( have_rows('portfolio_images') ): ?>							
 								<?php while( have_rows('portfolio_images') ): the_row(); 
 									$image = get_sub_field('image');	
-									$size = 'thumbnail-portfolio';
+									$size = 'full'; //'thumbnail-portfolio';
 								?>					 
 									<div class="portfolio-item">								
 										<?php echo wp_get_attachment_image( $image, $size ); ?>		
