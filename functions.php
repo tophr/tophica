@@ -44,18 +44,20 @@ add_theme_support( 'custom-logo', array(
 	'flex-width'  => true,
 ) );
 
-add_theme_support( 'custom-header' );
+//add_theme_support( 'custom-header' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );
 
 // Disabling srcset until we figure things out
 add_filter( 'wp_calculate_image_srcset', '__return_false' );
 
+
 /*-----------------------------------------------------------------------------------*/
 /*	Register Sidebars
 /*-----------------------------------------------------------------------------------*/
 
-register_sidebar( array(
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
 		'name'          => __( 'Blog Sidebar', 'Tophica' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Add widgets here to appear in your sidebar on blog and archive pages.', 'Tophica' ),
@@ -63,9 +65,7 @@ register_sidebar( array(
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-
-if ( function_exists('register_sidebar') ) {
+	));
 	register_sidebar(array(
 		'name' => 'Footer One',
 		'id' => 'sidebar-3',
@@ -184,6 +184,7 @@ function search_title_highlight() {
 
     echo $title;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Helpful function to see if a number is a multiple of another number
@@ -324,12 +325,25 @@ function tz_list_pings($comment, $args, $depth) {
 
 
 /*-----------------------------------------------------------------------------------*/
+/*	Enable SVG support
+/*-----------------------------------------------------------------------------------*/
+
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
+
+
+/*-----------------------------------------------------------------------------------*/
 /*	Custom Login Logo Support
 /*-----------------------------------------------------------------------------------*/
 
 function tz_custom_login_logo() {
     echo '<style type="text/css">
-        h1 a { background-image:url('.get_template_directory_uri().'/images/custom-login-logo.png) !important; background-size: auto auto !important; width: 320px !important; }
+        h1 a { background-image:url('.get_template_directory_uri().'/images/custom-login-logo.svg) !important; background-size: auto auto !important; width: 320px !important; }
     </style>';
 }
 function tz_wp_login_url() {
@@ -409,6 +423,7 @@ class Portfolio_Walker extends Walker_Category {
    }
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*	Hide Password Protected Posts
 /*-----------------------------------------------------------------------------------*/
@@ -425,6 +440,7 @@ function change_protected_title_prefix() {
 	return '%s';
 }
 add_filter('protected_title_format', 'change_protected_title_prefix');
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Load Widgets & Shortcodes
@@ -452,6 +468,7 @@ add_filter('widget_text', 'do_shortcode');
 
 remove_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'wpautop' , 12);
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Load Theme Options
