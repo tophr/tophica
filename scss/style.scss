@@ -8,7 +8,7 @@
 	Text Domain: tophica
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 1.5.2
+	Version: 1.5.3
 	
 	Designed & Handcrafted by ThemeZilla
 	All files, unless otherwise stated, are released under the GNU General Public License
@@ -208,22 +208,23 @@ h6 {
 	text-transform: uppercase;
 }
 
-#primary .entry-title { 
-	padding-left: 15%;
-	margin-bottom: 20px;
-	font-size: 2rem;
+#primary {
+	.entry-title { 
+		padding-left: 15%;
+		margin-bottom: 20px;
+		font-size: 2rem;
+	}
+	.entry-content {
+		float: left;
+		width: 70%;
+		min-height: 130px;
+		padding-bottom: 20px;
+		font-size: 1.25rem;
+		line-height: 1.75;
+	}
 }
 
 .page #primary .entry-title { padding-left: 0; }
-
-#primary .entry-content {
-	float: left;
-	width: 70%;
-	min-height: 130px;
-	padding-bottom: 20px;
-	font-size: 1.25rem;
-	line-height: 1.75;
-}
 
 .page-template-template-full-width #primary .entry-content { width: 100%; }
 
@@ -528,6 +529,9 @@ h6 {
 	a {
 		color: #000;
 		&:hover { text-decoration: none; }
+		img {
+			height: 51px;
+		}
 	}
 }
 
@@ -1093,17 +1097,18 @@ ol #commentform { width: 100%; }
 #commentform #submit, 
 .contactform #submit,
 .contact-submit input.pushbutton-wide {
-	background: transparent url("images/submit.gif") left top no-repeat;
-	width: 92px;
-	height: 29px;
+	background: transparent url("images/btn-submit.svg") left top no-repeat;
+	background-size: cover;
+	width: 120px;
+    height: 38px;
 	padding: 0;
 	text-indent: -9999px;
 	border-radius: none;
 	border: none;
 	box-shadow: none;
+	transition: filter 0.25s ease;	
 	&:hover {
-		background: transparent url("images/submit.gif") left -30px no-repeat;		
-		border-radius: none;
+		filter: grayscale(100%);
 	}
 }
 

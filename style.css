@@ -8,7 +8,7 @@
 	Text Domain: tophica
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 1.5.2
+	Version: 1.5.3
 	
 	Designed & Handcrafted by ThemeZilla
 	All files, unless otherwise stated, are released under the GNU General Public License
@@ -89,8 +89,7 @@ table {
 
 /* End Clearfix */
 *, ::after, ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	1.	Document Setup (body, common classes, vertical rhythm, structure etc)
@@ -244,9 +243,6 @@ h6 {
   margin-bottom: 20px;
   font-size: 2rem; }
 
-.page #primary .entry-title {
-  padding-left: 0; }
-
 #primary .entry-content {
   float: left;
   width: 70%;
@@ -254,6 +250,9 @@ h6 {
   padding-bottom: 20px;
   font-size: 1.25rem;
   line-height: 1.75; }
+
+.page #primary .entry-title {
+  padding-left: 0; }
 
 .page-template-template-full-width #primary .entry-content {
   width: 100%; }
@@ -477,6 +476,8 @@ h6 {
     color: #000; }
     #logo a:hover {
       text-decoration: none; }
+    #logo a img {
+      height: 51px; }
 
 #tagline {
   color: #999;
@@ -544,8 +545,7 @@ h6 {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   font-size: 12px;
   padding: 7px 0; }
   #primary-menu .sub-menu a,
@@ -782,7 +782,6 @@ textarea:focus,
 button:hover {
   background: #fff;
   border: 1px solid #b7d6df;
-  -webkit-box-shadow: 0 0 4px #a7d6e3;
   box-shadow: 0 0 4px #a7d6e3; }
 
 input:focus,
@@ -801,8 +800,7 @@ textarea:focus {
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
   display: block;
@@ -1011,20 +1009,23 @@ ol #commentform {
 #commentform #submit,
 .contactform #submit,
 .contact-submit input.pushbutton-wide {
-  background: transparent url("images/submit.gif") left top no-repeat;
-  width: 92px;
-  height: 29px;
+  background: transparent url("images/btn-submit.svg") left top no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 38px;
   padding: 0;
   text-indent: -9999px;
   border-radius: none;
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
+  box-shadow: none;
+  transition: -webkit-filter 0.25s ease;
+  transition: filter 0.25s ease;
+  transition: filter 0.25s ease, -webkit-filter 0.25s ease; }
   #commentform #submit:hover,
   .contactform #submit:hover,
   .contact-submit input.pushbutton-wide:hover {
-    background: transparent url("images/submit.gif") left -30px no-repeat;
-    border-radius: none; }
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
 
 .contact-form label {
   display: inline-block !important; }
@@ -1379,7 +1380,6 @@ label.error {
     background-repeat: no-repeat;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-    -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease; }
     #social-top a:hover,
     #social-bottom a:hover {
@@ -1497,12 +1497,9 @@ label.error {
   .hero-image .container {
     position: relative;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
   .hero-image h1 {
-    -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
     margin: 0 auto;
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
@@ -1596,7 +1593,6 @@ label.error {
     font-size: 20px;
     line-height: 21px;
     margin-bottom: 10px;
-    -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease; }
   .recent-wrap a {
     display: block;
