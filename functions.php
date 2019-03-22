@@ -458,6 +458,9 @@ include("functions/portfolio-meta.php");
 // Add the Theme Shortcodes
 include("functions/theme-shortcodes.php");
 
+// Add the Theme Advanced Custom Fields Field Groups
+include("functions/theme-acf.php");
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Filters that allow shortcodes in Text Widgets
