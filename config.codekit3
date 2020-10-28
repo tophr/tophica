@@ -704,49 +704,46 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/jquery.custom.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/jquery.custom-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js/jquery.quicksand.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/jquery.quicksand-min.js",
-		"oF": 0,
+		"oAP": "/js/jquery.quicksand.min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/jquery.shortcodes.js": {
+	"/js/scripts.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/scripts.min.js",
+		"oF": 2,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/scripts.min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/jquery.shortcodes-min.js",
+		"oAP": "/js/scripts.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/selectivizr.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
+	"/js/scripts.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/js/selectivizr-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+		"oAP": "/js/scripts.min.js.map",
+		"oF": 0
 		},
 	"/page.php": {
 		"cB": 0,
