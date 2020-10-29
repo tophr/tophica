@@ -204,7 +204,7 @@ function tz_enqueue_scripts() {
   // Register our scripts
 
   wp_register_script('quicksand', get_template_directory_uri() . '/js/jquery.quicksand.min.js', 'jquery');
-  wp_register_script('tm-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'quicksand'), '1.0', TRUE);
+  wp_register_script('tm-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery', 'quicksand'), '1.0', TRUE);
   wp_register_script('tm-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '4.1');
 
   wp_enqueue_style('tm-stylesheet', get_template_directory_uri() . '/css/style.min.css', '1.5.1' );
@@ -355,7 +355,7 @@ function tz_comment($comment, $args, $depth) {
 
     add_action('login_head', 'tz_custom_login_logo');
     add_filter('login_headerurl', 'tz_wp_login_url');
-    add_filter('login_headertitle', 'tz_wp_login_title');
+    add_filter('login_headertext', 'tz_wp_login_title');
 
 
     /*-----------------------------------------------------------------------------------*/
