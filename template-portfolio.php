@@ -6,77 +6,79 @@ Template Name: Portfolio
 
 <?php get_header(); ?>
 
-		<h1 class="page-title">
-			<?php 
-			global $post;
-			if(get_post_meta($post->ID, 'heading_value', true) != ''): 
-				echo get_post_meta($post->ID, 'heading_value', true); 
-			else: 
-				_e('Some of my recent work.', 'tophica'); 
-			endif; 
-			?>
-		</h1>
+<h1 class="page-title">
+  <?php
+  global $post;
+  if(get_post_meta($post->ID, 'heading_value', true) != ''):
+    echo get_post_meta($post->ID, 'heading_value', true);
+  else:
+    _e('Some of my recent work.', 'tophica');
+  endif;
+  ?>
+</h1>
 
-		<div id="recent-portfolio" class="portfolio-recent clearfix">
+<div id="recent-portfolio" class="portfolio-recent clearfix">
 
-			<?php while (have_posts()) : the_post(); ?>
-			<div class="sidebar">
+  <?php while (have_posts()) : the_post(); ?>
+    <div class="sidebar">
 
-				<?php the_content(); ?>
+      <?php the_content(); ?>
 
-				<h3><?php echo get_theme_mod( 'portfolio_filter', 'Filter by Client:' ); ?></h3>
+      <h3><?php echo get_theme_mod( 'portfolio_filter', 'Filter by Client:' ); ?></h3>
 
-				<ul id="filter">
-				  <li class="segment-1"><a data-value="all" href="#">All</a></li>
-				  <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'skill-type', 'walker' => new Portfolio_Walker())); ?>
-				</ul>
+      <ul id="filter">
+        <li class="segment-1"><a data-value="all" href="#">All</a></li>
+        <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'skill-type', 'walker' => new Portfolio_Walker())); ?>
+      </ul>
 
-			</div>
-			<?php endwhile; ?>
+    </div>
+  <?php endwhile; ?>
 
-			<div class="recent-wrap">
+  <div class="recent-wrap">
 
-				<ul id="items" class="image-grid">
+    <ul id="items" class="image-grid">
 
-					<?php 
-					$count = 1;
-					$query = new WP_Query();
-					$query->query('post_type=portfolio&posts_per_page=-1');
-					while ($query->have_posts()) : $query->the_post(); 
-					$terms = get_the_terms( get_the_ID(), 'skill-type' );
+      <?php
+      $count = 1;
+      $query = new WP_Query();
+      $query->query('post_type=portfolio&posts_per_page=-1');
+      while ($query->have_posts()) : $query->the_post();
+      $terms = get_the_terms( get_the_ID(), 'skill-type' );
 
-					?>
+      ?>
 
-						<li data-id="id-<?php echo $count; ?>" class="<?php if($terms) : foreach ($terms as $term) { echo 'term-'.$term->term_id.' '; } endif; ?>">
+      <li data-id="id-<?php echo $count; ?>" class="<?php if($terms) : foreach ($terms as $term) { echo 'term-'.$term->term_id.' '; } endif; ?>">
 
-						<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-							<a href="<?php the_permalink(); ?>"> 
-								<div class="post-thumb">
-									<?php tz_lightbox(get_the_ID()); ?>
-								</div>
+        <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+          <a href="<?php the_permalink(); ?>">
+            <div class="post-thumb">
+              <?php tz_lightbox(get_the_ID()); ?>
+            </div>
 
-								<div class="count hidden"><?php echo $count; ?></div>
+            <div class="count hidden"><?php echo $count; ?></div>
 
-								<h2 class="entry-title"><?php the_title(); ?></h2>
+            <h2 class="entry-title"><?php the_title(); ?></h2>
 
-								<div class="entry-content">
-									<?php the_excerpt(); ?>
-								</div>
-							</a>                            
-						</div>
+            <?php if (get_theme_mod('portfolio_show_excerpt') === true): ?>
+            <div class="entry-content">
+              <?php the_excerpt(); ?>
+            </div>
+            <?php endif; ?>
+          </a>
+        </div>
 
-					<?php
-					$count++;
-					?>
+        <?php
+        $count++;
+        ?>
 
-					</li>
+      </li>
 
-					<?php endwhile; wp_reset_query(); ?>
+    <?php endwhile; wp_reset_query(); ?>
 
-				</ul>
+  </ul>
 
-			</div>
+</div>
 
-		</div>            
+</div>
 
 <?php get_footer(); ?>

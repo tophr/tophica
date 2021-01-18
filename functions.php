@@ -477,11 +477,7 @@ function tz_comment($comment, $args, $depth) {
     /*	Load Theme Options
     /*-----------------------------------------------------------------------------------*/
 
-    define('TZ_FILEPATH', get_template_directory());
-    define('TZ_DIRECTORY', get_template_directory_uri());
-
-    require_once (TZ_FILEPATH . '/functions/theme-functions.php');
-    require_once (TZ_FILEPATH . '/functions/customizer.php');
-
+    include("functions/theme-functions.php");
+    include("functions/customizer.php");
 
     ?>
