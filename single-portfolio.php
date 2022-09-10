@@ -51,15 +51,21 @@
 
 						<?php endif; ?>
 							
-							<?php if( have_rows('portfolio_images') ): ?>							
+							<?php if( have_rows('portfolio_images') ): $i = 0; ?>							
 								<?php while( have_rows('portfolio_images') ): the_row(); 
 									$image = get_sub_field('image');	
 									$size = 'full'; //'thumbnail-portfolio';
 								?>					 
-									<div class="portfolio-item">								
-										<?php echo wp_get_attachment_image( $image, $size ); ?>		
+									<div class="portfolio-item">				
+										<?php if ( $i === 0 ):
+											echo wp_get_attachment_image( $image, $size, false, array(
+												'loading' => 'eager'
+											 ) );			
+										else: 
+											echo wp_get_attachment_image( $image, $size );										
+										endif; ?>
 									</div>
-								<?php endwhile; ?>									
+								<?php $i++; endwhile; ?>									
 							<?php endif; ?>  
 							
 
