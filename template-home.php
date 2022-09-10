@@ -22,7 +22,6 @@ if( !empty($image) ): ?>
 <div id="slider2" class="clearfix">
   <ul class="slides_container2 bxslider">
     <?php while( have_rows('slider') ): the_row();
-    // vars
     $image = get_sub_field('slider_image');
     $link = get_sub_field('slider_url');
     $alt = get_sub_field('slider_alt_tag');
@@ -31,7 +30,7 @@ if( !empty($image) ): ?>
       <?php if( $link ): ?>
         <a href="<?php echo $link; ?>">
         <?php endif; ?>
-        <img src="<?php echo $image; ?>" alt="<?php echo $alt; ?>" />
+        <img src="<?php echo $image; ?>" alt="<?php echo $alt; ?>" width="940" height="350" />
         <?php if( $link ): ?>
         </a>
       <?php endif; ?>
