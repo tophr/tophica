@@ -1220,6 +1220,9 @@ td {
       width: 25%;
       padding: 0 15px;
     }
+    .widget_block {
+      margin-bottom: 0;
+    }
     h3 {
       text-transform: uppercase;
       color: #999;
@@ -1462,77 +1465,90 @@ td {
 
 
   /* Social Icons */
-  #social-top,
-  #social-bottom {
+  .social-top,
+  .social-bottom {
     list-style-type: none;
     clear: both;
     li {
-      display: inline;
+      display: inline-block;
+      margin: 0 9px 9px 0;
     }
     a {
       display: block;
-      float: left;
       width: 48px;
       height: 48px;
       text-indent: -9999px;
-      margin: 0 9px 9px 0;
-      background-image: url(../images/social_icons.svg);
+      background-image: url('../images/social_icons.svg');
       background-repeat: no-repeat;
+      background-position: left top;
       filter: grayscale(100%);
-      transition: all 0.25s ease;
+      transition: filter 0.25s ease;
       &:hover {
         filter: none;
       }
     }
   }
 
-  #plus a {
+  .ico-plus a {
     background-position: left top;
   }
-  #twitter a {
-    background-position: -49px top;
+  .ico-twitter a {
+    background-position: -48px top;
   }
-  #flickr a {
+  .ico-flickr a {
     background-position: -96px top;
   }
-  #linkedin a {
+  .ico-linkedin a {
     background-position: -144px top;
   }
-  #youtube a {
+  .ico-youtube a {
     background-position: left -48px;
   }
-  #vimeo a {
+  .ico-vimeo a {
     background-position: -48px -48px;
   }
-  #lastfm a {
+  .ico-lastfm a {
     background-position: -96px -48px;
   }
-  #behance a {
+  .ico-behance a {
     background-position: -144px -48px;
   }
-  #facebook a {
+  .ico-facebook a {
     background-position: left -96px;
   }
-  #instagram a {
+  .ico-instagram a {
     background-position: -48px -96px;
   }
-  #tumblr a {
+  .ico-tumblr a {
     background-position: -96px -96px;
   }
-  #pinterest a {
+  .ico-pinterest a {
     background-position: -144px -96px;
   }
-  #snapchat a {
+  .ico-snapchat a {
     background-position: left -144px;
   }
-  #dribbble a {
-    background-position: -48px -145px;
+  .ico-dribbble a {
+    background-position: -48px -144px;
   }
-  #medium a {
-    background-position: -96px -145px;
+  .ico-medium a {
+    background-position: -96px -144px;
   }
-  #github a {
+  .ico-github a {
     background-position: -144px -144px;
+  }
+  .ico-mastodon a {
+    background-position: left -192px;
+  }
+  .ico-spotify a {
+    background-position: -48px -192px;
+  }
+
+  .ico-github, .ico-medium {
+    a:hover, a:focus {
+      // filter: invert(1);
+      opacity: 0.8;
+    }
   }
 
   /*-----------------------------------------------------------------------------------*/
