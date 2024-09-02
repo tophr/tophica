@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <?php wp_head(); ?>
 
@@ -27,12 +29,10 @@
           } ?>
         </div>
 
-        <div id="primary-nav">
+        <nav id="primary-nav">
           <?php if ( has_nav_menu( 'primary-menu' ) ) {
             wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_id' => 'primary-menu', 'menu_class' => 'sf-menu', 'container' => '' ) );
           } ?>
-        </div>
-
+        </nav>
       </div>
-
     </header>

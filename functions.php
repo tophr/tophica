@@ -4,8 +4,7 @@
 /*	Register WP3.0+ Menus
 /*-----------------------------------------------------------------------------------*/
 
-function register_menu()
-{
+function register_menu() {
   register_nav_menu('primary-menu', __('Primary Menu', 'tophica'));
 }
 add_action('init', 'register_menu');
@@ -106,8 +105,7 @@ if (function_exists('register_sidebar')) {
 /*	Get related posts by taxonomy
 /*-----------------------------------------------------------------------------------*/
 
-function get_posts_related_by_taxonomy($post_id, $taxonomy, $notin, $args = array())
-{
+function get_posts_related_by_taxonomy($post_id, $taxonomy, $notin, $args = array()) {
   $query = new WP_Query();
   $terms = wp_get_object_terms($post_id, $taxonomy);
   if (count($terms)) {
@@ -131,8 +129,7 @@ function get_posts_related_by_taxonomy($post_id, $taxonomy, $notin, $args = arra
 /*	Custom Gravatar Support
 /*-----------------------------------------------------------------------------------*/
 
-function tz_custom_gravatar($avatar_defaults)
-{
+function tz_custom_gravatar($avatar_defaults) {
   $tz_avatar = get_template_directory_uri() . '/images/gravatar.png';
   $avatar_defaults[$tz_avatar] = 'Custom Gravatar (/images/gravatar.png)';
   return $avatar_defaults;
@@ -144,8 +141,7 @@ add_filter('avatar_defaults', 'tz_custom_gravatar');
 /*	Change Default Excerpt Length
 /*-----------------------------------------------------------------------------------*/
 
-function tz_excerpt_length($length)
-{
+function tz_excerpt_length($length) {
   return 30;
 }
 add_filter('excerpt_length', 'tz_excerpt_length');
@@ -155,8 +151,7 @@ add_filter('excerpt_length', 'tz_excerpt_length');
 /*	Configure Excerpt String
 /*-----------------------------------------------------------------------------------*/
 
-function tz_excerpt_more($excerpt)
-{
+function tz_excerpt_more($excerpt) {
   return sprintf(
     '... <a class="read-more" href="%1$s">%2$s</a>',
     get_permalink(get_the_ID()),
@@ -166,13 +161,11 @@ function tz_excerpt_more($excerpt)
 add_filter('excerpt_more', 'tz_excerpt_more');
 
 add_action('init', 'tz_add_excerpts_to_pages');
-function tz_add_excerpts_to_pages()
-{
+function tz_add_excerpts_to_pages() {
   add_post_type_support('page', 'excerpt');
 }
 
-function search_excerpt_highlight()
-{
+function search_excerpt_highlight() {
   $excerpt = get_the_excerpt();
   $sr = get_query_var('s');
   $keys = explode(" ", $sr);
@@ -183,8 +176,7 @@ function search_excerpt_highlight()
   echo '<p>' . $excerpt . '</p>';
 }
 
-function search_title_highlight()
-{
+function search_title_highlight() {
   $title = get_the_title();
   $sr = get_query_var('s');
   $keys = explode(" ", $sr);
@@ -200,8 +192,7 @@ function search_title_highlight()
 /*	Helpful function to see if a number is a multiple of another number
 /*-----------------------------------------------------------------------------------*/
 
-function is_multiple($number, $multiple)
-{
+function is_multiple($number, $multiple) {
   return ($number % $multiple) == 0;
 }
 
@@ -210,8 +201,7 @@ function is_multiple($number, $multiple)
 /*	Register and load common JS
 /*-----------------------------------------------------------------------------------*/
 
-function tz_enqueue_scripts()
-{
+function tz_enqueue_scripts() {
   // Register our scripts
 
   wp_register_script('quicksand', get_template_directory_uri() . '/js/jquery.quicksand.min.js', array('jquery'));
@@ -219,7 +209,9 @@ function tz_enqueue_scripts()
   wp_register_script('tm-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '4.1', TRUE);
 
   wp_enqueue_style('tm-stylesheet', get_template_directory_uri() . '/css/style.min.css', '1.6.1');
-  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i|Poppins:700');
+  // wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i|Poppins:700');
+  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 
   if (is_page_template('template-portfolio.php')) {
     wp_enqueue_script('tm-scripts');
@@ -239,8 +231,7 @@ add_action('wp_enqueue_scripts', 'tz_enqueue_scripts');
 /*	Add bxslider
 /*-----------------------------------------------------------------------------------*/
 
-function tm_home_slider()
-{
+function tm_home_slider() {
   if (is_page_template('template-home.php') && empty(get_field('hero_image', get_option('page_on_front')))) {
 ?>
 
@@ -266,8 +257,7 @@ add_action('wp_head', 'tm_home_slider');
 /*-----------------------------------------------------------------------------------*/
 
 add_filter('body_class', 'tz_browser_body_class');
-function tz_browser_body_class($classes)
-{
+function tz_browser_body_class($classes) {
   global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
 
   if ($is_lynx) $classes[] = 'lynx';
@@ -288,8 +278,7 @@ function tz_browser_body_class($classes)
 /*	Comment Styling
 /*-----------------------------------------------------------------------------------*/
 
-function tz_comment($comment, $args, $depth)
-{
+function tz_comment($comment, $args, $depth) {
 
   $isByAuthor = false;
 
@@ -328,8 +317,7 @@ function tz_comment($comment, $args, $depth)
 /*	Separated Pings Styling
   /*-----------------------------------------------------------------------------------*/
 
-function tz_list_pings($comment, $args, $depth)
-{
+function tz_list_pings($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment; ?>
   <li id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?>
   <?php }
@@ -339,8 +327,7 @@ function tz_list_pings($comment, $args, $depth)
 /*	Enable SVG support
 /*-----------------------------------------------------------------------------------*/
 
-function add_file_types_to_uploads($file_types)
-{
+function add_file_types_to_uploads($file_types) {
   $new_filetypes = array();
   $new_filetypes['svg'] = 'image/svg+xml';
   $file_types = array_merge($file_types, $new_filetypes);
@@ -353,18 +340,15 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 /*	Custom Login Logo Support
 /*-----------------------------------------------------------------------------------*/
 
-function tz_custom_login_logo()
-{
+function tz_custom_login_logo() {
   echo '<style type="text/css">
       h1 a { background-image:url(' . get_template_directory_uri() . '/images/custom-login-logo.svg) !important; background-size: auto auto !important; width: 320px !important; }
       </style>';
 }
-function tz_wp_login_url()
-{
+function tz_wp_login_url() {
   return home_url();
 }
-function tz_wp_login_title()
-{
+function tz_wp_login_title() {
   return get_option('blogname');
 }
 
@@ -377,10 +361,8 @@ add_filter('login_headertext', 'tz_wp_login_title');
 /*	List categories for the portfolio
 /*-----------------------------------------------------------------------------------*/
 
-class Portfolio_Walker extends Walker_Category
-{
-  function start_el(&$output, $category, $depth = 0, $args = array(), $id = 0)
-  {
+class Portfolio_Walker extends Walker_Category {
+  function start_el(&$output, $category, $depth = 0, $args = array(), $id = 0) {
     extract($args);
     $cat_name = esc_attr($category->name);
     $cat_name = apply_filters('list_cats', $cat_name, $category);
@@ -444,8 +426,7 @@ class Portfolio_Walker extends Walker_Category
 /*-----------------------------------------------------------------------------------*/
 /*	Hide Password Protected Posts
 /*-----------------------------------------------------------------------------------*/
-function tz_password_post_filter($where = '')
-{
+function tz_password_post_filter($where = '') {
   if (!is_single() && !is_admin()) {
     $where .= " AND post_password = ''";
   }
@@ -454,8 +435,7 @@ function tz_password_post_filter($where = '')
 add_filter('posts_where', 'tz_password_post_filter');
 
 // Remove 'Protected' Prefix
-function change_protected_title_prefix()
-{
+function change_protected_title_prefix() {
   return '%s';
 }
 add_filter('protected_title_format', 'change_protected_title_prefix');

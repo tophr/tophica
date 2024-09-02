@@ -2,11 +2,9 @@
 /*
 Template Name: Home
 */
-?>
 
-<?php get_header(); ?>
+get_header();
 
-<?php
 $image = get_field('hero_image');
 
 if( !empty($image) ): ?>
@@ -64,7 +62,6 @@ if( !empty($image) ): ?>
     $post_count = $query->post_count;
 
     while ($query->have_posts()) : $query->the_post();
-
     ?>
 
     <?php if(is_multiple($start, 3)) : /* if the start count is a multiple of 3 */ ?>

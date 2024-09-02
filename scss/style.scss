@@ -19,8 +19,33 @@
 
 -----------------------------------------------------------------------------------*/
 
-$primary-font: "Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
-$display-font: "Poppins", Helvetica, Arial, sans-serif;
+// .courier-prime-regular {
+//   font-family: "Courier Prime", monospace;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .courier-prime-bold {
+//   font-family: "Courier Prime", monospace;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// .courier-prime-regular-italic {
+//   font-family: "Courier Prime", monospace;
+//   font-weight: 400;
+//   font-style: italic;
+// }
+
+// .courier-prime-bold-italic {
+//   font-family: "Courier Prime", monospace;
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+
+$primary-font: "Courier Prime", monospace; //"Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
+$display-font: $primary-font; //"Poppins", Helvetica, Arial, sans-serif;
 $brand-color1: #cd2931;
 $brand-color2: #006699;
 $light-grey: #f5f5f5;
@@ -30,11 +55,124 @@ $mid-grey: #444;
 /*	0.	CSS Reset & Clearfix - http://meyerweb.com/eric/tools/css/reset/
 /*-----------------------------------------------------------------------------------*/
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; }
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+} /* Hide from IE Mac \*/
+.clearfix {
+  display: block;
+} /* End hide from IE Mac */
+.none {
+  display: none;
+} /* End Clearfix */
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -48,22 +186,29 @@ body {
   line-height: 1.5;
   font-family: $primary-font;
   background: #fff;
-  color: #444;
+  color: #000;
 }
 
 input,
 textarea {
-  font: 14px/20px $primary-font;
+  font: 1.5rem $primary-font;
   background: #fff;
-  color: #999;
-  border: 1px solid #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 1rem;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
-.alignleft { float: left; }
+.alignleft {
+  float: left;
+}
 
-.alignright { float: right; }
+.alignright {
+  float: right;
+}
 
 .aligncenter {
   margin-left: auto;
@@ -78,13 +223,19 @@ textarea {
   font-size: 0;
   height: 0;
   line-height: 0;
-  width:100%;
+  width: 100%;
 }
 
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-a img { border: none; }
+a img {
+  border: none;
+}
 
 p,
 pre,
@@ -100,22 +251,27 @@ form,
 .gallery-row,
 .post-thumb,
 .author-bio,
-#logo { margin-bottom: 20px; }
+#logo {
+  margin-bottom: 20px;
+}
 
 .hentry,
 .navigation-links,
 .hfeed,
-.pinglist { margin-bottom: 40px; }
+.pinglist {
+  margin-bottom: 40px;
+}
 
-.widget
-.children,
+.widget .children,
 .entry-content ol ol,
 .entry-content ol ul,
 .entry-content ul ul,
 .comment-body ol ol,
 .comment-body ol ul,
 .comment-body ul ul,
-.widget ul ul { margin-bottom: 0; }
+.widget ul ul {
+  margin-bottom: 0;
+}
 
 h1,
 h2,
@@ -171,7 +327,9 @@ h6 {
   }
 }
 
-.page-back { float: right; }
+.page-back {
+  float: right;
+}
 
 .back {
   position: absolute;
@@ -181,15 +339,17 @@ h6 {
 }
 
 .page-title {
+  margin: 3rem 0 2rem 0;
   padding: 30px 0 0 0;
-  text-transform: uppercase;
-  font-size: 2rem; //22px;
+  text-transform: lowercase;
+  font-size: 4rem; //22px;
+  letter-spacing: 0;
 }
 
 .entry-title,
 .entry-title a {
   color: $mid-grey;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 #primary {
@@ -208,21 +368,29 @@ h6 {
   }
 }
 
-.page #primary .entry-title { padding-left: 0; }
+.page #primary .entry-title {
+  padding-left: 0;
+}
 
-.page-template-template-full-width #primary .entry-content { width: 100%; }
+.page-template-template-full-width #primary .entry-content {
+  width: 100%;
+}
 
 @media (min-width: 768px) {
   .centered-column {
     width: 70%;
     margin: 0 auto;
-    .entry-content { width: 100% !important; }
+    .entry-content {
+      width: 100% !important;
+    }
   }
 }
 
 .archive #primary .entry-content,
 .blog #primary .entry-content,
-.search-results #primary .entry-content { border-bottom: 1px solid #efefef; }
+.search-results #primary .entry-content {
+  border-bottom: 1px solid #efefef;
+}
 
 // .single #primary .entry-content,
 // .blog #primary .entry-content,
@@ -246,9 +414,9 @@ h6 {
 }
 
 // .layout-2cl #primary {
-  //float: left;
-  //width: 75%;
-  //gotta figure out how this works
+//float: left;
+//width: 75%;
+//gotta figure out how this works
 // }
 
 #sidebar {
@@ -257,7 +425,9 @@ h6 {
   margin-top: 57px;
 }
 
-.layout-2cl #sidebar { float: left; }
+.layout-2cl #sidebar {
+  float: left;
+}
 
 .search-no-results #post-0,
 #primary .hentry {
@@ -276,7 +446,7 @@ h6 {
   }
   input {
     background: #fff;
-    display:block;
+    display: block;
   }
 }
 
@@ -315,7 +485,6 @@ h6 {
   padding-bottom: 75%;
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /*	2.	bxSlider v4.0 - Fully loaded, responsive content slider
 * http://bxslider.com
@@ -327,7 +496,6 @@ h6 {
 * CEO and founder of bxCreative, LTD
 * http://bxcreative.com
 /*-----------------------------------------------------------------------------------*/
-
 
 /** RESET AND LAYOUT
 ===================================*/
@@ -373,7 +541,7 @@ h6 {
 
   .bx-pager {
     text-align: center;
-    font-size: .85em;
+    font-size: 0.85em;
     font-family: Arial;
     font-weight: bold;
     color: #fff;
@@ -404,7 +572,8 @@ h6 {
     background: none;
   }
 
-  .bx-pager, .bx-controls-auto {
+  .bx-pager,
+  .bx-controls-auto {
     bottom: 0;
   }
 
@@ -430,7 +599,9 @@ h6 {
     font-weight: 700;
     font-size: 36px;
     color: #fff;
-    &.disabled { display: none; }
+    &.disabled {
+      display: none;
+    }
   }
 
   /* AUTO CONTROLS (START / STOP) */
@@ -490,12 +661,11 @@ h6 {
       color: #fff;
       font-family: Arial;
       display: block;
-      font-size: .85em;
+      font-size: 0.85em;
       padding: 10px;
     }
   }
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*	3.	Header Styles
@@ -505,14 +675,18 @@ h6 {
   padding-top: 30px;
 }
 
-#upper-wrap { border-bottom: 1px solid #efefef; }
+#upper-wrap {
+  border-bottom: 3px solid $brand-color1;
+}
 
 #logo {
   color: #000;
   float: left;
   a {
     color: #000;
-    &:hover { text-decoration: none; }
+    &:hover {
+      text-decoration: none;
+    }
     img {
       height: 51px;
       width: auto;
@@ -554,10 +728,14 @@ h6 {
   }
 }
 
-.sf-menu > li { float: left; }
+.sf-menu > li {
+  float: left;
+}
 
 .sf-menu li:hover > ul,
-.sf-menu li.sfHover > ul { display: block; }
+.sf-menu li.sfHover > ul {
+  display: block;
+}
 
 .sf-menu a {
   display: block;
@@ -579,20 +757,25 @@ h6 {
 
 #primary-menu {
   a {
-    color: #999999;
     padding: 12px 15px 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: #000;
   }
   li:last-child a {
     padding-right: 0;
   }
   a:hover,
-  .current-menu-item > a { color: $brand-color1; }
+  .current-menu-item > a {
+    color: $brand-color1;
+  }
   .sub-menu,
   .children {
     background: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 3px;
-    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     font-size: 12px;
     padding: 7px 0;
     a {
@@ -600,7 +783,9 @@ h6 {
       margin: 0 15px;
       padding: 8px 0;
     }
-    li:first-child a { border-top: none; }
+    li:first-child a {
+      border-top: none;
+    }
   }
 }
 
@@ -608,7 +793,9 @@ h6 {
 /*	5.	Main Content Styles
 /*-----------------------------------------------------------------------------------*/
 
-address { font-style: italic; }
+address {
+  font-style: italic;
+}
 
 abbr[title],
 acronym[title],
@@ -618,20 +805,26 @@ dfn[title] {
 }
 
 blockquote {
-  background:url(../images/quote_content.png) no-repeat;
+  background: url(../images/quote_content.png) no-repeat;
   min-height: 40px;
   margin-left: 15px;
   padding: 0 40px;
   color: #999;
 }
 
-strong { font-weight: 700; }
+strong {
+  font-weight: 700;
+}
 
 em,
 dfn,
-cite { font-style: italic; }
+cite {
+  font-style: italic;
+}
 
-dfn { font-weight: 600; }
+dfn {
+  font-weight: 600;
+}
 
 sup {
   font-size: 11px;
@@ -643,25 +836,39 @@ sub {
   vertical-align: bottom;
 }
 
-small { font-size: 11px; }
+small {
+  font-size: 11px;
+}
 
-del { text-decoration: line-through; }
+del {
+  text-decoration: line-through;
+}
 
-ins { text-decoration: underline; }
+ins {
+  text-decoration: underline;
+}
 
 code,
-pre { line-height: 18px; }
+pre {
+  line-height: 18px;
+}
 
 var,
 kbd,
 samp,
 code,
-pre { font: 16px/20px Consolas, "Andale Mono", Courier, "Courier New", monospace; }
+pre {
+  font: 16px/20px Consolas, "Andale Mono", Courier, "Courier New", monospace;
+}
 
-kbd { font-weight: 600; }
+kbd {
+  font-weight: 600;
+}
 
 samp,
-var { font-style: italic; }
+var {
+  font-style: italic;
+}
 
 pre {
   white-space: pre;
@@ -680,7 +887,9 @@ code {
 
 ul,
 ol,
-dl { margin-left: 30px; }
+dl {
+  margin-left: 30px;
+}
 
 table {
   border: 1px solid #ccc;
@@ -691,11 +900,17 @@ table {
   padding: 0 5px;
 }
 
-table .even { background: #ddd; }
+table .even {
+  background: #ddd;
+}
 
-caption { text-align: left; }
+caption {
+  text-align: left;
+}
 
-tr { border-bottom: 1px solid #ccc; }
+tr {
+  border-bottom: 1px solid #ccc;
+}
 
 th,
 td {
@@ -706,1476 +921,1663 @@ td {
 
 .entry-content img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
-  img.alignleft {
-    float: left;
+img.alignleft {
+  float: left;
+}
+
+img.alignright {
+  display: block;
+}
+
+.wp-block-image .alignright {
+  margin: 0 0 1rem 0;
+  @media (min-width: 768px) {
+    margin: 0 0 1.5rem 1.5rem;
   }
+}
 
-  img.alignright {
-    display: block;
+// img.size-large {
+// }
+
+img.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  clear: both;
+  margin-top: 5px;
+}
+
+.wp-caption.alignleft {
+  text-align: left;
+  margin: 10px 0 20px 0;
+}
+
+.wp-caption.alignleft .wp-caption-text {
+  text-align: left;
+}
+
+.wp-caption-text {
+  padding-bottom: 5px;
+}
+
+.wp-caption {
+  font-style: italic;
+  color: #999;
+  font-size: 0.75em;
+  margin: 10px 0 20px 0;
+  @media (max-width: 1230px) {
+    max-width: 100%;
   }
+}
 
-  // img.size-large {
-  // }
+.wp-caption img.size-large {
+  margin: 10px 0 0 0;
+}
 
-  img.aligncenter {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    clear: both;
-    margin-top: 5px;
-  }
+.wp-caption img,
+.wp-caption img a {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
 
-  .wp-caption.alignleft {
-    text-align: left;
-    margin: 10px 0 20px 0;
-  }
+.wp-caption-text {
+  margin: 0;
+}
 
-  .wp-caption.alignleft .wp-caption-text { text-align: left; }
+.wp-smiley {
+  max-height: 13px;
+  margin: 0 !important;
+}
 
-  .wp-caption-text { padding-bottom: 5px; }
+.gallery {
+  margin: auto;
+}
 
-  .wp-caption {
-    font-style: italic;
-    color: #999;
-    font-size: .75em;
-    margin: 10px 0 20px 0;
-    @media (max-width: 1230px) {
-      max-width: 100%;
-    }
-  }
+.gallery-image {
+  border: 2px solid #efefef;
+  margin-left: 0;
+}
 
-  .wp-caption img.size-large { margin: 10px 0 0 0; }
+.gallery-caption {
+  margin-left: 0;
+}
 
-  .wp-caption img,
-  .wp-caption img a {
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-  }
+.gallery-item {
+  float: left;
+  text-align: center;
+  margin-left: 0;
+}
 
-  .wp-caption-text {
-    margin: 0;
-  }
+.gallery {
+  float: left;
+  width: 100%;
+}
 
-  .wp-smiley {
-    max-height: 13px;
+.gallery-item {
+  width: auto !important;
+  float: left;
+  margin: 10px 10px 0 0 !important;
+  img {
     margin: 0 !important;
+    padding: 0 !important;
   }
-
-  .gallery { margin: auto; }
-
-  .gallery-image {
-    border: 2px solid #efefef;
-    margin-left: 0;
-  }
-
-  .gallery-caption { margin-left: 0; }
-
-  .gallery-item {
+  a {
     float: left;
-    text-align: center;
-    margin-left: 0;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
+}
 
-  .gallery {
-    float: left;
-    width: 100%;
+.sticky-post {
+  background-color: #333;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+}
+
+.sticky .posted-on {
+  display: none;
+}
+
+// .bypostauthor {
+
+// }
+
+input,
+textarea,
+button {
+  background: #f5f5f5;
+  border: 1px solid #fff;
+}
+
+input,
+textarea {
+  padding: 5px;
+}
+
+// input { /*height: 20px;*/ }
+
+button {
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+button:hover {
+  background: #fff;
+  border: 1px solid $brand-color1;
+  box-shadow: 0 0 4px $brand-color1;
+}
+
+input:focus,
+textarea:focus {
+  color: #444;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Misc Custom Styles */
+
+.droid-italic {
+  font-style: italic;
+  font-size: 11px;
+}
+
+.gray {
+  color: #999;
+}
+.intro-text {
+  font-size: 1.25em;
+  line-height: 1.75;
+}
+
+.search-no-results #post-0,
+#primary .hentry {
+  padding-top: 30px;
+}
+
+.search-highlight {
+  background: yellow;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	6.	Post Content Styles
+  /*-----------------------------------------------------------------------------------*/
+
+#primary .entry-meta {
+  float: left;
+  width: 15%;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.entry-meta {
+  font-size: 14px;
+  font-style: italic;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.entry-meta a {
+  color: #999;
+}
+
+.entry-meta a:hover {
+  color: #666;
+}
+
+#primary .entry-meta a {
+  color: #444444;
+  font-style: normal;
+}
+
+#primary .entry-meta span {
+  display: block;
+}
+
+.published strong {
+  color: $mid-grey;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.permalink img {
+  padding: 0 3px 0 0;
+}
+
+.author-bio {
+  padding: 20px;
+  background: #fbfbfb;
+  border: 1px solid #efefef;
+}
+
+.author-bio .avatar {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.author-title {
+  font-weight: 600;
+  margin-left: 60px;
+}
+
+.author-description {
+  margin-left: 60px;
+}
+
+.entry-content ul {
+  list-style-type: disc;
+}
+
+.entry-content ol {
+  list-style-type: decimal;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	7.	Comments
+  /*-----------------------------------------------------------------------------------*/
+
+#comment-wrap {
+  p {
+    margin-bottom: 0.5em;
   }
-
-  .gallery-item {
-    width: auto !important;
-    float: left;
-    margin:  10px 10px 0 0 !important;
-    img {
-      margin: 0 !important;
-      padding:  0 !important;
-    }
-    a {
-      float: left;
-      border: none !important;
-      margin:  0 !important;
-      padding: 0 !important;
-    }
+  h3 {
+    font-size: 24px;
+    line-height: 26px;
   }
+}
 
-  .sticky-post {
-    background-color: #333;
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    padding: 0.25em 0.5em;
-    position: absolute;
-    top: 0;
-    text-transform: uppercase;
-  }
+.comments-sidebar {
+  width: 15%;
+  padding-right: 30px;
+  padding-top: 60px;
+  text-align: right;
+  float: left;
+  font-size: 11px;
+}
 
-  .sticky .posted-on {
+#respond-wrap .comments-sidebar {
+  padding-top: 30px;
+}
+
+.commentlist {
+  float: left;
+  width: 65%;
+  margin: 10px 0 40px 0;
+  padding-top: 50px;
+  padding-right: 30px;
+  border-top: 1px solid #efefef;
+  list-style-type: none;
+  .line {
     display: none;
   }
+}
 
-  // .bypostauthor {
+.commentlist li li li .line {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-bottom: 1px solid #efefef;
+  margin: 0 0 0 -50px;
+}
 
-  // }
+.commentlist .comment-body {
+  padding-left: 45px;
+}
 
-  input,
-  textarea,
-  button {
-    background: #f5f5f5;
-    border: 1px solid #fff;
+.commentlist li li .comment-body {
+  padding-left: 30px;
+}
+
+.commentlist ul {
+  border-left: 2px solid #efefef;
+  margin: 0 0 0 63px;
+}
+
+.commentlist ul ul {
+  margin: 0 0 0 50px;
+}
+
+.commentlist li li {
+  padding-top: 25px;
+  margin-top: 0;
+}
+
+.commentlist li #commentform {
+  margin-top: 20px;
+}
+
+.commentlist li #respond {
+  padding-top: 5px;
+}
+
+.pinglist {
+  margin: 20px 0 40px 30px;
+  list-style-type: decimal;
+}
+
+.comment {
+  margin-bottom: 40px;
+  background: #fff;
+}
+
+.comment-body ul,
+.comment-body ol,
+.comment-body dl {
+  margin-left: 30px;
+}
+
+#respond {
+  margin-top: 18px;
+  background: #fff;
+}
+
+#commentform {
+  float: left;
+  width: 70%;
+  margin-top: 30px;
+  padding-right: 30px;
+}
+
+li li .cancel-comment-reply {
+  padding-left: 30px;
+}
+
+li .cancel-comment-reply {
+  padding-left: 45px;
+}
+
+ol #commentform {
+  width: 100%;
+}
+
+#commentform input {
+  margin-right: 10px;
+  width: 60%;
+}
+
+#commentform textarea,
+#contact-form-comment-g35-comment {
+  width: 100%;
+}
+
+#commentform span,
+.contactform span {
+  color: #f00;
+}
+
+#commentform span.grey,
+.contactform span.grey {
+  color: #999;
+  font-style: italic;
+}
+
+#commentform #submit,
+.contactform #submit,
+.contact-submit input.pushbutton-wide,
+.btn-submit button {
+  background: transparent url("../images/btn-submit.svg") left top no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 38px;
+  padding: 0;
+  text-indent: -9999px;
+  border-radius: none;
+  border: none;
+  box-shadow: none;
+  transition: filter 0.25s ease;
+  &:hover {
+    filter: grayscale(100%);
   }
+}
 
-  input,
-  textarea { padding: 5px; }
+.contact-form label {
+  display: inline-block !important;
+}
 
-  // input { /*height: 20px;*/ }
+.children {
+  list-style-type: none;
+}
 
-  button {
-    padding: 2px 10px;
-    cursor: pointer;
-  }
+.avatar {
+  position: relative;
+  background: #fff;
+  z-index: 5;
+}
 
-  input:focus,
-  textarea:focus,
-  button:hover {
-    background: #fff;
-    border: 1px solid #b7d6df;
-    -webkit-box-shadow: 0 0 4px #a7d6e3;
-    -moz-box-shadow: 0 0 4px #a7d6e3;
-    box-shadow: 0 0 4px #a7d6e3;
-  }
+li li .avatar {
+  margin: -8px 0 0 -18px;
+}
 
-  input:focus,
-  textarea:focus { color: #444; }
-
-
-  /* Text meant only for screen readers. */
-  .screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    white-space: nowrap;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-  }
-
-  .screen-reader-text:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    clip: auto !important;
-    color: #21759b;
-    display: block;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000; /* Above WP toolbar. */
-  }
-
-  /* Misc Custom Styles */
-
-  .droid-italic {
+.comment-meta {
+  margin-bottom: 15px;
+  a {
+    color: #999;
     font-style: italic;
-    font-size: 11px;
-  }
-
-  .gray {
-    color: #999;
-  }
-  .intro-text {
-    font-size: 1.25em;
-    line-height: 1.75;
-  }
-
-  .search-no-results #post-0,
-  #primary .hentry {
-    padding-top: 30px;
-  }
-
-  .search-highlight {
-    background: yellow;
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	6.	Post Content Styles
-  /*-----------------------------------------------------------------------------------*/
-
-  #primary .entry-meta {
-    float: left;
-    width: 15%;
-    text-align: right;
-    padding-right: 40px;
-  }
-
-  .entry-meta {
     font-size: 14px;
-    font-style:italic;
-    color: #999;
-    margin-bottom: 10px;
+    &:hover {
+      color: #666;
+    }
   }
+}
 
-  .entry-meta a { color: #999; }
+.comment-meta,
+.comment-author {
+  padding-left: 48px;
+}
 
-  .entry-meta a:hover { color: #666; }
+li li .comment-meta,
+li li .comment-author {
+  padding-left: 30px;
+}
 
-  #primary .entry-meta a {
+.comment-author {
+  margin-top: -47px;
+  a {
     color: #444444;
+  }
+  a:after {
+    content: " \2192";
+  }
+  cite {
     font-style: normal;
   }
+}
 
-  #primary .entry-meta span { display: block; }
+.says {
+  display: none;
+}
 
-  .published strong {
-    color: $mid-grey;
-    font-weight: normal;
-    font-style: normal;
-  }
+.nocomments {
+  text-align: center;
+  padding: 20px;
+}
 
-  .permalink img { padding: 0 3px 0 0; }
-
-  .author-bio {
-    padding: 20px;
-    background: #fbfbfb;
-    border: 1px solid #efefef;
-  }
-
-  .author-bio .avatar	{
-    float: left;
-    margin: 0 10px 0 0;
-  }
-
-  .author-title {
-    font-weight: 600;
-    margin-left: 60px;
-  }
-
-  .author-description { margin-left: 60px; }
-
-  .entry-content ul { list-style-type: disc; }
-
-  .entry-content ol { list-style-type: decimal; }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	7.	Comments
-  /*-----------------------------------------------------------------------------------*/
-
-  #comment-wrap {
-    p {
-      margin-bottom: .5em;
-    }
-    h3 {
-      font-size: 24px;
-      line-height: 26px;
+.comment-body {
+  ul {
+    list-style-type: disc;
+    border: none;
+    margin-bottom: 20px;
+    li {
+      padding: 0;
+      margin: 0;
     }
   }
-
-  .comments-sidebar {
-    width: 15%;
-    padding-right: 30px;
-    padding-top: 60px;
-    text-align: right;
-    float: left;
-    font-size: 11px;
-  }
-
-  #respond-wrap .comments-sidebar { padding-top: 30px; }
-
-  .commentlist {
-    float: left;
-    width: 65%;
-    margin: 10px 0 40px 0;
-    padding-top: 50px;
-    padding-right: 30px;
-    border-top: 1px solid #efefef;
-    list-style-type: none;
-    .line { display: none; }
-  }
-
-  .commentlist li li li .line{
-    display: block;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border-bottom: 1px solid #efefef;
-    margin: 0 0 0 -50px;
-  }
-
-  .commentlist .comment-body { padding-left: 45px; }
-
-  .commentlist li li .comment-body { padding-left: 30px; }
-
-  .commentlist ul {
-    border-left: 2px solid #efefef;
-    margin: 0 0 0 63px;
-  }
-
-  .commentlist ul ul{	margin: 0 0 0 50px; }
-
-  .commentlist li li {
-    padding-top: 25px;
-    margin-top: 0;
-  }
-
-  .commentlist li #commentform { margin-top: 20px; }
-
-  .commentlist li #respond { padding-top: 5px; }
-
-  .pinglist {
-    margin: 20px 0 40px 30px;
+  ol {
     list-style-type: decimal;
   }
-
-  .comment {
-    margin-bottom: 40px;
-    background: #fff;
+  a {
+    word-wrap: break-word;
   }
+}
 
-  .comment-body ul,
-  .comment-body ol,
-  .comment-body dl { margin-left: 30px; }
+.moderation {
+  padding-left: 45px;
+  color: red;
+  font-size: 11px;
+}
 
-  #respond {
-    margin-top: 18px;
-    background: #fff;
-  }
+.author-tag {
+  font-size: 11px;
+}
 
-  #commentform {
+#pings {
+  padding-top: 60px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	8.	Pagination
+  /*-----------------------------------------------------------------------------------*/
+
+.page-navigation {
+  margin: 56px 0 0 0;
+  font-style: italic;
+  .nav-next {
     float: left;
-    width: 70%;
-    margin-top: 30px;
-    padding-right: 30px;
   }
-
-  li li .cancel-comment-reply { padding-left: 30px; }
-
-  li .cancel-comment-reply { padding-left: 45px; }
-
-  ol #commentform { width: 100%; }
-
-  #commentform input {
-    margin-right: 10px;
-    width: 60%;
-  }
-
-  #commentform textarea,
-  #contact-form-comment-g35-comment {
-    width: 100%;
-  }
-
-  #commentform span,
-  .contactform span { color: #F00; }
-
-  #commentform span.grey,
-  .contactform span.grey{
-    color: #999;
-    font-style: italic;
-  }
-
-  #commentform #submit,
-  .contactform #submit,
-  .contact-submit input.pushbutton-wide,
-  .btn-submit button {
-    background: transparent url("../images/btn-submit.svg") left top no-repeat;
-    background-size: cover;
-    width: 120px;
-    height: 38px;
-    padding: 0;
-    text-indent: -9999px;
-    border-radius: none;
-    border: none;
-    box-shadow: none;
-    transition: filter 0.25s ease;
-    &:hover {
-      filter: grayscale(100%);
-    }
-  }
-
-  .contact-form label {
-    display: inline-block !important;
-  }
-
-  .children { list-style-type: none; }
-
-  .avatar {
-    position: relative;
-    background: #fff;
-    z-index: 5;
-  }
-
-  li li .avatar {
-    margin:-8px 0 0 -18px;
-  }
-
-  .comment-meta {
-    margin-bottom: 15px;
-    a {
-      color: #999;
-      font-style: italic;
-      font-size: 14px;
-      &:hover { color: #666; }
-    }
-  }
-
-  .comment-meta,
-  .comment-author { padding-left: 48px; }
-
-  li li .comment-meta,
-  li li .comment-author { padding-left: 30px; }
-
-  .comment-author {
-    margin-top: -47px;
-    a{ color: #444444; }
-    a:after{ content: " \2192"; }
-    cite {
-      font-style: normal;
-    }
-  }
-
-  .says { display: none; }
-
-  .nocomments {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .comment-body {
-    ul {
-      list-style-type: disc;
-      border: none;
-      margin-bottom: 20px;
-      li {
-        padding: 0;
-        margin: 0;
-      }
-    }
-    ol { list-style-type: decimal; }
-    a {
-      word-wrap: break-word;
-    }
-  }
-
-  .moderation {
-    padding-left: 45px;
-    color: red;
-    font-size: 11px;
-  }
-
-  .author-tag {
-    font-size: 11px;
-  }
-
-  #pings {
-    padding-top: 60px;
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	8.	Pagination
-  /*-----------------------------------------------------------------------------------*/
-
-  .page-navigation {
-    margin: 56px 0 0 0;
-    font-style: italic;
-    .nav-next { float: left; }
-    .nav-previous { float: right; }
-  }
-
-  .single-page-navigation {
-    margin: 0;
-    padding-top: 40px;
-    .nav-next { float: right; }
-    .nav-previous { float: left; }
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	9.	Footer Styles
-  /*-----------------------------------------------------------------------------------*/
-
-  #footer-container {
-    background-color: #f5f5f5;
-    margin-top: 30px;
-  }
-
-  #footer-widgets {
-    padding: 60px 0 40px;
-    font-size: .8625em;
-    .widget {
-      font-style: normal;
-      color: #444444;
-      float: left;
-      padding: 0;
-    }
-    .widget-wrap {
-      margin: 0 -15px;
-    }
-    .widget-section {
-      float: left;
-      width: 25%;
-      padding: 0 15px;
-    }
-    .widget_block {
-      margin-bottom: 0;
-    }
-    h3 {
-      text-transform: uppercase;
-      color: #999;
-      margin: 0 0 17px 0;
-    }
-  }
-
-  #footer {
-    padding: 25px 0 20px 0;
-    border-top: 1px solid #e0e0e0;
-    background: #f5f5f5;
-    font-size: .8625rem;
-    color: #999;
-    clear: both;
-  }
-
-  #footer-wave {
-    height: 15px;
-    width: 100%;
-    float: left;
-    margin-top: -15px;
-    background-image: url("../images/wavybg.png");
-  }
-
-  .copyright {
-    float: left;
-    margin: 10px 0 15px 0;
-  }
-
-  .credit {
+  .nav-previous {
     float: right;
-    margin: 10px 0 15px 0;
   }
+}
 
-  .credit a,
-  .copyright a { color: #666666; }
+.single-page-navigation {
+  margin: 0;
+  padding-top: 40px;
+  .nav-next {
+    float: right;
+  }
+  .nav-previous {
+    float: left;
+  }
+}
 
+/*-----------------------------------------------------------------------------------*/
+/*	9.	Footer Styles
   /*-----------------------------------------------------------------------------------*/
-  /*	10.	Page Templates
+
+#footer-container {
+  // background-color: #f5f5f5;
+  margin-top: 30px;
+}
+
+#footer-widgets {
+  padding: 60px 0 40px;
+  // font-size: 0.8625em;
+  .widget {
+    font-style: normal;
+    color: #000;
+    float: left;
+    padding: 0;
+  }
+  .widget-wrap {
+    margin: 0 -15px;
+  }
+  .widget-section {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+  }
+  .widget_block {
+    margin-bottom: 0;
+  }
+  h3 {
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0 17px 0;
+  }
+}
+
+#footer {
+  padding: 25px 0 20px 0;
+  border-top: 2px solid $brand-color1;
+  // background: #f5f5f5;
+  // font-size: 0.8625rem;
+  // color: #999;
+  clear: both;
+}
+
+.copyright {
+  float: left;
+  margin: 10px 0 15px 0;
+}
+
+.credit {
+  float: right;
+  margin: 10px 0 15px 0;
+}
+
+.credit a,
+.copyright a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	10.	Page Templates
   /*-----------------------------------------------------------------------------------*/
 
-  .archive-lists .children { margin-bottom: 0; }
+.archive-lists .children {
+  margin-bottom: 0;
+}
 
-  .full-width { width: 940px!important; }
+.full-width {
+  width: 940px !important;
+}
 
-  .contactform {
-    margin: 30px 0 0 0;
-    p { margin-bottom: 0; }
-    li {
-      list-style-type: none;
-      label {
-        display: block;
-        margin-bottom: 10px;
-      }
-      input[type="text"] {
-        width: 300px;
-        margin-bottom: 15px;
-      }
-      textarea {
-        width: 90%;
-        height: 200px;
-        margin-bottom:15px;
-      }
-      button { float: right; }
-    }
+.contactform {
+  margin: 30px 0 0 0;
+  p {
+    margin-bottom: 0;
   }
-
-  label.error { color: red; }
-
-  .page-template-template-portfolio .page-title {
-    display: none;
-  }
-
-
-  /* About Page */
-  .about-image {
-    margin: -60px 0 0 30px;
-    @media (max-width: 500px) {
-      margin: -10px auto 20px;
-      text-align: center;
-      width: 100%;
-      float: none;
+  li {
+    list-style-type: none;
+    label {
+      display: block;
+      margin-bottom: 10px;
     }
-  }
-
-  /* Blog */
-
-  @media (min-width: 768px) {
-    #blog {
-      width: 75%;
-      float: left;
-      padding-right: 15px;
+    input[type="text"] {
+      width: 300px;
+      margin-bottom: 15px;
     }
-
-    #secondary {
+    textarea {
+      width: 90%;
+      height: 200px;
+      margin-bottom: 15px;
+    }
+    button {
       float: right;
-      width: 25%;
     }
   }
+}
 
+label.error {
+  color: red;
+}
+
+.page-template-template-portfolio .page-title {
+  display: none;
+}
+
+/* About Page */
+.about-image {
+  margin: -60px 0 0 30px;
+  @media (max-width: 500px) {
+    margin: -10px auto 20px;
+    text-align: center;
+    width: 100%;
+    float: none;
+  }
+}
+
+/* Blog */
+
+@media (min-width: 768px) {
   #blog {
-    .hentry {
-      margin: 30px 0;
-      border-bottom: 1px solid $mid-grey;
-    }
-    .post-thumb {
-      float: left;
-      width: 210px;
-      height: 165px;
-      margin-right: 30px;
-      margin-bottom: 30px;
-      overflow: hidden;
-      @media (max-width: 580px) {
-        float: none;
-        margin: 0 auto 20px;
-        width: 100%;
-        height: auto;
-        text-align: center;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        border: 1px solid $light-grey;
-        @media (max-width: 580px) {
-          height: 240px;
-          object-fit: cover;
-        }
-      }
-    }
-    .entry-title {
-      font-size: 28px;
-      line-height: 1;
-    }
+    width: 75%;
+    float: left;
+    padding-right: 1rem; //15px;
   }
 
   #secondary {
-    margin-top: 30px;
-    padding-left: 15px;
-    font-size: .8625em;
-    a {
-      text-decoration: underline;
-    }
-    .widget {
-      li {
-        margin-bottom: 5px;
-      }
-    }
+    float: right;
+    width: 25%;
   }
+}
 
-  /*-----------------------------------------------------------------------------------*/
-  /*	11.	Widgets
-  /*-----------------------------------------------------------------------------------*/
-
-  .widget {
-    margin-bottom: 20px;
-    &:last-child { border-bottom: none; }
-    ul {
-      list-style-type: none;
-      margin: 0;
-    }
-    ol {
-      list-style-type: decimal;
-      margin-bottom: 0;
-    }
+@media (min-width: 1440px) {
+  #blog {
+    padding-right: 2rem;
   }
+}
 
-  .widget-title {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.2;
-    color: #999;
-    margin: 0 0 20px 0;
-    font-style: normal;
-    letter-spacing: 1px;
+#blog {
+  .hentry {
+    margin: 30px 0;
+    border-bottom: 1px solid $mid-grey;
   }
-
-  /* Recent Comments Widget */
-  .widget_recent_comments { color: #666; }
-
-  .widget_recent_comments li { margin-bottom: 2px; }
-
-  .widget_recent_comments li:last-child { margin-bottom: 0; }
-
-  /* Posts Widget */
-  .widget_recent_entries li { margin-bottom: 2px; }
-
-  .widget_recent_entries li:last-child { margin-bottom: 0; }
-
-  /* Categories Widget */
-  .widget_categories { color: #999; }
-
-  /* Search Widget */
-  .widget_search #s { width: 100%; max-width: 300px; }
-
-  .widget_search form,
-  .widget_search fieldset { margin: 0; }
-
-  /* Blog Widget */
-  .tz_blog .entry-title a,
-  .tz_blog .entry-title {
-    color: $mid-grey;
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  .tz_blog .entry-meta a {
-    color: #999;
-    font-style: italic;
-  }
-
-  .tz_blog .entry-meta a:hover { color: #666; }
-
-  .tz_blog .hentry { margin-bottom: 20px; }
-
-  /* Calander Widget */
-  .widget_calendar caption { margin-bottom: 5px; }
-  .widget_calendar table { width: 100% }
-
-
-  /* Flickr Widget */
-
-  .flickr_badge_image,
-  .flickr-images {
-    //float: left;
-    //margin: 0 8px 8px 0;
-    margin-right: -6px;
-    img {
-      margin: 0 5px 5px 0 !important;
-      padding: 3px;
-      width: 62px;
-      height: 62px;
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      &:hover { border-color: #d5d5d5; }
-    }
-  }
-
-  /* Video Widget */
-  .tz_video { margin-bottom: 10px; }
-
-
-  /* Social Icons */
-  .social-top,
-  .social-bottom {
-    list-style-type: none;
-    clear: both;
-    li {
-      display: inline-block;
-      margin: 0 9px 9px 0;
-    }
-    a {
-      display: block;
-      width: 48px;
-      height: 48px;
-      text-indent: -9999px;
-      background-image: url('../images/social_icons.svg');
-      background-repeat: no-repeat;
-      background-position: left top;
-      filter: grayscale(100%);
-      transition: filter 0.25s ease;
-      &:hover {
-        filter: none;
-      }
-    }
-  }
-
-  .ico-plus a {
-    background-position: left top;
-  }
-  .ico-twitter a {
-    background-position: -48px top;
-  }
-  .ico-flickr a {
-    background-position: -96px top;
-  }
-  .ico-linkedin a {
-    background-position: -144px top;
-  }
-  .ico-youtube a {
-    background-position: left -48px;
-  }
-  .ico-vimeo a {
-    background-position: -48px -48px;
-  }
-  .ico-lastfm a {
-    background-position: -96px -48px;
-  }
-  .ico-behance a {
-    background-position: -144px -48px;
-  }
-  .ico-facebook a {
-    background-position: left -96px;
-  }
-  .ico-instagram a {
-    background-position: -48px -96px;
-  }
-  .ico-tumblr a {
-    background-position: -96px -96px;
-  }
-  .ico-pinterest a {
-    background-position: -144px -96px;
-  }
-  .ico-snapchat a {
-    background-position: left -144px;
-  }
-  .ico-dribbble a {
-    background-position: -48px -144px;
-  }
-  .ico-medium a {
-    background-position: -96px -144px;
-  }
-  .ico-github a {
-    background-position: -144px -144px;
-  }
-  .ico-mastodon a {
-    background-position: left -192px;
-  }
-  .ico-spotify a {
-    background-position: -48px -192px;
-  }
-
-  .ico-github, .ico-medium {
-    a:hover, a:focus {
-      // filter: invert(1);
-      opacity: 0.8;
-    }
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	12.	Shortcode Styles
-  /*-----------------------------------------------------------------------------------*/
-
-  @media (min-width: 768px) {
-    /* Columns */
-    .one_half { width: 48%; }
-    .one_third { width: 30.66%; }
-    .two_third { width: 65.33%; }
-    .one_fourth { width: 22%; }
-    .three_fourth { width: 74%; }
-    .one_fifth { width: 16.8%; }
-    .two_fifth { width: 37.6%; }
-    .three_fifth { width: 58.4%; }
-    .four_fifth { width: 79.2%; }
-    .one_sixth { width: 13.33%; }
-    .five_sixth { width: 82.67%; }
-
-    .one_half,
-    .one_third,
-    .two_third,
-    .three_fourth,
-    .one_fourth,
-    .one_fifth,
-    .two_fifth,
-    .three_fifth,
-    .four_fifth,
-    .one_sixth,
-    .five_sixth {
-      position: relative;
-      margin-right: 4%;
-      margin-bottom: 20px;
-      float: left;
-    }
-
-    .column-last {
-      margin-right: 0!important;
-      clear: right;
-    }
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	13.	Homepage Elements
-  /*-----------------------------------------------------------------------------------*/
-
-  /* Hero Image */
-  .hero-image {
-    background-color: #5b93f7;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 85%;
-    height: 55vh;
+  .post-thumb {
+    float: left;
+    width: 210px;
+    height: 165px;
+    margin-right: 30px;
     margin-bottom: 30px;
-    @media (min-width: 768px) { background-attachment: fixed; }
-    .container {
-      position: relative;
-      height: 100%;
-      display: flex;
+    overflow: hidden;
+    @media (max-width: 580px) {
+      float: none;
+      margin: 0 auto 20px;
+      width: 100%;
+      height: auto;
+      text-align: center;
     }
-    h1 {
-      align-self: center;
-      margin: 0 auto;
-      padding: 20px;
-      background: rgba(#000,0.8);
-      color: #fff;
-      font-size: 3rem;
-      line-height: 1;
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid $light-grey;
+      @media (max-width: 580px) {
+        height: 240px;
+        object-fit: cover;
+      }
     }
   }
+  .entry-title {
+    font-size: 28px;
+    line-height: 1;
+  }
+}
 
-  /* Slider */
-  .bxslider {
+#secondary {
+  margin-top: 30px;
+  padding-left: 15px;
+  font-size: 0.8625em;
+  a {
+    text-decoration: underline;
+  }
+  .widget {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	11.	Widgets
+  /*-----------------------------------------------------------------------------------*/
+
+.widget {
+  margin-bottom: 20px;
+  &:last-child {
+    border-bottom: none;
+  }
+  ul {
+    list-style-type: none;
     margin: 0;
   }
-  .bx-wrapper {
-    max-height: 420px;
-    .bx-viewport {
-      border: none;
-      left: 0;
+  ol {
+    list-style-type: decimal;
+    margin-bottom: 0;
+  }
+}
+
+.widget-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #999;
+  margin: 0 0 20px 0;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+/* Recent Comments Widget */
+.widget_recent_comments {
+  color: #666;
+}
+
+.widget_recent_comments li {
+  margin-bottom: 2px;
+}
+
+.widget_recent_comments li:last-child {
+  margin-bottom: 0;
+}
+
+/* Posts Widget */
+.widget_recent_entries li {
+  margin-bottom: 2px;
+}
+
+.widget_recent_entries li:last-child {
+  margin-bottom: 0;
+}
+
+/* Categories Widget */
+.widget_categories {
+  color: #999;
+}
+
+/* Search Widget */
+.widget_search #s {
+  width: 100%;
+  max-width: 300px;
+}
+
+.widget_search form,
+.widget_search fieldset {
+  margin: 0;
+}
+
+/* Blog Widget */
+.tz_blog .entry-title a,
+.tz_blog .entry-title {
+  color: $mid-grey;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.tz_blog .entry-meta a {
+  color: #999;
+  font-style: italic;
+}
+
+.tz_blog .entry-meta a:hover {
+  color: #666;
+}
+
+.tz_blog .hentry {
+  margin-bottom: 20px;
+}
+
+/* Calender Widget */
+.widget_calendar caption {
+  margin-bottom: 5px;
+}
+.widget_calendar table {
+  width: 100%;
+}
+
+
+#searchform {
+  input {
+    font-size: .875rem;
+  }
+}
+
+/* Flickr Widget */
+
+.flickr_badge_image,
+.flickr-images {
+  //float: left;
+  //margin: 0 8px 8px 0;
+  margin-right: -6px;
+  img {
+    margin: 0 5px 5px 0 !important;
+    padding: 3px;
+    width: 62px;
+    height: 62px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    &:hover {
+      border-color: #d5d5d5;
+    }
+  }
+}
+
+/* Video Widget */
+.tz_video {
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-top,
+.social-bottom {
+  list-style-type: none;
+  clear: both;
+  li {
+    display: inline-block;
+    margin: 0 9px 9px 0;
+  }
+  a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-indent: -9999px;
+    background-image: url("../images/social_icons.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    filter: grayscale(100%);
+    transition: filter 0.25s ease;
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.ico-plus a {
+  background-position: left top;
+}
+.ico-twitter a {
+  background-position: -48px top;
+}
+.ico-flickr a {
+  background-position: -96px top;
+}
+.ico-linkedin a {
+  background-position: -144px top;
+}
+.ico-youtube a {
+  background-position: left -48px;
+}
+.ico-vimeo a {
+  background-position: -48px -48px;
+}
+.ico-lastfm a {
+  background-position: -96px -48px;
+}
+.ico-behance a {
+  background-position: -144px -48px;
+}
+.ico-facebook a {
+  background-position: left -96px;
+}
+.ico-instagram a {
+  background-position: -48px -96px;
+}
+.ico-tumblr a {
+  background-position: -96px -96px;
+}
+.ico-pinterest a {
+  background-position: -144px -96px;
+}
+.ico-snapchat a {
+  background-position: left -144px;
+}
+.ico-dribbble a {
+  background-position: -48px -144px;
+}
+.ico-medium a {
+  background-position: -96px -144px;
+}
+.ico-github a {
+  background-position: -144px -144px;
+}
+.ico-mastodon a {
+  background-position: left -192px;
+}
+.ico-spotify a {
+  background-position: -48px -192px;
+}
+
+.ico-github,
+.ico-medium {
+  a:hover,
+  a:focus {
+    // filter: invert(1);
+    opacity: 0.8;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	12.	Shortcode Styles
+  /*-----------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+  /* Columns */
+  .one_half {
+    width: 48%;
+  }
+  .one_third {
+    width: 30.66%;
+  }
+  .two_third {
+    width: 65.33%;
+  }
+  .one_fourth {
+    width: 22%;
+  }
+  .three_fourth {
+    width: 74%;
+  }
+  .one_fifth {
+    width: 16.8%;
+  }
+  .two_fifth {
+    width: 37.6%;
+  }
+  .three_fifth {
+    width: 58.4%;
+  }
+  .four_fifth {
+    width: 79.2%;
+  }
+  .one_sixth {
+    width: 13.33%;
+  }
+  .five_sixth {
+    width: 82.67%;
+  }
+
+  .one_half,
+  .one_third,
+  .two_third,
+  .three_fourth,
+  .one_fourth,
+  .one_fifth,
+  .two_fifth,
+  .three_fifth,
+  .four_fifth,
+  .one_sixth,
+  .five_sixth {
+    position: relative;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .column-last {
+    margin-right: 0 !important;
+    clear: right;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	13.	Homepage Elements
+  /*-----------------------------------------------------------------------------------*/
+
+/* Hero Image */
+.hero-image {
+  background-color: #5b93f7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 85%;
+  height: 55vh;
+  margin-top: -3px;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    background-attachment: fixed;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+  }
+  h1 {
+    align-self: center;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(#000, 0.8);
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: lowercase;
+  }
+}
+
+/* Slider */
+.bxslider {
+  margin: 0;
+}
+.bx-wrapper {
+  max-height: 420px;
+  .bx-viewport {
+    border: none;
+    left: 0;
+  }
+}
+
+@media (min-width: 940px) {
+  .home .slides_container2 {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+  }
+}
+
+#slider2 {
+  margin-bottom: 30px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.	Portfolio Thumbnails & Sorter
+  /*-----------------------------------------------------------------------------------*/
+
+.home.page {
+  .recent-wrap {
+    padding: 0;
+    border: none;
+    h3 {
+      font-size: 20px;
+      float: left;
+      width: 50%;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .portfolio-link {
+      float: right;
+      width: 50%;
+      text-align: right;
+    }
+    .hentry-wrap {
+      margin: 0 -15px;
+    }
+  }
+}
+
+/* Recent */
+.portfolio-recent {
+  .sidebar {
+    width: 20%;
+    float: left;
+    padding: 40px 0 25px 0;
+    p {
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+  .recent-wrap {
+    width: 80%;
+    .hentry {
+      width: 100%;
+    }
+  }
+}
+
+.portfolio-recent .sidebar,
+.no-border .sidebar,
+.no-border .recent-wrap {
+  border: none;
+}
+
+.recent-wrap {
+  width: 100%;
+  float: left;
+  padding: 40px 0 20px 0;
+  position: relative;
+  //font-size: .8625rem;
+  line-height: 1.5;
+  .hentry {
+    width: 33.3333333%;
+    margin: 0;
+    padding: 0 15px;
+    float: left;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
     }
   }
 
-  @media (min-width: 940px) {
-    .home .slides_container2 {
-      width:100%;
-      height: 420px;
-      overflow: hidden;
-    }
-  }
-
-  #slider2 {
-    margin-bottom: 30px;
+  .post-thumb {
+    margin-bottom: 10px;
     img {
       width: 100%;
       height: auto;
     }
   }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	14.	Portfolio Thumbnails & Sorter
-  /*-----------------------------------------------------------------------------------*/
-
-  .home.page {
-    .recent-wrap {
-      padding: 0;
-      border: none;
-      h3 {
-        font-size: 20px;
-        float: left;
-        width: 50%;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-      }
-      .portfolio-link {
-        float: right;
-        width: 50%;
-        text-align: right;
-      }
-      .hentry-wrap {
-        margin: 0 -15px;
+  .entry-title {
+    color: #444;
+    font-size: 20px;
+    line-height: 21px;
+    margin-bottom: 10px;
+    transition: all 0.25s ease;
+  }
+  a {
+    display: block;
+    color: #444;
+    &:hover {
+      color: #444;
+      text-decoration: none;
+      .entry-title {
+        color: $brand-color1;
       }
     }
   }
+}
 
-  /* Recent */
+/* Portfolio Entry Page */
+.single-portfolio {
+  .slides_container {
+    float: right;
+    width: 75%;
+    padding-top: 20px;
+    padding-left: 35px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
   .portfolio-recent {
     .sidebar {
-      width: 20%;
-      float: left;
-      padding: 40px 0 25px 0;
-      p {
-        margin-bottom: 15px;
-      }
-      h3 {
-        font-size: 14px;
-        margin-bottom: 5px;
-      }
+      padding-top: 20px;
+      width: 25%;
     }
-    .recent-wrap {
-      width: 80%;
-      .hentry {
-        width: 100%;
+  }
+  .recent-wrap {
+    width: 75%;
+    .hentry {
+      width: 33.3333333333%;
+      float: left;
+    }
+  }
+  .portfolio-item {
+    margin-bottom: 20px;
+  }
+}
+
+#home-border .recent-wrap,
+#home-border .sidebar {
+  padding: 0;
+}
+
+.post-thumb {
+  a {
+    cursor: pointer;
+  }
+}
+
+#recent-portfolio {
+  .entry-title {
+    margin-bottom: 0;
+  }
+}
+
+#recent-portfolio-detail {
+  margin: 0 -15px;
+  // h3 {
+  //   //margin-left: 15px;
+  // }
+  .entry-title {
+    margin-bottom: 5px;
+  }
+}
+
+.image-grid {
+  margin: 0 -15px;
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+  li {
+    float: left;
+    height: 340px;
+    width: 33.33333333%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    @media (min-width: 940px) {
+      .post-thumb img {
+        width: 281px;
+        height: 221px;
+        max-width: none;
+        object-fit: cover;
       }
     }
   }
+}
 
-  .portfolio-recent .sidebar,
-  .no-border .sidebar,
-  .no-border .recent-wrap { border: none; }
+.video_info {
+  display: block;
+  width: 700px;
+  margin-bottom: 20px;
+}
+
+.post_video {
+  margin-bottom: 20px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	15.	Mobile Styles
+  /*-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	Desktop
+  /*-----------------------------------------------------------------------------------*/
+
+@media (min-width: 960px) {
+  .container {
+    width: 940px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	Large Desktop
+  /*-----------------------------------------------------------------------------------*/
+
+@media (min-width: 1230px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+  .container {
+    width: 1440px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	Tablet and below
+  /*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 959px) {
+  .back {
+    max-width: 300px;
+  }
+  #primary .entry-content {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .single #primary .entry-content,
+  .blog #primary .entry-content,
+  .archive #primary .entry-content,
+  .search-results #primary .entry-content {
+    max-width: 100%;
+  }
+  .container {
+    padding: 20px;
+  }
+  #header {
+    padding-top: 0;
+  }
+  #upper-wrap {
+    text-align: center;
+  }
+  #primary {
+    width: 100%;
+  }
+  #logo {
+    margin-bottom: 0;
+    float: none;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  #primary-nav {
+    float: none;
+    margin: 0;
+    clear: both;
+    text-align: center;
+    ul a {
+      padding: 0 9px;
+    }
+  }
+  #primary-menu {
+    margin: 10px auto;
+    display: inline-block;
+  }
+  #sidebar {
+    width: 100%;
+    &.aside {
+      display: none;
+    }
+  }
+  /*-----------------------------------------------------------------------------------*/
+  /*	6.	Post Content Styles
+    /*-----------------------------------------------------------------------------------*/
+
+  #primary .entry-title {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #primary .entry-meta {
+    width: 100%;
+    margin: 0 0 10px 0;
+    text-align: left;
+  }
+  #primary .entry-meta span {
+    display: inline;
+  }
+  .entry-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  img.size-large {
+    margin: 10px 0;
+  }
+  .wp-caption {
+    margin: 0;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /*-----------------------------------------------------------------------------------*/
+  /*	7.	Comments
+    /*-----------------------------------------------------------------------------------*/
+
+  #respond-wrap .comments-sidebar {
+    padding-top: 0px;
+  }
+  #commentform {
+    width: 97%;
+  }
+  .comments-sidebar {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+  .commentlist {
+    max-width: 500px;
+  }
+  .page-template-template-full-width-php .commentlist {
+    max-width: 760px;
+  }
+  /*-----------------------------------------------------------------------------------*/
+  /*	9.	Footer Styles
+    /*-----------------------------------------------------------------------------------*/
+
+  #footer-container {
+    margin: 0;
+    padding: 20px;
+  }
+  .single #footer-container {
+    margin: 0;
+  }
+  #footer-widgets .widget-section {
+    margin: 0;
+  }
+  /*-----------------------------------------------------------------------------------*/
+  /*	10.	Page Templates
+    /*-----------------------------------------------------------------------------------*/
+
+  .full-width {
+    /*width: 940px!important;*/
+    width: 100% !important;
+  }
+  .single .slides_container img {
+    max-width: 100%;
+    height: auto;
+  }
+  .single-page-navigation {
+    padding-top: 0;
+  }
+  .hentry,
+  .navigation-links,
+  .hfeed,
+  .pinglist {
+    margin-bottom: 20px;
+  }
+  /*-----------------------------------------------------------------------------------*/
+  /*	11.	Widgets
+    /*-----------------------------------------------------------------------------------*/
+
+  /* Search Widget */
+  .widget_search #s {
+    width: 100%;
+  }
+  /* Flickr Widget */
+  .tz_flickr_widget {
+    padding-right: 0;
+    /*width: 228px;*/
+    width: 100%;
+  }
+  .flickr_badge_image img,
+  .flickr_images img {
+    width: 75px;
+    height: 75px;
+  }
+
+  /*-----------------------------------------------------------------------------------*/
+  /*	12.	Homepage Elements
+    /*-----------------------------------------------------------------------------------*/
+
+  .home-recent .sidebar,
+  .sidebar {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 0 0;
+    border: none;
+  }
+  .home .sidebar {
+    padding: 0;
+  }
 
   .recent-wrap {
     width: 100%;
-    float: left;
-    padding: 40px 0 20px 0;
-    position: relative;
-    //font-size: .8625rem;
-    line-height: 1.5;
-    .hentry {
-      width: 33.3333333%;
-      margin: 0;
-      padding: 0 15px;
-      float: left;
-      img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .post-thumb {
-      margin-bottom: 10px;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .entry-title {
-      color: #444;
-      font-size: 20px;
-      line-height: 21px;
-      margin-bottom: 10px;
-      transition: all 0.25s ease;
-    }
-    a {
-      display: block;
-      color: #444;
-      &:hover {
-        color: #444;
-        text-decoration: none;
-        .entry-title {
-          color: $brand-color1;
-
-        }
-      }
-    }
+    padding: 0;
+    border: none;
   }
-
-  /* Portfolio Entry Page */
-  .single-portfolio {
-    .slides_container {
-      float: right;
-      width: 75%;
-      padding-top: 20px;
-      padding-left: 35px;
-      text-align: center;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .portfolio-recent {
-      .sidebar {
-        padding-top: 20px;
-        width: 25%;
-      }
-    }
-    .recent-wrap {
-      width: 75%;
-      .hentry {
-        width: 33.3333333333%;
-        float: left;
-      }
-    }
-    .portfolio-item {
-      margin-bottom: 20px;
-    }
+  .home .home-recent .sidebar {
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
   }
-
-  #home-border .recent-wrap,
-  #home-border .sidebar { padding: 0; }
-
-  .post-thumb {
-    a {
-      cursor: pointer;
-    }
+  .portfolio-recent .recent-wrap {
+    border: none;
   }
-
-  #recent-portfolio {
-    .entry-title { margin-bottom: 0; }
+  .home.page .recent-wrap .hentry-wrap {
+    width: auto;
+    margin: 0 -20px;
   }
-
-  #recent-portfolio-detail {
-    margin: 0 -15px;
-    // h3 {
-    //   //margin-left: 15px;
-    // }
-    .entry-title {
-      margin-bottom: 5px;
-    }
+  .recent-wrap .hentry-wrap {
+    width: 100%;
   }
+  .recent-wrap .post-thumb a {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------------*/
+  /*	14.	Portfolio Sorter, MANDATORY styling
+    /*-----------------------------------------------------------------------------------*/
 
   .image-grid {
-    margin: 0 -15px;
-    &:after {
-      content: "";
-      display: block;
-      height: 0;
-      overflow: hidden;
-      clear: both;
-    }
+    width: 100%;
+    margin: 0;
     li {
-      float: left;
-      height: 340px;
-      width: 33.33333333%;
-      overflow: hidden;
-      margin-bottom: 10px;
-      @media (min-width: 940px) {
-        .post-thumb img {
-          width: 281px;
-          height: 221px;
-          max-width: none;
-          object-fit: cover;
-        }
+      width: 100%;
+      margin: 0;
+      height: auto;
+      .hentry {
+        padding: 0;
       }
     }
   }
 
   .video_info {
-    display: block;
-    width: 700px;
-    margin-bottom: 20px;
+    max-width: 100%;
   }
+}
 
-  .post_video {
-    margin-bottom: 20px;
+@media (max-width: 767px) {
+  .single .slides_container {
+    width: 100%;
+    padding: 0;
   }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	15.	Mobile Styles
-  /*-----------------------------------------------------------------------------------*/
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	Desktop
-  /*-----------------------------------------------------------------------------------*/
-
-  @media (min-width: 960px) {
-    .container{
-      width: 940px;
+  .page-back {
+    float: none;
+    text-align: center;
+  }
+  .back {
+    width: 100%;
+    position: inherit;
+    margin: 10px 0;
+    font-size: 0.75em;
+  }
+  .single-portfolio {
+    .page-title {
+      text-align: center;
     }
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	Large Desktop
-  /*-----------------------------------------------------------------------------------*/
-
-  @media (min-width: 1230px) {
-    .container {
-      width: 1140px;
-    }
-  }
-
-  /*-----------------------------------------------------------------------------------*/
-  /*	Tablet and below
-  /*-----------------------------------------------------------------------------------*/
-
-  @media (max-width: 959px) {
-    .back {
-      max-width: 300px;
-    }
-    #primary .entry-content {
+    .portfolio-recent .sidebar,
+    .recent-wrap .hentry {
       width: 100%;
+    }
+  }
+  #footer-widgets {
+    padding: 20px 0;
+    .widget-section {
+      width: 50%;
+      height: 240px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .recent-wrap .hentry,
+  .portfolio-recent .sidebar,
+  .portfolio-recent .recent-wrap {
+    width: 100%;
+  }
+  #filter li {
+    display: inline-block;
+    padding: 6px;
+  }
+  .portfolio-recent .sidebar h3 {
+    text-align: center;
+    margin-top: -10px;
+  }
+  .bx-wrapper {
+    margin-bottom: 20px;
+  }
+  .post-15 {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0 20px;
+    .container {
       padding-bottom: 0;
     }
-    .single #primary .entry-content,
-    .blog #primary .entry-content,
-    .archive #primary .entry-content,
-    .search-results #primary .entry-content {
-      max-width: 100%;
-    }
-    .container {
-      padding: 20px;
-    }
-    #header {
-      padding-top: 0;
-    }
-    #upper-wrap {
-      text-align: center;
-    }
-    #primary {
-      width: 100%;
-    }
-    #logo {
-      margin-bottom: 0;
-      float: none;
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-    #primary-nav {
-      float: none;
-      margin: 0;
-      clear: both;
-      text-align: center;
-      ul a {
-        padding: 0 9px;
-      }
-    }
-    #primary-menu {
-      margin: 10px auto;
-      display: inline-block;
-    }
-    #sidebar {
-      width: 100%;
-      &.aside {
-        display: none;
-      }
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	6.	Post Content Styles
-    /*-----------------------------------------------------------------------------------*/
-
-    #primary .entry-title {
-      padding: 0;
-      margin-bottom: 0;
-    }
-    #primary .entry-meta {
-      width: 100%;
-      margin: 0 0 10px 0;
-      text-align: left;
-    }
-    #primary .entry-meta span {
-      display: inline;
-    }
-    .entry-content img {
-      max-width: 100%;
-      height: auto;
-    }
-    img.size-large {
-      margin: 10px 0;
-    }
-    .wp-caption {
-      margin: 0;
-    }
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      padding-top: 30px;
-      height: 0;
-      overflow: hidden;
-      iframe,
-      object,
-      embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    /*-----------------------------------------------------------------------------------*/
-    /*	7.	Comments
-    /*-----------------------------------------------------------------------------------*/
-
-    #respond-wrap .comments-sidebar {
-      padding-top: 0px;
-    }
-    #commentform {
-      width: 97%;
-    }
-    .comments-sidebar {
-      width: 100%;
-      text-align: left;
-      margin: 0;
-    }
-    .commentlist {
-      max-width: 500px;
-    }
-    .page-template-template-full-width-php .commentlist {
-      max-width: 760px;
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	9.	Footer Styles
-    /*-----------------------------------------------------------------------------------*/
-
-    #footer-container {
-      margin: 0;
-      padding: 20px;
-    }
-    .single #footer-container {
-      margin: 0;
-    }
-    #footer-widgets .widget-section {
-      margin: 0;
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	10.	Page Templates
-    /*-----------------------------------------------------------------------------------*/
-
-    .full-width { /*width: 940px!important;*/
-      width: 100%!important;
-    }
-    .single .slides_container img {
-      max-width: 100%;
-      height: auto;
-    }
-    .single-page-navigation {
-      padding-top: 0;
-    }
-    .hentry, .navigation-links, .hfeed, .pinglist {
-      margin-bottom: 20px;
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	11.	Widgets
-    /*-----------------------------------------------------------------------------------*/
-
-    /* Search Widget */
-    .widget_search #s {
-      width: 100%;
-    }
-    /* Flickr Widget */
-    .tz_flickr_widget {
-      padding-right: 0;
-      /*width: 228px;*/
-      width: 100%;
-    }
-    .flickr_badge_image img,
-    .flickr_images img {
-      width: 75px;
-      height: 75px;
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	12.	Homepage Elements
-    /*-----------------------------------------------------------------------------------*/
-
-    .home-recent .sidebar, .sidebar {
-      width: 100%;
-      margin: 0;
-      padding: 20px 0 0 0;
-      border: none;
-    }
-    .home .sidebar {
-      padding: 0;
-    }
-
-    .recent-wrap {
-      width: 100%;
-      padding: 0;
-      border: none;
-    }
-    .home .home-recent .sidebar {
-      border-top: 1px solid #efefef;
-      padding-top: 20px;
-    }
-    .portfolio-recent .recent-wrap {
-      border: none;
-    }
-    .home.page .recent-wrap .hentry-wrap{
-      width: auto;
-      margin: 0 -20px;
-    }
-    .recent-wrap .hentry-wrap {
-      width: 100%;
-    }
-    .recent-wrap .post-thumb a {
-      width: 100%;
-      height: auto;
-      text-align: center;
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	14.	Portfolio Sorter, MANDATORY styling
-    /*-----------------------------------------------------------------------------------*/
-
-    .image-grid {
-      width: 100%;
-      margin: 0;
-      li {
-        width: 100%;
-        margin: 0;
-        height: auto;
-        .hentry {
-          padding: 0;
-        }
-      }
-    }
-
-    .video_info {
-      max-width: 100%;
-    }
   }
-
-  @media (max-width: 767px) {
-    .single .slides_container {
-      width: 100%;
-      padding: 0;
-    }
-    .page-back {
-      float: none;
-      text-align: center;
-    }
-    .back {
-      width: 100%;
-      position: inherit;
-      margin: 10px 0;
-      font-size: .75em;
-    }
-    .single-portfolio {
-      .page-title {
-        text-align: center;
-      }
-      .portfolio-recent .sidebar,
-      .recent-wrap .hentry {
-        width: 100%;
-      }
-    }
-    #footer-widgets {
-      padding: 20px 0;
-      .widget-section {
-        width: 50%;
-        height: 240px;
-        overflow: hidden;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    .recent-wrap .hentry,
-    .portfolio-recent .sidebar,
-    .portfolio-recent .recent-wrap {
-      width: 100%;
-    }
-    #filter li {
-      display: inline-block;
-      padding: 6px;
-    }
-    .portfolio-recent .sidebar h3 {
-      text-align: center;
-      margin-top: -10px;
-    }
-    .bx-wrapper {
-      margin-bottom: 20px;
-    }
-    .post-15 {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 0 20px;
-      .container {
-        padding-bottom: 0;
-      }
-    }
-  }
-  @media (max-width: 510px) {
-    #footer-widgets {
-      .widget-section {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  @media (max-width: 360px) {
-    .recent-wrap .post-thumb a {
-      padding: 0;
-      height: auto;
-    }
-    .image-grid li {
-      height: auto !important;
-    }
-    .image-grid li img, .home-recent .post-thumb img {
+}
+@media (max-width: 510px) {
+  #footer-widgets {
+    .widget-section {
       width: 100%;
       height: auto;
     }
-    .one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
   }
+}
+
+@media (max-width: 360px) {
+  .recent-wrap .post-thumb a {
+    padding: 0;
+    height: auto;
+  }
+  .image-grid li {
+    height: auto !important;
+  }
+  .image-grid li img,
+  .home-recent .post-thumb img {
+    width: 100%;
+    height: auto;
+  }
+  .one_half,
+  .one_third,
+  .two_third,
+  .three_fourth,
+  .one_fourth,
+  .one_fifth,
+  .two_fifth,
+  .three_fifth,
+  .four_fifth,
+  .one_sixth,
+  .five_sixth {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
