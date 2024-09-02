@@ -191,10 +191,11 @@ body {
 
 input,
 textarea {
-  font: 14px/20px $primary-font;
+  font: 1.5rem $primary-font;
   background: #fff;
-  color: #999;
-  border: 1px solid #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 1rem;
 }
 
 .hidden {
@@ -931,6 +932,13 @@ img.alignright {
   display: block;
 }
 
+.wp-block-image .alignright {
+  margin: 0 0 1rem 0;
+  @media (min-width: 768px) {
+    margin: 0 0 1.5rem 1.5rem;
+  }
+}
+
 // img.size-large {
 // }
 
@@ -1067,10 +1075,8 @@ input:focus,
 textarea:focus,
 button:hover {
   background: #fff;
-  border: 1px solid #b7d6df;
-  -webkit-box-shadow: 0 0 4px #a7d6e3;
-  -moz-box-shadow: 0 0 4px #a7d6e3;
-  box-shadow: 0 0 4px #a7d6e3;
+  border: 1px solid $brand-color1;
+  box-shadow: 0 0 4px $brand-color1;
 }
 
 input:focus,
@@ -1609,12 +1615,18 @@ label.error {
   #blog {
     width: 75%;
     float: left;
-    padding-right: 15px;
+    padding-right: 1rem; //15px;
   }
 
   #secondary {
     float: right;
     width: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #blog {
+    padding-right: 2rem;
   }
 }
 
@@ -1755,12 +1767,19 @@ label.error {
   margin-bottom: 20px;
 }
 
-/* Calander Widget */
+/* Calender Widget */
 .widget_calendar caption {
   margin-bottom: 5px;
 }
 .widget_calendar table {
   width: 100%;
+}
+
+
+#searchform {
+  input {
+    font-size: .875rem;
+  }
 }
 
 /* Flickr Widget */
@@ -1969,6 +1988,7 @@ label.error {
     color: #fff;
     font-size: 3rem;
     line-height: 1;
+    text-transform: lowercase;
   }
 }
 
@@ -2402,6 +2422,7 @@ label.error {
     width: 75px;
     height: 75px;
   }
+
   /*-----------------------------------------------------------------------------------*/
   /*	12.	Homepage Elements
     /*-----------------------------------------------------------------------------------*/

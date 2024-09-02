@@ -31,7 +31,7 @@ if (!empty($image)): ?>
 		</h1>
 	<?php endif; ?>
 
-	<div id="primary" class="hfeed">
+	<main id="primary" class="hfeed">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -66,7 +66,6 @@ if (!empty($image)): ?>
 			</div>
 
 		<?php endif; ?>
-	</div>
-
+	</main>
 
 	<?php get_footer(); ?>

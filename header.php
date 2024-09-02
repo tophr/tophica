@@ -29,10 +29,10 @@
           } ?>
         </div>
 
-        <div id="primary-nav">
+        <nav id="primary-nav">
           <?php if ( has_nav_menu( 'primary-menu' ) ) {
             wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_id' => 'primary-menu', 'menu_class' => 'sf-menu', 'container' => '' ) );
           } ?>
-        </div>
+        </nav>
       </div>
     </header>

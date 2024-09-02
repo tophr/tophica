@@ -5,26 +5,26 @@ Template Name: Centered Column
 ?>
 <?php get_header(); ?>
 
-	<div class="centered-column">	
+	<div class="centered-column">
 		<h1 class="page-title">
-			<?php 
+			<?php
 			global $post;
 			global $post;
-			if(get_post_meta($post->ID, 'heading_value', true) != ''): 
-				echo get_post_meta($post->ID, 'heading_value', true); 
-			else: 
+			if(get_post_meta($post->ID, 'heading_value', true) != ''):
+				echo get_post_meta($post->ID, 'heading_value', true);
+			else:
 				the_title();
-			endif; 
+			endif;
 			?>
 		</h1>
 
-		<div id="primary" class="hfeed">
+		<main id="primary" class="hfeed">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">	
+			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-				<div class="clearfix">		
+				<div class="clearfix">
 
 					<div class="entry-content">
 
@@ -32,7 +32,7 @@ Template Name: Centered Column
 
 					</div>
 
-				</div>     
+				</div>
 
 			</div>
 
@@ -53,7 +53,7 @@ Template Name: Centered Column
 			</div>
 
 		<?php endif; ?>
-		</div>
+		</main>
 	</div>
 
 <?php get_footer(); ?>
