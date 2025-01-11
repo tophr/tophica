@@ -1886,9 +1886,16 @@ label.error {
 .ico-spotify a {
   background-position: -48px -192px;
 }
+.ico-bluesky a {
+  background-position: -96px -192px;
+}
+.ico-threads a {
+  background-position: -144px -192px;
+}
 
 .ico-github,
-.ico-medium {
+.ico-medium,
+.ico-threads {
   a:hover,
   a:focus {
     // filter: invert(1);
