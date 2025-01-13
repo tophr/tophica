@@ -43,7 +43,6 @@
 //   font-style: italic;
 // }
 
-
 $primary-font: "Courier Prime", monospace; //"Nunito Sans", Roboto, Helvetica, Arial, sans-serif;
 $display-font: $primary-font; //"Poppins", Helvetica, Arial, sans-serif;
 $brand-color1: #cd2931;
@@ -1775,10 +1774,9 @@ label.error {
   width: 100%;
 }
 
-
 #searchform {
   input {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -2196,16 +2194,16 @@ label.error {
   }
   li {
     float: left;
-    height: 340px;
     width: 33.33333333%;
     overflow: hidden;
     margin-bottom: 10px;
     @media (min-width: 940px) {
       .post-thumb img {
-        width: 281px;
-        height: 221px;
+        width: 100%;
+        height: auto;
         max-width: none;
         object-fit: cover;
+        aspect-ratio: 21 / 16;
       }
     }
   }
