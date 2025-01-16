@@ -327,15 +327,16 @@ h6 {
 }
 
 .page-back {
-  float: right;
+  margin: 3rem auto;
+  text-align: center;
 }
 
-.back {
-  position: absolute;
-  text-align: right;
-  width: 300px;
-  margin: -30px 0 0 -300px;
-}
+// .back {
+//   position: absolute;
+//   text-align: right;
+//   width: 300px;
+//   margin: -30px 0 0 -300px;
+// }
 
 .page-title {
   margin: 3rem 0 2rem 0;
@@ -2493,10 +2494,6 @@ label.error {
   .single .slides_container {
     width: 100%;
     padding: 0;
-  }
-  .page-back {
-    float: none;
-    text-align: center;
   }
   .back {
     width: 100%;
