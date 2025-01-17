@@ -21,7 +21,6 @@ if (!empty($image)): ?>
 		<h1 class="page-title">
 			<?php
 			global $post;
-			global $post;
 			if (get_post_meta($post->ID, 'heading_value', true) != ''):
 				echo get_post_meta($post->ID, 'heading_value', true);
 			else:
