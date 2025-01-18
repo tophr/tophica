@@ -634,6 +634,14 @@
       "oAP" : "\/images\/sprite.psd",
       "oF" : 0
     },
+    "\/images\/thenet-glitch.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/thenet-glitch.mp4",
+      "oF" : 0
+    },
     "\/images\/tophermcculloch-header.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -754,6 +762,21 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/scss\/_modal.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_modal.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
     },
     "\/scss\/style.scss" : {
       "aP" : 0,

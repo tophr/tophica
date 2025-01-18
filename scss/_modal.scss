@@ -1,0 +1,64 @@
+#gl-btn-net {
+  text-decoration: none;
+  font-weight: normal;
+  &:hover, &:focus {
+    color: #cd2931;
+  }
+}
+
+#gl-modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow: auto;
+  // padding: 20px;
+}
+
+#gl-modal {
+  width: 100%;
+  height: 100%;
+  outline: 1px solid red;
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#gl-btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  margin: 0;
+  padding: 0.5rem;
+  text-indent: -9999px;
+  background: transparent;
+  width: 2rem;
+  height: 2rem;
+  &:before {
+    content: "\00d7";
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    // border: 1px solid red;
+    text-align: right;
+    margin: -3px 5px 0 0;
+  }
+  &:hover, &:focus {
+    border: none;
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}

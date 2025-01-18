@@ -1,5 +1,9 @@
 *** Tophica Changelog ***
-02 September 2024 - Version 2.0.0
+18 January 2025 - Version 2.1.0
+ * Social icon tweaks
+ * Added embedded The Net experience
+
+2 September 2024 - Version 2.0.0
  * goodbye portfolio content, hello giant courier
 
 28 October 2020 - Version 1.5.4
