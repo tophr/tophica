@@ -1891,10 +1891,14 @@ label.error {
 .ico-threads a {
   background-position: -144px -192px;
 }
+.ico-codepen a {
+  background-position: left -240px;
+}
 
 .ico-github,
 .ico-medium,
-.ico-threads {
+.ico-threads,
+.ico-codepen {
   a:hover,
   a:focus {
     // filter: invert(1);

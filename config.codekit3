@@ -277,19 +277,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/quote.png" : {
-      "ft" : 32768,
-      "iS" : 190,
-      "oA" : 0,
-      "oAP" : "\/images\/quote.png",
-      "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/images\/shortcodes\/alerts\/alert_green_bg.gif" : {
       "ft" : 4194304,
       "iS" : 557,
@@ -656,19 +643,6 @@
       "opt" : 0,
       "plM" : 3758088159,
       "prP" : 0
-    },
-    "\/images\/wavybg.png" : {
-      "ft" : 32768,
-      "iS" : 852,
-      "oA" : 0,
-      "oAP" : "\/images\/wavybg.png",
-      "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
     },
     "\/includes\/portfolio-video.php" : {
       "cB" : 0,
