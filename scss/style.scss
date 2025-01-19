@@ -1,3 +1,4 @@
+@import 'wp-overrides';
 @import 'modal';
 
 /*-----------------------------------------------------------------------------------
@@ -1241,8 +1242,10 @@ textarea:focus {
 }
 
 .commentlist {
+  @media (min-width: 768px) {
   float: left;
   width: 65%;
+  }
   margin: 10px 0 40px 0;
   padding-top: 50px;
   padding-right: 30px;
@@ -1545,6 +1548,14 @@ li li .comment-author {
 .credit {
   float: right;
   margin: 10px 0 15px 0;
+}
+
+.copyright, .credit {
+  @media (max-width: 500px) {
+    float: none;
+    clear: both;
+    text-align: center;
+  }
 }
 
 .credit a,
@@ -1998,7 +2009,10 @@ label.error {
     padding: 20px;
     background: rgba(#000, 0.8);
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
     line-height: 1;
     text-transform: lowercase;
   }
